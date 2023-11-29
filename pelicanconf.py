@@ -35,7 +35,7 @@ DEFAULT_PAGINATION = 20
 # RELATIVE_URLS = True
 
 #:==================
-THEME = './theme'
+THEME = './themes/clean-blog'
 #:plugins
 PLUGIN_PATHS = ["plugins", "."]
 PLUGINS = ["org_reader",]

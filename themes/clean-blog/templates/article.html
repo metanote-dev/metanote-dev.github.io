@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+
+    {% for keyword in article.keywords %}
+        <meta name="keywords" contents="{{keyword}}" />
+    {% endfor %}
+
+    {% for description in article.description %}
+        <meta name="description" contents="{{description}}" />
+    {% endfor %}
+
+    {% for tag in article.tags %}
+        <meta name="tags" contents="{{tag}}" />
+    {% endfor %}
+
+{% endblock %}
+
+{% block opengraph %}
+	{{ super() }}
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="{{ author }}">
+	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+	<meta property="og:title" content="{{ article.title }}">
+	<meta property="og:description" content="{{ article.headline }}">
+	<meta property="og:image" content="{{ SITEURL }}/{{ article.header_cover }}">
+	<meta property="article:published_time" content="{{ article.date }}">
+{% endblock %}
+
+{% block header %}
+    <!-- Page Header -->
+    {% if article.header_cover %}
+        <header class="intro-header" style="background-image: url('{{ article.header_cover }}')">
+    {% else %}
+        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/post-bg.jpg')">
+    {% endif %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{ article.title }}</h1>
+                        {% if article.headline %}
+                            <h3 class="subheading">{{ article.headline }}</h3>
+                        {% endif %}
+                        <span class="meta">Posted by
+                            {% for author in article.authors %}
+                                <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                            {% endfor %}
+                             on {{ article.locale_date }}
+                        </span>
+                        {% import 'translations.html' as translations with context %}
+                        {{ translations.translations_for(article) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <!-- Post Content -->
+    <article>
+        {{ article.content }}
+    </article>
+
+    <hr>
+
+    {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
+        <div class="comments">
+            <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = '{{ DISQUS_SITENAME }}';
+                var disqus_identifier = '{{ article.url }}';
+                var disqus_url = '{{ SITEURL }}/{{ article.url }}';
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    {% endif %}
+{% endblock content %}
