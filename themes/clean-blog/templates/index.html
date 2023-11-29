@@ -33,12 +33,17 @@
             {% if article.summary %}
                 {{ article.summary|truncate(140) }}
             {% endif %}
-            <p class="post-meta">Posted by
-                {% for author in article.authors %}
-                    <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                {% endfor %}
-                 on {{ article.locale_date }}
-                 {% include 'comments.html' %}
+	    <p class="post-meta">by
+              {% for author in article.authors %}
+              <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+              {% endfor %}
+	      in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+              on {{ article.date.strftime('%Y-%m-%d') }}
+	      {% if article.tags %}
+	      tags: {% for tag in article.tags %}
+	      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+	      {% endfor %}
+	      {% endif %}
             </p>
         </div>
         <hr>
