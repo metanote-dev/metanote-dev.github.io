@@ -5,14 +5,15 @@
  */
 
 body {
-  font-family: 'Open Sans', 'Lora','Times New Roman',serif;
-  font-size: 18px;
+    font-size: 1.8rem;
+    letter-spacing: .01rem;
+    line-height: 1.75em;
   font-weight: 300;
   color: #404040;
 }
 
 p {
-  line-height: 1.5;
+  /* line-height: 1.5; */
   margin: 30px 0;
 }
 p a {
@@ -235,7 +236,7 @@ hr.small {
 }
 .post-preview > .post-meta {
   color: #808080;
-  font-size: 18px;
+  font-size: 1.3rem;
   font-style: italic;
   margin-top: 0;
 }
@@ -385,7 +386,7 @@ form .row:first-child .floating-label-form-group {
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #404040;
 }
 img::selection {
   color: white;
