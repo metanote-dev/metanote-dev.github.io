@@ -95,7 +95,14 @@
                                 <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                             {% endfor %}
                         {% endif %}
-                    {% endif %}
+				{% endif %}
+				<!-- i18n begin -->
+				{% if lang_siteurls %}
+{% for lang, url in lang_siteurls.items() %}
+<li{% if lang == DEFAULT_LANG %} class="active"{% endif %}><a href="{{ url }}/">{{ lang }}</a></li>
+{% endfor %}
+{% endif %}
+<!-- i18n end -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

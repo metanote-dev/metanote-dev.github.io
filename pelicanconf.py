@@ -38,5 +38,10 @@ DEFAULT_PAGINATION = 20
 THEME = './themes/clean-blog'
 #:plugins
 PLUGIN_PATHS = ["plugins", "./plugins"]
-PLUGINS = ["org_reader",]
+PLUGINS = ["org_reader","i18n_subsites",]
 ORG_READER_EMACS_LOCATION = '/usr/local/bin/emacs'
+
+# mapping: language_code -> settings_overrides_dict
+I18N_SUBSITES = {
+    'zh': {}
+    }
