@@ -37,6 +37,6 @@ DEFAULT_PAGINATION = 1
 #:==================
 THEME = './themes/clean-blog'
 #:plugins
-PLUGIN_PATHS = ["plugins", "."]
+PLUGIN_PATHS = ["plugins", "./plugins"]
 PLUGINS = ["org_reader",]
 ORG_READER_EMACS_LOCATION = '/usr/local/bin/emacs'
