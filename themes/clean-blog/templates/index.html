@@ -41,6 +41,8 @@
 	      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
 	      {% endfor %}
 	      {% endif %}
+	      {% import 'translations.html' as translations with context %}
+              {{ translations.translations_for(article) }}
             </p>
 	    {% if article.summary %}
                 {{ article.summary|truncate(140) }}
