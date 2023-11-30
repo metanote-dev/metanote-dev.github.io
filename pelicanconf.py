@@ -45,3 +45,6 @@ ORG_READER_EMACS_LOCATION = '/usr/local/bin/emacs'
 I18N_SUBSITES = {
     'zh': {}
     }
+TWITTER_URL = 'https://twitter.com/MetanoteTeam'
+EMAIL_URL = 'mailto:metanote.team@gmail.com'
+GITHUB_URL = 'https://www.github.com/metanote-dev'

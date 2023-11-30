@@ -29,14 +29,14 @@ progress {
 template {
     display: none
 }
-a {
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects
-}
-a:active,
-a:hover {
-    outline-width: 0
-}
+/* a { */
+/*     background-color: transparent; */
+/*     -webkit-text-decoration-skip: objects */
+/* } */
+/* a:active, */
+/* a:hover { */
+/*     outline-width: 0 */
+/* } */
 abbr[title] {
     border-bottom: none;
     text-decoration: underline;
@@ -644,12 +644,12 @@ body {
     color: #575757;
     line-height:1.6
 }
-::-moz-selection {
-    background: #d6edff
-}
-::selection {
-    background: #d6edff
-}
+/* ::-moz-selection { */
+/*     background: #d6edff */
+/* } */
+/* ::selection { */
+/*     background: #d6edff */
+/* } */
 /* dl, */
 /* ol, */
 /* p, */
@@ -702,14 +702,14 @@ body {
 .footdef sup {
     padding-right: .5em
 }
-a {
-    color: #527d9a;
-    text-decoration: none
-}
-a:hover {
-    color: #035;
-    border-bottom: 1px dotted
-}
+/* a { */
+/*     color: #527d9a; */
+/*     text-decoration: none */
+/* } */
+/* a:hover { */
+/*     color: #035; */
+/*     border-bottom: 1px dotted */
+/* } */
 figure {
     padding: 0;
     margin: 1em auto;
