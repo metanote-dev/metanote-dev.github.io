@@ -10,8 +10,18 @@
     <tbody>
       {% for article in year_dates %}
         <tr>
-        <td>{{ article.locale_date }}</td>
-        <td><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></td>
+        <td><span class="archive-meta">{{ article.locale_date }}</span></td>
+        <td>
+	  <a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a>
+	  &nbsp;&nbsp;<span class="archive-meta"><i class="fa fa-tags"></i> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
+	  {% if article.tags %}
+	  <span class="archive-meta">
+	      <i class="fa fa-tag"></i> {% for tag in article.tags %}
+	      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+	      </span>
+	      {% endfor %}
+	      {% endif %}
+	</td>
         </tr>
     {% endfor %}
     </tbody>
