@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ SITEURL }}/">{{ SITENAME }}</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+            	{% for title, link in MENUITEMS %}
+                        <li><a href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                        {% for p in PAGES %}
+                            <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                        {% endfor %}
+                    {% else %}
+                        {% if DISPLAY_CATEGORIES_ON_MENU %}
+                            {% for cat, null in categories %}
+                                <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                            {% endfor %}
+                        {% endif %}
+				{% endif %}
+				<!-- i18n begin -->
+				{% if lang_siteurls %}
+{% for lang, url in lang_siteurls.items() %}
+<li{% if lang == DEFAULT_LANG %} class="active"{% endif %}><a href="{{ url }}/">{{ lang }}</a></li>
+{% endfor %}
+{% endif %}
+<!-- i18n end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
