@@ -35,6 +35,15 @@ DEFAULT_PAGINATION = 20
 # RELATIVE_URLS = True
 
 #:==================
+DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_RETENTION = [".git",]
+
+INDEX_SAVE_AS = 'blog/index.html'
+ARTICLE_URL = 'blog/{slug}.html'
+ARTICLE_SAVE_AS = 'blog/{slug}.html'
+ARTICLE_LANG_URL = 'blog/{slug}-{lang}.html'
+ARTICLE_LANG_SAVE_AS = 'blog/{slug}-{lang}.html'
+
 THEME = './themes/clean-blog'
 #:plugins
 PLUGIN_PATHS = ["plugins", "./plugins"]
