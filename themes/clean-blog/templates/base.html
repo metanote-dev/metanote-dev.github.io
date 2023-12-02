@@ -2,13 +2,13 @@
 <html lang="{{ DEFAULT_LANG }}">
 
 <head>
-  {% include "head.html" %}
+  {% include "_includes/head.html" %}
 </head>
 
 <body>
 
   <!-- Navigation -->
-  {% include "nav.html"%}
+  {% include "_includes/nav.html"%}
 
     {% block header %}{% endblock header %}
 
@@ -24,7 +24,7 @@
     <hr>
 
     <!-- Footer -->
-    {% include "footer.html"%}
+    {% include "_includes/footer.html"%}
     <!-- jQuery -->
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.js"></script>
 

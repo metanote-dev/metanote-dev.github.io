@@ -2,14 +2,14 @@
 <html lang="{{ DEFAULT_LANG }}">
 
 <head>
-  {% include "head.html" %}
+  {% include "_includes/head.html" %}
   <meta name="keywords" content="org mode,org-mode,emacs,iOS,android,mobile,orgmode,markdown">
 </head>
 
 <body>
 
   <!-- Navigation -->
-  {% include "nav.html"%}
+  {% include "_includes/nav.html"%}
 
     <section id="home">
 <!-- Header -->
@@ -50,7 +50,7 @@
     {{ page.content}}
 
     <!-- Footer -->
-    {% include "footer.html"%}
+    {% include "_includes/footer.html"%}
     <!-- jQuery -->
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.js"></script>
 
