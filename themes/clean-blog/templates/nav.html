@@ -16,22 +16,10 @@
             	{% for title, link in MENUITEMS %}
                         <li><a href="{{ link }}">{{ title }}</a></li>
                     {% endfor %}
-
-                    {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for p in PAGES %}
-                            <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-                        {% endfor %}
-                    {% else %}
-                        {% if DISPLAY_CATEGORIES_ON_MENU %}
-                            {% for cat, null in categories %}
-                                <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-				{% endif %}
 				<!-- i18n begin -->
 				{% if lang_siteurls %}
 {% for lang, url in lang_siteurls.items() %}
-<li{% if lang == DEFAULT_LANG %} class="active"{% endif %}><a href="{{ url }}/">{{ lang }}</a></li>
+<li{% if lang == DEFAULT_LANG %} class="active"{% endif %}><a href="{{ url }}/">{{ lang | lookup_lang_name }}</a></li>
 {% endfor %}
 {% endif %}
 <!-- i18n end -->

@@ -50,9 +50,38 @@ PLUGIN_PATHS = ["plugins", "./plugins"]
 PLUGINS = ["org_reader","i18n_subsites",]
 ORG_READER_EMACS_LOCATION = '/usr/local/bin/emacs'
 
+MENUITEMS = (
+    ("Blog", "/blog/index.html"),
+    ("FAQ", "/pages/faq.html"),
+    ("ChangeLog", "/pages/changelog.html"),
+    ("Archive", "/archives.html"),
+)
+
+languages_lookup = {
+             'en': 'English',
+             'zh': '中文',
+             }
+
+def lookup_lang_name(lang_code):
+    return languages_lookup[lang_code]
+
+JINJA_FILTERS = {
+             'lookup_lang_name': lookup_lang_name,
+             }
+
+I18N_UNTRANSLATED_ARTICLES = 'remove'
+I18N_UNTRANSLATED_PAGES = 'remove'
 # mapping: language_code -> settings_overrides_dict
 I18N_SUBSITES = {
-    'zh': {}
+    'zh': {
+        'SITENAME': 'Metanote-文档,日程,待办',
+        'MENUITEMS': (
+    ("Blog", "/zh/blog/index.html"),
+    ("FAQ", "/zh/pages/faq.html"),
+    ("更新日志", "/zh/pages/changelog.html"),
+    ("归档", "/zh/archives.html"),
+)
+    }
     }
 TWITTER_URL = 'https://twitter.com/MetanoteTeam'
 EMAIL_URL = 'mailto:metanote.team@gmail.com'
