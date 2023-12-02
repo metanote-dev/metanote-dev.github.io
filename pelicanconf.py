@@ -57,3 +57,5 @@ I18N_SUBSITES = {
 TWITTER_URL = 'https://twitter.com/MetanoteTeam'
 EMAIL_URL = 'mailto:metanote.team@gmail.com'
 GITHUB_URL = 'https://www.github.com/metanote-dev'
+APP_STORE_URL = 'https://apps.apple.com/app/metanote-notes-docs-tasks/id6452550221'
+GOOGLE_PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.iknockdoor.metanote'

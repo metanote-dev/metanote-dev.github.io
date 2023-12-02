@@ -3,6 +3,7 @@
 
 <head>
   {% include "head.html" %}
+  <meta name="keywords" content="org mode,org-mode,emacs,iOS,android,mobile,orgmode,markdown">
 </head>
 
 <body>
@@ -10,15 +11,54 @@
   <!-- Navigation -->
   {% include "nav.html"%}
 
-    {% block header %}{% endblock header %}
+    <section id="home">
+<!-- Header -->
+	{% if HEADER_COVER %}
+        <header class="intro-header" style="background-image: url('{{ HEADER_COVER }}')">
+    {% else %}
+        <header class="intro-header" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/app-bg.jpg')">
+    {% endif %}
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="intro-message">
+						<h1>{{ page.title }}</h1>
+						<h3>{{ page.subtitle }}</h3>
+						<hr class="intro-divider">
+						<ul class="list-inline intro-social-buttons">
+						  <li>
+							<a href="{{ APP_STORE_URL }}" class="btn btn-default btn-lg"><i class="fa-brands fa-app-store-ios fa-fw"></i> <span class="network-name">App Store</span></a>
+						  </li>
+						  <li>
+							<a href="{{ GOOGLE_PLAY_STORE_URL }}" class="btn btn-default btn-lg"><i class="fa-brands fa-google-play fa-fw"></i> <span class="network-name">Google Play</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.container -->
+
+	</header>
+	<!-- /.intro-header -->
+</section>
 
     <!-- Main Content -->
     {{ page.content}}
 
-    <hr>
-
     <!-- Footer -->
     {% include "footer.html"%}
+    <!-- jQuery -->
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/clean-blog.js"></script>
 </body>
 
 </html>
