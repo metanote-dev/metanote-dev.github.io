@@ -14,7 +14,7 @@
     {% for tag in article.tags %}
         <meta name="tags" contents="{{tag}}" />
     {% endfor %}
-
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
 {% endblock %}
 
 {% block opengraph %}

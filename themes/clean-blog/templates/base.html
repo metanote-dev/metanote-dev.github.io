@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 
-<head>
-  {% include "_includes/head.html" %}
-</head>
+  <head>
+    {% block head %}
+    {% include "_includes/head.html" %}
+    <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+    {% endblock head %}
+
+    {% block opengraph %}
+    <meta property="og:locale" content="{{ DEFAULT_LANG }}">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    {% endblock opengraph %}
+  </head>
 
 <body>
 
