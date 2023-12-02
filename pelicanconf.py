@@ -1,6 +1,8 @@
 AUTHOR = 'Metanote Team'
 SITENAME = 'Metanote-notes,docs,tasks'
 SITEURL = ""
+APP_NAME = "Metanote"
+APP_DESCRIPTION = "A plain text editor for mobile that supports org mode."
 
 PATH = "content"
 
@@ -75,6 +77,7 @@ I18N_UNTRANSLATED_PAGES = 'remove'
 I18N_SUBSITES = {
     'zh': {
         'SITENAME': 'Metanote-文档,日程,待办',
+        'APP_DESCRIPTION': '中文 sub title.',
         'MENUITEMS': (
     ("Blog", "/zh/blog/index.html"),
     ("FAQ", "/zh/pages/faq.html"),

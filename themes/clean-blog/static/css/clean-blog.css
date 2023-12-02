@@ -163,7 +163,19 @@ hr.small {
     padding-bottom: 20%;
 }
 
+.post-heading {
+    padding: 150px 0 100px;
+}
+
 .intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 4em;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.post-heading > h1 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 4em;
@@ -181,12 +193,22 @@ hr.small {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
+.post-heading > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
     }
 
     .intro-message > h1 {
+        font-size: 3em;
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 700;
+    }
+
+    .post-heading > h1 {
         font-size: 3em;
 	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 700;
