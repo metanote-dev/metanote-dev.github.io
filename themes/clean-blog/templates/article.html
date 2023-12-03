@@ -14,9 +14,10 @@
     {% for tag in article.tags %}
         <meta name="tags" contents="{{tag}}" />
     {% endfor %}
-{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
 {% endblock %}
 
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
+	
 {% block opengraph %}
 	{{ super() }}
 	<meta property="og:type" content="article">
