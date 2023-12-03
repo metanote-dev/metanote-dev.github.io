@@ -49,7 +49,7 @@ ARTICLE_LANG_SAVE_AS = 'blog/{slug}-{lang}.html'
 THEME = './themes/clean-blog'
 #:plugins
 PLUGIN_PATHS = ["plugins", "./plugins"]
-PLUGINS = ["org_reader","i18n_subsites",]
+PLUGINS = ["org_reader","i18n_subsites","neighbors",]
 ORG_READER_EMACS_LOCATION = '/usr/local/bin/emacs'
 
 MENUITEMS = (
