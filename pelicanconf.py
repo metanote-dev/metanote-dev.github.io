@@ -2,7 +2,7 @@ AUTHOR = 'Metanote Team'
 SITENAME = 'Metanote-notes,docs,tasks'
 SITEURL = ""
 APP_NAME = "Metanote"
-APP_DESCRIPTION = "A plain text editor for mobile that supports org mode."
+APP_DESCRIPTION = "A text editor designed for writing, maintaining TODO lists, and project planning."
 
 PATH = "content"
 
@@ -77,7 +77,7 @@ I18N_UNTRANSLATED_PAGES = 'remove'
 I18N_SUBSITES = {
     'zh': {
         'SITENAME': 'Metanote-文档,日程,待办',
-        'APP_DESCRIPTION': '中文 sub title.',
+        'APP_DESCRIPTION': '一款支持知识管理，写作，TODO-list 和项目管理的纯文本编辑器',
         'MENUITEMS': (
     ("Blog", "/zh/blog/index.html"),
     ("FAQ", "/zh/pages/faq.html"),
