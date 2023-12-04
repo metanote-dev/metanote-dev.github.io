@@ -37,6 +37,19 @@ DEFAULT_PAGINATION = 20
 # RELATIVE_URLS = True
 
 #:==================
+# that' strange, only folder can be add
+STATIC_PATHS = ['images','data','copy2root',]
+# '.' is the articles path, so, need excludes from articles
+ARTICLE_EXCLUDES = ['images','data','copy2root',]
+# settings for some static file's copy dest
+EXTRA_PATH_METADATA = {
+    'copy2root/README.md': {'path': 'README.md'},
+    'copy2root/privacy.html': {'path': 'privacy.html'},
+    'copy2root/update_info.json': {'path': 'update_info.json'},
+    'copy2root/update_info_ios.json': {'path': 'update_info_ios.json'},
+    }
+
+
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_RETENTION = [".git",]
 
