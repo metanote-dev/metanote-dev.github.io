@@ -63,7 +63,7 @@ THEME = './themes/clean-blog'
 #:plugins
 PLUGIN_PATHS = ["plugins", "./plugins"]
 PLUGINS = ["org_reader","i18n_subsites","neighbors",]
-ORG_READER_EMACS_LOCATION = '/usr/local/bin/emacs'
+ORG_READER_EMACS_LOCATION = 'emacs'
 
 MENUITEMS = (
     ("Blog", "/blog/index.html"),
