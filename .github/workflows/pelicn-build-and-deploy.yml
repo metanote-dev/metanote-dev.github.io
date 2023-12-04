@@ -28,11 +28,13 @@ jobs:
         run: |
           sudo apt install emacs-nox --yes
           emacs -Q --script emacsconf.el
+          emacs --version
+          emacs -Q --batch -eval "'(message (org-version))'"
       - name: Build blog
         run: pelican -s publishconf.py
       - name: List files in the repository
         run: |
           pwd
           ls output
-          ls ${{ github.workspace }}
+          # ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
