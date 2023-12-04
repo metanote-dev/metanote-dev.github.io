@@ -27,12 +27,12 @@ jobs:
       - name: Install Emacs
         run: |
           sudo apt install emacs-nox --yes
-	  emacs -Q --script emacsconf.el
+          emacs -Q --script emacsconf.el
       - name: Build blog
-      	run: pelican -s publishconf.py
+        run: pelican -s publishconf.py
       - name: List files in the repository
         run: |
-	  pwd
-	  ls output
+          pwd
+          ls output
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
