@@ -1,0 +1,28 @@
+#+TITLE: FAQ
+#+DATE: 2023-12-04 16:14:02 +0800
+#+OPTIONS: toc:nil num:t ^:t
+#+PROPERTY: SLUG faq
+#+PROPERTY: LANGUAGE en
+
+* Metanote
+Metanote is a org-mode-compatible plain text editor designed for knowledge management, writing, creating TODO lists, or project management. If you're familiar with Org mode, using Metanote will be seamless.
+
+Even if you have no experience with org-mode or Emacs, you can quickly grasp how to use Metanote. All features are designed for efficiency, cleanliness, and simplicity. You can use Metanote effortlessly—everything is in text, everything is more editable.
+* Our Mission and Vision
+We are committed to providing a fully decentralized, absolutely private, and highly customizable solution for knowledge and task management for everyone.
+** Decentralization
+Everything is based on plain text, with no proprietary file formats. This means your data is not dependent on any platform or software. Users have absolute control over their data, freely using, copying, moving, and permanently saving it without losing data due to platform or software changes.
+** Absolute Privacy
+A purely local application, developed natively, requiring no network connection for absolute privacy.
+** High Customizable
+Everything is in text, everything is editable. Flexibility and freedom allow everyone to work in their style, create a workflow that suits them, and find solutions for every need.
+* Is Metanote Open Source?
+Currently, Metanote is not open source. Metanote is a purely local, native application, different from similar web-based products. Metanote has no usage barriers, and we can't guarantee that opening the source won't lead to commercial use of the code, causing inconvenience to users.
+* How Does Metanote Ensure User Data Privacy Without Being Open Source?
+1. Metanote requires no network access apart from essential interactions with the iOS system (e.g., for premium features). This is easily verifiable from iOS privacy reports or network captures.
+2. Metanote is a purely native application, and once compiled, the code cannot be altered—this sets it apart from web applications.
+* Is Metanote Free?
+Metanote's basic editing features are entirely free. To fulfill our mission, some advanced features require payment, but Metanote offers a one-time purchase for permanent access. All revenue is used to sustain Metanote's development and maintenance. If Metanote brings value to your life and work, enhancing your quality, please generously support our development work.
+
+
+
