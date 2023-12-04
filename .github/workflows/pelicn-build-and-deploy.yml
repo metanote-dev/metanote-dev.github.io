@@ -24,12 +24,16 @@ jobs:
         run: |
           pip install pelican==4.9.1
           pelican --version
+      # - name: Install Emacs
+      #   run: |
+      #     sudo apt install emacs-nox --yes
+      #     emacs -Q --script emacsconf.el
+      #     emacs --version
+      #     emacs -Q --batch -eval "(message (org-version))"
       - name: Install Emacs
-        run: |
-          sudo apt install emacs-nox --yes
-          emacs -Q --script emacsconf.el
-          emacs --version
-          emacs -Q --batch -eval "(message (org-version))"
+        uses: jcs090218/setup-emacs@master
+        with:
+            version: 28.2
       - name: Build blog
         run: pelican -s publishconf.py
       - name: List files in the repository

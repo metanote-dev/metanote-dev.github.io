@@ -4,6 +4,7 @@
 (require 'package)
 
 ;; htmlize is needed for SRC blocks
+(setq package-user-dir (expand-file-name "./.packages"))
 (setq package-load-list '((htmlize t)))
 (package-initialize)
 
@@ -40,8 +41,9 @@
                              (org-read-date nil nil dateobj nil)
                            (org-timestamp-format dateobj "%Y-%m-%d")))
 
-                 :author (substring-no-properties
-                          (car (plist-get org-export-env ':author)))
+                 ;; :author (substring-no-properties
+                 ;;          (car (plist-get org-export-env ':author)))
+		 :author "Metanote Team"
 
                  ; org file properties
                  :category (cdr (assoc-string "CATEGORY" org-keyword-properties t))
