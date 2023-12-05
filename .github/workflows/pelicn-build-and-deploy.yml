@@ -36,9 +36,14 @@ jobs:
             version: 28.2
       - name: Build blog
         run: pelican -s publishconf.py
-      - name: List files in the repository
-        run: |
-          pwd
-          ls output
-          # ls ${{ github.workspace }}
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: output
+      # - name: List files in the repository
+      #   run: |
+      #     pwd
+      #     ls output
+      #     # ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
