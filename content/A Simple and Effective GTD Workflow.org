@@ -1,0 +1,39 @@
+#+TITLE: A Simple and Effective GTD Workflow
+#+DATE: 2023-12-05 19:23:06 +0800
+#+OPTIONS: toc:nil num:t ^:t
+#+PROPERTY: LANGUAGE en
+#+PROPERTY: SLUG a_simple_and_effective_gtd_workflow
+
+* The Significance of GTD
+When individuals are faced with a large volume of tasks, it's easy to become disorganized, forgetful, and overwhelmed, leading to a decrease in productivity. GTD (Getting Things Done) is a widely adopted methodology designed to clear various tasks from the mind, bringing clarity and order to a multitude of tasks, allowing for their easy and efficient management.
+
+* Tools Needed
+There are various methods, with the classic being pen and paper, sticky notes, and storage boxes. Here's how to use Metanote for GTD:
+1. **Inbox.org File**
+   - Quickly record daily thoughts, new to-do items.
+   - Things to be done today.
+2. **Tasks.org File**
+   - Record things you want to do but haven't figured out how.
+   - Ideas that need further consideration.
+   - Tasks that you currently lack the time or resources to complete.
+3. **archive.org**
+   - Archive completed tasks.
+4. **Other Custom Files**
+   - Used for organized reference material.
+
+* Workflow
+1. Review tasks in the Inbox. Complete one and archive it, then select another suitable task for processing.
+2. During work, if you have any ideas, inspirations, or new to-do items, don't interrupt your current work. Capture them and toss them into the Inbox.
+3. At the end of the day or during appropriate relaxation times, organize the Inbox:
+   - Digest and categorize recorded ideas.
+   - Tag and move them to other custom files for reference.
+   - If it's a new actionable item, leave it in the Inbox; otherwise, move it to the Tasks file.
+4. Once the Inbox is empty, pick tasks from the Tasks file. Consider and generate actionable steps, then place them in the Inbox.
+5. Repeat the process.
+
+Note: You can customize two Agenda views, restricting them to Inbox.org and Tasks.org files. This allows you to view and operate on tasks through Agenda Views instead of directly viewing files, which can be more efficient.
+
+* Principles or Considerations
+1. Have only one goal: clear the Inbox.
+2. The Inbox should only contain actionable items. Whether big or small, short or long, if it needs to be done, it goes into the Inbox.
+3. Empty your mind. Don't burden your mind; focus only on the task at hand. There's no need to rush; things are already organized. Do them at your own pace, maintaining a relaxed and pleasant mindset.

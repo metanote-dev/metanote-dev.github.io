@@ -1,0 +1,106 @@
+#+TITLE: Agenda view
+#+DATE: 2023-12-05 19:24:20 +0800
+#+OPTIONS: toc:nil num:t ^:t
+#+PROPERTY: LANGUAGE en
+#+PROPERTY: SLUG agenda_view
+
+* Agenda View
+Agenda View allows you to filter and generate to-do lists suitable for various scenarios by setting conditions such as time range, file scope, completion status, tags, or properties. You can save the settings of commonly used to-do lists for quick access from the menu, and you can create as many to-do lists as you need.
+
+In agenda view, you can not only view to-do items but also easily perform some operations without having to open the corresponding file for editing. When you perform these operations, Metanote will automatically complete the file editing. Currently, the following operations are supported:
+
+1. Change the status of a headline; you can directly modify it here when your to-do item enters the next stage.
+2. Move or archive a headline; after completing a task, you can use the move function to archive it to another file, such as "Archive 2023.org." Note that if a headline has sub-headlines, they will also be moved.
+3. Delete a headline; you can directly delete it here when you have completed a task and don't need to archive it. Similarly, if there are sub-headlines, they will be deleted together.
+
+* Default Agenda View
+By default, Metanote provides two agenda views: "Agenda" and "To-Do List"
+
+** Agenda
+1. The agenda lists headlines with specific time arrangements (daily, weekly, monthly, yearly) across all files. It includes:
+   1. Planned events (SCHEDULED): Events scheduled for a specific time.
+   2. Latest events (DEADLINE): Events that must be completed by a certain time.
+   3. Active timestamps: Events scheduled for a specific time. Active timestamps look like this <2023-11-18 Sat>. If you just want to record a time without it appearing in your schedule or receiving a notification, you can use a silent timestamp like this [2023-11-18 Sat].
+2. If you view the agenda for "Today," the headlines will include:
+   1. Events scheduled for today.
+   2. Events scheduled before today but in an unfinished state, meaning you still need to do these things today.
+   3. Events scheduled after today but require a reminder today (you can use the warning feature in Planning to set reminders a few days in advance or overdue).
+3. If you view the schedule for a date before or after today, only items defined on that date will appear.
+
+** To-Do List
+To-Do List list all headlines in all files with an unfinished state.
+
+* Customizing Agenda View Settings
+The following settings are consistent with Org mode. If you are familiar with Org mode, you can refer to Org mode settings. If you are not familiar, it's still easy to use; these are just filtering conditions.
+
+** Name
+This appears in the menu bar for easy differentiation and quick access to other lists.
+
+** Agenda Files
+Set the file scope; it can be a single file or a folder. If not set, it defaults to all files.
+
+** Type
+Schedule lists have two types: "List" and "Agenda" They only differ in presentation.
+*** List
+Presents all headlines that meet the criteria in a list form.
+*** Agenda
+1. Except for conditions restricted by custom Agenda view, headlines must be SCHEDULED, DEADLINE, or have an active timestamp.
+2. Presented in a calendar format.
+**** Agenda Span
+Set the time range for the agenda display.
+**** First Day of the Week
+When the span is "week," set the first day of the week. This setting is ineffective in other span.
+
+** Configuration
+*** Incomplete only
+Whether to show only unfinished state headlines, default is selected, showing only unfinished tasks.
+*** Subtasks
+Whether to display subtasks, default selected, showing subtasks.
+*** Enable Tag Inheritance
+Enable tag inheritance when selected; otherwise, it is not enabled. The default is enabled.
+*** Tag Groups
+Enable tag groups when selected; otherwise, it is not enabled. The default is enabled.
+*** Property Inheritance
+Enable property inheritance when selected; otherwise, it is not enabled. The default is not enabled.
+*** SCHEDULED, DEADLINE, Active Timestamp
+Whether to display these three types of tasks when selected; otherwise, they are not displayed. These three types of tasks often appear in "Agenda" so if you don't want them to repeat in your custom To-Do List, you can uncheck them. The default is selected.
+*** Comment trees, Archive trees
+Whether to display these two types of tasks when selected; otherwise, they are not displayed. The default is not selected.
+
+** Tags and Properties
+Edit the query string of custom tag and property filtering conditions, fully compatible with Org mode's search string. Each condition is a tag or property, following the settings below:
+1. Support logical operators "&" for "AND relationship" and "|" for "OR relationship." The combination priority of "&" is higher than "|". Currently, parentheses () expressions are not supported. For example:
+   #+begin_example
+tag1|tag2&tag3
+   #+end_example
+   Means to find headlines with tag1 or simultaneously with tag2 and tag3.
+2. "+" represents positive selection, "-" represents negative selection. In cases where there is a + or - and there is no ambiguity, the & sign can be omitted. For example:
+   #+begin_example
++tag1+tag2-tag3
+   #+end_example
+   Represents finding headlines that simultaneously have tag1 and tag2 but not tag3.
+3. Support regular expressions, for example:
+   #+begin_example
+work+{^boss.*}
+   #+end_example
+   Represents finding headlines that simultaneously have the tag "work" and a tag starting with "boss"
+4. When there are relational operators, it indicates that the query condition is for a Property; otherwise, it is for a Tag. Supported relational operators are '<', '=', '>', '<=', '>=', '<>', Note: If the Property's value is a string, it needs to be enclosed in double quotes. For example:
+   #+begin_example
++work+PRIORITY="A"+With={Sarah|Denny}
+   #+end_example
+   Represents finding headlines with the tag "work," a priority of "A," and a "With" Property with a value of Sarah or Denny.
+5. Special Properties, as mentioned in the previous examples, such as PRIORITY. Special Properties are inherent to the headline itself, and there is no need to define them; they already exist. You can use these Properties to find headlines with specific conditions. Currently supported special Properties include:
+   1. PRIORITY
+      Represents the priority of the headline, with values "A," "B," and "C," indicating high, medium, and low, respectively.
+   2. LEVEL
+      Indicates the number of asterisks in the headline.
+   3. TODO
+      Represents the status keyword of the headline. Note that its value is text and needs to be enclosed in double quotes.
+   4. ITEM
+      Represents the title of the headline.
+   5. CATEGORY
+      Represents the category of the headline.
+   #+begin_example
+ProjectA+PRIORITY="A"+LEVEL=2+TODO="ING"+CATEGORY="work"+ITEM={.*bug.*}
+   #+end_example
+   This signifies a query for headlines in the "work" category, tagged with "ProjectA", having a priority of "A," a status of "ING", and a title containing the text "bug", with a headline level of 2.

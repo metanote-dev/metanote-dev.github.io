@@ -1,0 +1,20 @@
+#+TITLE: 使用 Git 同步 Metanote 中的文件
+#+DATE: 2023-12-05 16:27:32 +0800
+#+OPTIONS: toc:nil num:t ^:t
+#+PROPERTY: LANGUAGE zh
+#+PROPERTY: SLUG how_to_sync_your_org_files_using_git
+#+CATEGORY: Metanote
+#+PROPERTY: TAGS sync,git
+
+选择一个 iOS 上你喜欢的 Git 工具，这里我用 iSh 举例。
+
+1. 打开 iSH，并通过以下命令按装 Git 
+   : apk add git openssh
+2. 配置 git，用户名，邮箱，公钥等，和在命令行中完全一样
+3. 打开 iPhone 上的 “文件” app，在 “On My iPhone” 下新建一个文件夹，比如 “orgfiles”
+4. 在 iSH 中新建一个目录，并将 “orgfiles” 挂载到 iSH 的文件系统上 
+   : mkdir orgfiles 
+   : mount -t ios . orgfiles 
+   执行以上命令后会弹出 iPhone 的文件管理器，选择 “On My iPhone” 下刚刚新建的 “orgfiles” 并点击完成即可。
+5. 在 iSH 中用 git 命令将你的 git 仓库 clone 到 orgfiles 即可
+6. 同样，打开 Metanote，在 “文件” 的左上角选择编辑 locations，然后添加 “orgfiles” 文件夹，然后等待处理完成即可，如果你的文件不是非常非常多，几秒钟就可以处理完成了，如果你主要使用这个文件夹，就将它设为默认 location

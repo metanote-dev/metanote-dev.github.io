@@ -1,0 +1,73 @@
+#+TITLE: 文档内设置 InBufferSettings
+#+DATE: 2023-12-05 19:26:27 +0800
+#+OPTIONS: toc:nil num:t ^:t
+#+PROPERTY: LANGUAGE zh
+#+PROPERTY: SLUG in_buffer_settings
+
+* InBufferSettings
+InBufferSettings 使得每个 org 文件可以有自己独立的于全局的设置，比如 TODO 关键字的设置，TAG 的设置等。
+* Metanote 目前支持的 InBufferSettings 以及作用
+*注意* 即使目前 Metanote 不支持的 InBufferSettings 你依然可以添加，Metanote 可以正确解析和识别，只是没有对应的功能，在以后的版本中随着功能增加会有更多的 InBufferSettings 得到支持。以下的内容都是 Metanote 已经支持的，几乎支持了 org mode 中所有主要的 InBufferSettings.
+** TITLE
+#+begin_example
+#+TITLE: 文章题目
+#+end_example
+如果设置了 TITLE 则会在文件管理器中显示文章题目，如果没有设置则默认显示文件名。
+** CATEGORY
+#+begin_example
+#+CATEGORY: 分类
+#+end_example
+1. 如果设置了 CATEGORY 则文件内所有的 Headline 都会继承这个分类，你可以在 Agenda view 中通过 CATEGORY 来筛选 Headline
+2. 如果没有设置 CATEGORY 则文件内所有的 Headline 的分类默认为文件名
+3. 文件中的 Headline 可以通过设置自己的 Property 来覆盖整个文件的 InBufferSettings 设置，比如
+   #+begin_example
+#+CATEGORY: 文件中的Headline都继承的分类
+'* Headline
+:PROPERTIES:
+:CATEGORY: 覆盖文件的分类
+:END:
+   #+end_example
+** STARTUP
+STARTUP 有很多值，目前 Metanote 支持的有 "logdone" 和 "lognotedone"，当 STARTUP 中有 "logdone" 时，当前文件中的 Headline 在被标记为完成状态时会记录完的时间戳，而当有 "lognotedone" 时表示当前文件中的 Headline 在被标记为完成状态时会在记录时间戳的同时要求记录一条日志，"logdone" 和 "lognotedone" 同时只能出现一个。
+#+begin_example
+#+STARTUP: lognotedone
+#+end_example
+** TODO, SEQ_TODO, TYP_TODO
+SEQ_TODO 和 TYP_TODO 在 Org mode 中已经不再使用，而是统一使用 TODO. TODO 用来定义文件级 TODO 关键字。
+#+begin_example
+#+TODO: REPORT BUG KNOWNCAUSE | FIXED
+#+TODO: TODO(t) WAIT(w@/!) | DONE(d!) CANCELED(c@)
+#+end_example
+TODO 关键字的声明语法与 Org mode 完全一致
+1. "|" 前为未完成状态，后面为完成状态
+2. WAIT(w@/!)
+   1. w 为快捷键定义
+   2. 在 "/" 前的 @ 表示进入 WAIT 时记录日志
+   3. 在 "/" 之后的 ! 表示离开 WAIT 状态时记录时间戳
+   4. 如果没有 "/" 则单独使用 "@" 或 "!" 则默认为进入时的动作
+** FILETAGS
+定义文件级的 TAG，在开启 TAG 继承的情况下文件中的 Headline 都将继承文件级的 TAG
+#+begin_example
+#+FILETAGS: :Peter:Boss:Secret:
+#+end_example
+** TAGS
+在文件内声明 TAG 或 TAG 组
+#+begin_example
+#+TAGS: laptop car pc sailboat
+#+TAGS: [ GTD : Control Persp ]
+#+TAGS: [ Project : {P@.+} ]
+#+end_example
+1. 第一行声明了四个 TAG，但并没有什么实际用处，只是在输入 TAG 时更加便捷，TAG 不用声明就可以直接使用
+2. 第二行声明了一个 TAG 组，Control, Persp 都属于 GTD，在 Agenda view 中搜索打有 GTP TAG 的 Headline 时，打有 Control 或 Persp TAG 的 Headline 都可能被检索出来。
+3. 第三行用简单的正则表式声明了一个 TAG 组，所的符合正则表达式的 TAG 都属于 Project
+4. 可通过交叉定义 TAG 组实现分级的 TAG 组定义，形成分类学上的定义。
+** PROPERTY
+定义文件级的 Property，在 Property 继承开启的情况下文件中所有 Headline 都将继承文件级的 Property
+#+begin_example
+#+PROPERTY: var foo=1
+#+end_example
+*** 有特殊意义的 Property
+如果 Property 的 Key 为 SUMMARY 则 SUMMARY 的 value 为做为文件的摘要显示在文件管理器中，比如
+#+begin_example
+#+PROPERTY: SUMMARY 这是一篇文章的摘要
+#+end_example

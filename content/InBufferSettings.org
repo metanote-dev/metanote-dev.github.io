@@ -1,0 +1,79 @@
+#+TITLE: InBufferSettings
+#+DATE: 2023-12-05 19:25:54 +0800
+#+OPTIONS: toc:nil num:t ^:t
+#+PROPERTY: LANGUAGE en
+#+PROPERTY: SLUG in_buffer_settings
+* InBufferSettings
+InBufferSettings allows each file to have its own independent settings, such as TODO keywords and TAG settings, separate from the global settings.
+* InBufferSettings supported by Metanote and their functions
+*Note:* Even if Metanote does not currently support some InBufferSettings, you can still add them. Metanote can correctly parse and recognize them; they just don't have corresponding functionality. In future versions, as features are added, more InBufferSettings will be supported. The following content is already supported by Metanote, covering almost all major InBufferSettings in org mode.
+
+** TITLE
+#+begin_example
+#+TITLE: Article Title
+#+end_example
+If TITLE is set, the article title will be displayed in the file manager. If not set, the file name will be displayed by default.
+
+** CATEGORY
+#+begin_example
+#+CATEGORY: Category
+#+end_example
+1. If CATEGORY is set, all headlines in the file will inherit this category. You can filter headlines in Agenda view by CATEGORY.
+2. If CATEGORY is not set, all headlines in the file will default to the file name.
+3. Headlines in the file can override the InBufferSettings of the entire file by setting their own properties. For example:
+   #+begin_example
+   #+CATEGORY: Category inherited by headlines in the file
+   '* Headline
+   :PROPERTIES:
+   :CATEGORY: Overriding category for the headline
+   :END:
+   #+end_example
+
+** STARTUP
+STARTUP has many values. Currently supported by Metanote are "logdone" and "lognotedone." When "logdone" is present in STARTUP, timestamps will be recorded for headlines in the current file when marked as done. When "lognotedone" is present, it indicates that headlines in the current file, when marked as done, should record a timestamp and require a log entry. Only one of "logdone" and "lognotedone" can be present at a time.
+#+begin_example
+#+STARTUP: lognotedone
+#+end_example
+
+** TODO, SEQ_TODO, TYP_TODO
+SEQ_TODO and TYP_TODO are no longer used in Org mode; TODO is now used universally. TODO is used to define file-level TODO keywords.
+#+begin_example
+#+TODO: REPORT BUG KNOWNCAUSE | FIXED
+#+TODO: TODO(t) WAIT(w@/!) | DONE(d!) CANCELED(c@)
+#+end_example
+The syntax for declaring TODO keywords is identical to Org mode:
+1. "|" denotes incomplete states, and states after it denote completion.
+2. WAIT(w@/!)
+   1. w is a fast-key definition.
+   2. @ before "/" indicates logging when entering the WAIT state.
+   3. ! after "/" indicates logging a timestamp when leaving the WAIT state.
+   4. If there is no "/", using "@" or "!" alone defaults to the action when entering.
+   
+** FILETAGS
+Defines file-level TAGS. With tag inheritance enabled, headlines in the file will inherit file-level TAGS.
+#+begin_example
+#+FILETAGS: :Peter:Boss:Secret:
+#+end_example
+
+** TAGS
+Declares TAGS or TAG groups within the file.
+#+begin_example
+#+TAGS: laptop car pc sailboat
+#+TAGS: [ GTD : Control Persp ]
+#+TAGS: [ Project : {P@.+} ]
+#+end_example
+1. The first line declares four TAGS, but they have no practical use. It's just more convenient when entering TAGS.
+2. The second line declares a TAG group. Control and Persp belong to GTD. When searching for headlines with the GTD TAG in Agenda view, headlines with Control or Persp TAG might be retrieved.
+3. The third line uses a simple regular expression to declare a TAG group. All TAGS matching the regular expression belong to TAG "Project".
+4. Cross-defining TAG groups can be used to create hierarchical definitions of TAG groups, forming a hierarchical structure.
+
+** PROPERTY
+Defines file-level properties. With property inheritance enabled, all headlines in the file will inherit file-level properties.
+#+begin_example
+#+PROPERTY: var foo=1
+#+end_example
+*** Properties with special meanings
+If the property key is SUMMARY, the value of SUMMARY will be displayed as the abstract for the file in the file manager. For example:
+#+begin_example
+#+PROPERTY: SUMMARY This is the abstract of an article
+#+end_example

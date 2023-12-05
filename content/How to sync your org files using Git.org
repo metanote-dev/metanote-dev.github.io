@@ -1,0 +1,22 @@
+#+TITLE: How to sync your org files using Git
+#+DATE: 2023-12-05 19:03:57 +0800
+#+OPTIONS: toc:nil num:t ^:t
+#+PROPERTY: LANGUAGE en
+#+PROPERTY: SLUG how_to_sync_your_org_files_using_git
+#+CATEGORY: Metanote
+#+PROPERTY: TAGS sync,git
+
+First, pick a Git tool you like on iOS. I use iSh here.
+
+1. Install Git in iSH using the command:
+   : apk add git openssh
+2. Configure Git with your username, email, and public key, just as you would on the command line.
+3. Create a folder named "orgfiles" in the "On My iPhone" directory using the "Files" app.
+4. In iSH, create a directory and mount "orgfiles" to the iSH file system using the commands:
+   : mkdir orgfiles 
+   : mount -t ios . orgfiles 
+   Follow the prompts in the iPhone's file manager.
+5. Clone your Git repository into the "orgfiles" directory using Git commands.
+6. In Metanote, add the "orgfiles" folder in the "Edit Locations" section of the "Files" tab. Make it the default location if you frequently use it.
+
+That's all!
