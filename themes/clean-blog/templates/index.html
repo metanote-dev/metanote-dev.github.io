@@ -45,7 +45,7 @@
               {{ translations.translations_for(article) }}
             </p>
 	    {% if article.summary %}
-                {{ article.summary|truncate(140) }}
+                {{ article.summary|striptags|truncate(140) }}
             {% endif %}
         </div>
         <hr>
