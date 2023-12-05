@@ -47,6 +47,7 @@ EXTRA_PATH_METADATA = {
     'copy2root/privacy.html': {'path': 'privacy.html'},
     'copy2root/update_info.json': {'path': 'update_info.json'},
     'copy2root/update_info_ios.json': {'path': 'update_info_ios.json'},
+    'copy2root/.nojekyll': {'path': '.nojekyll'},
     }
 
 

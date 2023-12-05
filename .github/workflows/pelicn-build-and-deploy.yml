@@ -42,6 +42,7 @@ jobs:
           branch: gh-pages
           folder: output
           git-config-name: Metanote Team
+          single-commit: true
       # - name: List files in the repository
       #   run: |
       #     pwd
