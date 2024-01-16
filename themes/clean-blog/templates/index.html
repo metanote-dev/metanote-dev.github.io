@@ -36,6 +36,9 @@
               {% endfor %}
 	      in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
               on {{ article.date.strftime('%Y-%m-%d') }}
+	      {% if article.modified and article.modified != article.date %}
+              updated {{ article.modified.strftime('%Y-%m-%d') }}
+	      {% endif %}
 	      {% if article.tags %}
 	      tags: {% for tag in article.tags %}
 	      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
