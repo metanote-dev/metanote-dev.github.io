@@ -1,0 +1,18 @@
+#+TITLE: 自定义 Capture 功能为什么开发了这么久
+#+DATE: 2024-01-16 21:10:34 +0800
+#+OPTIONS: toc:nil num:t ^:nil
+#+PROPERTY: LANGUAGE
+#+PROPERTY: SLUG why_the_developement_of_custom_capture_take_so_long
+
+距离 Metanote iOS 版的上一个 release 版本 0.7.1 的发布已经过去一个多月了，新的版本仍未开发完成，Custom Capture 功能实现起来确实比想像中复杂很多，而且也比预期的开发周期长了很多，好在之前整体的技术方案设计比较合理，在实现过程中并没有遇到什么技术难题，更多的只是工作量的问题。
+
+花费了这么长时间开发这个功能，这几天我也在想是否值得，Org mode 的 Custom Capture 功能其实非常的灵活，有很多可设置项，但即便是熟悉 Emacs 和 Org mode 的用户也未必很了解或使用过这些功能，因为大部的需求可能只需要简单的 Custom Capture template 即可实现。但我不得不尽可能多的支持这些设置项，而且要考虑到许多异常情况，因为：
+1. Custom Capture 功能非常重要，骨灰级的用户可能确实是对一些不常用的设置项是有需求的。
+2. 做为以为 Emacs 用户在移动端带来完整 Org mode 体验为目标的 Metanote 来说，这些设置项无疑需要尽可能多支持，最大限度的带来一致的体验。
+
+
+想要有极致的体验无疑开发成本也是很高的，单是 Custom Capture 功能的 target, type, template, property 这几个大的设置项排列组合起来就已经是一个很大的数据集，外加一些异常情况的处理，先不说开发的工作量，单是测试的工作量也不小了。
+
+在这里我就不一一列举 Metanote 目前的实现的支持的 Custom Capture 的设置项了，在版本发布后再提供一份详细的文档说明。
+
+另外，除了功能本身的开发工作之外，我终于可以使用 Emacs 开发 iOS app 了，之前因为想要尽早上线 Metanote iOS 版，并没有太在意 XCode 的问题，免强使用而已，比如 XCode 的 Git 版本管理功能，简直不能忍。最近花了一些时间并终于解决了这个问题，我已经使用这个方案用 Emacs 开发 Metanote 的新版本一个月左右的时间了，一切都很顺利，验证已线结束，是时候分享一下这个方案了。
