@@ -1,7 +1,7 @@
 #+TITLE: 自定义 Capture 功能为什么开发了这么久
 #+DATE: 2024-01-16 21:10:34 +0800
 #+OPTIONS: toc:nil num:t ^:nil
-#+PROPERTY: LANGUAGE
+#+PROPERTY: LANGUAGE zh
 #+PROPERTY: SLUG why_the_developement_of_custom_capture_take_so_long
 
 距离 Metanote iOS 版的上一个 release 版本 0.7.1 的发布已经过去一个多月了，新的版本仍未开发完成，Custom Capture 功能实现起来确实比想像中复杂很多，而且也比预期的开发周期长了很多，好在之前整体的技术方案设计比较合理，在实现过程中并没有遇到什么技术难题，更多的只是工作量的问题。
