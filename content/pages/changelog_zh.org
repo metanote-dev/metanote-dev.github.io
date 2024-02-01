@@ -4,6 +4,20 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.8.0
+CLOSED: <2024-02-01 四>
+终于，自定义 Capture 功能的开发和测工作完成了！这个过程不但有一些技术挑战，而且有着很大的工作量，有非常多的使用场景需要支持，单是测试工作就用了将近两周。
+
+至此，Metanote 对 Org mode 的核心功能的支持更加完备，包括基本的文档结构，自定义任务管理，自定义 Tag 等 InBufferSettings, 自定义 Agenda view，自定义 Capture 等等，我想 Metanote 应该是在 Emacs 之外对 Org mode 支持最完整的应用了。在后面的开发工作中我们将逐渐支持富文本渲染，包括图片，表格，超链接等，以及加密，导出，Roam Research 等功能，敬请期待。
+
+同时我们启用了公测版本，您可以同时安装正式版和测试版，加入公测，反馈问题， https://testflight.apple.com/join/pAYGdOQe (注意，测试版本可能会存在一些问题，仅供测试使用)
+
+本次更新内容:
+1. 支持自定义 Capture 功能，详细设置和使用请参考官网 https://metanote-dev.github.io/
+2. 所有打开新窗口(Buffer)的功能的入口，包括 capture, agenda view, 文件管理器，收藏等，移至导航栏左侧菜单
+3. “草稿”功能做为一个 Capture 模版不再独立存在，从文件管理器中移除
+4. “收藏”功能独立为一个窗口(Buffer)，从文件管理器中移除
+5. 优化了 MiniBuffer 和 Narrow Buffer 的功能
 * 0.7.1
 CLOSED: <2023-12-11>
 1. 修复了无法删除日程类型自定义 Agenda view 的问题

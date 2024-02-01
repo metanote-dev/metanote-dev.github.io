@@ -4,6 +4,20 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.8.0
+CLOSED: <2024-02-01 四>
+Finally, the development and testing of the custom Capture feature are complete! This process not only presented some technical challenges but also involved a substantial amount of work. There are many usage scenarios to support, and the testing alone took nearly two weeks.
+
+With this, Metanote's support for the core features of Org mode is more comprehensive, including basic document structure, custom task management, custom InBufferSettings like tags, Agenda views, custom Capture, and more. I believe Metanote is now one of the most complete applications supporting Org mode outside of Emacs. In future development, we will gradually introduce support for rich text rendering, including images, tables, hyperlinks, encryption, export functions, Roam Research, and more. Stay tuned.
+
+At the same time, we've initiated the public beta version. You can install both the official and beta versions at same time, join the public test, and provide feedback. https://testflight.apple.com/join/pAYGdOQe , Please note that the beta version may have some bugs and is intended for testing purposes only.
+
+Updates in this release:
+1. Added support for custom Capture feature. For detailed settings and usage, please refer to the official website: https://metanote-dev.github.io/
+2. Moved all functions that open new buffers, including capture, agenda view, file manager, favorites, etc., to the left menu in the navigation bar.
+3. The 'Drafts' feature, now functioning as a Capture template, is no longer independent and has been removed from the file manager.
+4. The 'Favorites' feature is now a separate buffer and has been removed from the file manager.
+5. Optimized the functions of the MiniBuffer and Narrow Buffer.
 * 0.7.1
 CLOSED: <2023-12-11>
 1. Fixed the issue where custom Agenda views of the Agenda type could not be deleted.

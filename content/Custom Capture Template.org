@@ -1,0 +1,163 @@
+#+TITLE: Custom Capture Template
+#+DATE: 2024-01-31 00:09:44 +0800
+#+OPTIONS: toc:nil num:t ^:nil
+#+PROPERTY: LANGUAGE en
+#+PROPERTY: SLUG custom_capture_template
+
+Finally, the development and testing of the custom Capture feature are complete!
+
+* Capture
+The Custom Capture feature in Metanote allows for quick recording and collecting of ideas, tasks, and materials by customizing target files, content templates, and more. By intelligently customizing Capture templates that suit your daily workflow, you can greatly improve the efficiency of information collection and management.
+
+* Using capture
+** Using capture
+In any functional interface of Metanote, you can open the Capture feature by using the '+' button on the left navigation bar. You can choose from default or custom templates, and you can customize Capture templates in the settings (please note that the premium version of Metanote is required).
+
+Another very convenient way to use Capture is through the 3D-touch shortcut menu that pops up from the app icon. This allows you to capture directly without opening the app.
+
+[[file:data/36/36CF9D-1A3A-4359-8F9D-408C70D3FAE2/1.png]]
+
+[[file:data/36/36CF9D-1A3A-4359-8F9D-408C70D3FAE2/2.png]]
+
+** Using MiniBuffer
+The MiniBuffer allows you to directly record content in a mini buffer without leaving the current editing buffer. This way, you can take notes while referring to the content in the current buffer. Moreover, you can switch between the two buffer at any time, and even edit different sections of the same file in two buffer without any issues.
+
+You can choose whether to use the MiniBuffer during capture in the 'Settings.' The default is set to 'Automatic,' where it selects whether to use MiniBuffer or full-screen window capture.
+
+[[file:data/36/36CF9D-1A3A-4359-8F9D-408C70D3FAE2/3.png]]
+** Capture done
+When using the MiniBuffer, click the confirm button to save and exit the MiniBuffer. In full-screen mode, editing the file automatically saves upon exiting.
+** Cancel capture
+Occasionally, during capture, you may change your mind or wish to cancel midway. In such cases, simply click the 'Delete' button, and everything will return to its original state.
+** Visit the last stored capture item
+If you forget where the captured content is stored, use the 'Last Stored' function in the left menu of the navigation bar to directly open the last file edited during capture.
+** Default capture templates
+In Metanote, three default Capture templates are provided, each corresponding to different usage scenarios. The Metanote Premium version allows you to customize an unlimited number of Capture templates and modify or delete the default ones.
+*** Drafts
+"Drafts" template will create a blank file in the root directory with the current time as the file name. The file name format can be customized in the settings. If you cancel the capture, the file will be automatically deleted. This feature is suitable for quickly recording a temporary file, draft, or idea for later organization.
+*** Tasks
+"Tasks" template will append a to-do task in the "Index.org" file in the root directory. This is suitable for quickly recording a to-do item.
+*** Journal
+"Journal" template  will automatically organize a headline in the "Journal.org" file under the root directory, using the current date in the format of year, month, and day, which is known as a datetree in org mode. This is suitable for keeping a diary.
+* Setting up capture
+** template target
+Specification of where the captured item should be placed.
+*** file
+Text will be placed at the beginning or end of that file. You can directly choose an existing file or select a folder. If you choose a folder, you'll need to provide a filename template, supporting template expansion syntax. If the file already exists, it will be used directly. If the file doesn't exist, it will be automatically created.
+*** file+headline
+Fast configuration if the target heading is unique in the file.
+*** file+olp
+For non-unique headings, the full path is safer.
+*** file+olp+datetree
+This target1 creates a heading in a date tree2 for today’s date. If the optional outline path is given, the tree will be built under the node it is pointing to, instead of at top level. Check out the :time-prompt and :tree-type properties below for additional options.
+** template type
+The type of entry, a symbol. Valid values are:
+1. entry
+
+   An Org mode node, with a headline. Will be filed as the child of the target entry or as a top-level entry.
+2. item
+
+   A plain list item or checkbox item, placed in the first plain list at the target location. Again the target file should be an Org file.
+3. plain
+
+   Text to be inserted as it is.
+** template properties
+The rest of the entry is a property list of additional options. Recognized prop- erties are:
+1. prepend
+
+   Normally new captured information will be appended at the target location (last child, last table line, last list item, ...). Setting this property changes that.
+2. immediate-finish
+
+   When set, do not offer to edit the information, just file it away im- mediately. This makes sense if the template only needs information that can be added automatically.
+3. empty-line-before
+4. empty-line-after
+
+   Set this to the number of lines to insert before and after the new item. Default 0, and the only other common value is 1.
+5. time-prompt
+
+   Prompt for a date/time to be used for date/week trees and when filling the template. Without this property, capture uses the current date and time.
+6. tree-type
+
+   When week, make a week tree instead of the month tree, i.e., place the headings for each day under a heading with the current ISO week.
+7. unnarrowed
+
+   Do not narrow the target buffer, simply show the full buffer. De- fault is to narrow it so that you only see the new material.
+
+** template expansion
+In the template itself, special “%-escapes”4 allow dynamic insertion of content. The tem- plates are expanded in the order given here:
+1. %<FORMAT> The result of format-time-string on the FORMAT specification. see https://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
+2. %t Timestamp, date only.
+3. %T Timestamp, with date and time.
+4. %u, %U，Like ‘%t’, ‘%T’ above, but inactive timestamps.
+5. %i Initial content, the region when capture is called while the region is active. If there is text before ‘%i’ on the same line, such as indentation, and ‘%i’ is not inside a ‘%(exp)’ form, that prefix is added before every line in the inserted text.
+6. %f File visited by current buffer when org-capture was called.
+7. %F Full path of the file or directory visited by current buffer.
+8. %^g Prompt for tags, with completion on tags in target file.
+9. %^G Prompt for tags, with completion all tags in all agenda files.
+10. %^t, %^T, %^u, %^U Like ‘%t’, but prompt for date. Similarly ‘%^T’, ‘%^u’, ‘%^U’. You may define a prompt like ‘%^{Birthday}t’.
+11. %^{PROP}p Prompt the user for a value for property PROP.
+12. %^{PROMPT} Prompt the user for a string and replace this sequence with it.
+13. %N Insert the text entered at the Nth ‘%^{PROMPT}’, where N is a number, starting from 1.
+14. %? After completing the template, position point here.
+** Support for Org mode
+This section is provided for users familiar with Org mode; if you're not familiar, feel free to skip it. Metanote is the app with the most comprehensive support for Org mode. It also supports most of the commonly used custom Capture settings in Org mode. Here's a detailed breakdown of the support:
+*** template type
+1. [X] entry - supported
+2. [X] item - supported
+3. [X] checkitem - supported，using item
+4. [X] plain - supported
+5. [ ] table-line - Not supported yet; will be addressed when handling tables in a unified manner later.
+*** target
+1. [X] file - supported
+2. [ ] id - Not supported yet; will be addressed when implementing org-roam later.
+3. [X] file+headline - supported
+4. [X] file+olp - supported
+5. [ ] file+regexp - Not supported yet
+6. [X] file+olp+datetree - supported
+7. [ ] file+function - Not supported for now; due to Metanote not yet supporting elisp, functions are temporarily not supported.
+8. [ ] function - Not supported for now; similarly, as mentioned above, custom file names are not yet supported in Metanote. As a workaround, you can define file names dynamically using the template expansion as in the template when selecting a directory. This allows you to dynamically choose or create different files during capture.
+9. [ ] clock - Not supported for now; clock-related features will be addressed later and supported uniformly.
+*** properties
+1. [X] :prepend - supported
+2. [X] :immediate-finish - supported
+3. [X] :empty-line-before - supported
+4. [X] :empty-line-after - supported
+5. [ ] :clock-in - Not supported for now; clock-related features will be addressed later and supported uniformly.
+6. [ ] :clock-keep - Not supported for now; clock-related features will be addressed later and supported uniformly.
+7. [ ] :clock-resume - Not supported for now; clock-related features will be addressed later and supported uniformly.
+8. [X] :time-prompt - supported
+9. [X] :tree-type - supported
+10. [X] :unnarrowed - supported
+11. [ ] :table-line-pos - Not supported yet; will be addressed when handling tables in a unified manner later.
+12. [ ] :kill-buffer - Not supported; Metanote has internally implemented this functionality automatically.
+13. [ ] :no-save - Not supported; Metanote has internally implemented this functionality automatically.
+
+*** template expansion
+1. [ ] %[FILE] - Not supported yet
+2. [ ] %(EXP) - Not supported yet
+3. [X] %<FORMAT> - supported
+4. [X] %t - supported
+5. [X] %T - supported
+6. [X] %u, %U - supported
+7. [X] %i - supported
+8. [ ] %a - Not supported yet
+9. [ ] %A - Not supported yet
+10. [ ] %l - Not supported yet
+11. [ ] %c - Will support in the next version.
+12. [ ] %x - Will support in the next version.
+13. [ ] %k - Not supported yet
+14. [ ] %K - Not supported yet
+15. [ ] %n - Not supported yet
+16. [X] %f - supported
+17. [X] %F - supported
+18. [ ] %:keyword - Not supported yet
+19. [X] %^g - supported
+20. [X] %^G - supported
+21. [X] %^t, %^T, %^u, %^U - supported
+22. [ ] %^C - Will support in the next version.
+23. [ ] %^L - Will support in the next version.
+24. [X] %^{PROP}p - supported
+25. [X] %^{PROMPT} - supported
+26. [X] %N - supported
+27. [X] %? - supported
+
