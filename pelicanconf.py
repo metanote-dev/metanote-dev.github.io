@@ -55,10 +55,10 @@ DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_RETENTION = [".git",]
 
 INDEX_SAVE_AS = 'blog/index.html'
-ARTICLE_URL = 'blog/{slug}.html'
-ARTICLE_SAVE_AS = 'blog/{slug}.html'
-ARTICLE_LANG_URL = 'blog/{slug}-{lang}.html'
-ARTICLE_LANG_SAVE_AS = 'blog/{slug}-{lang}.html'
+ARTICLE_URL = '{slug}.html'
+ARTICLE_SAVE_AS = '{slug}.html'
+ARTICLE_LANG_URL = '{slug}-{lang}.html'
+ARTICLE_LANG_SAVE_AS = '{slug}-{lang}.html'
 
 THEME = './themes/clean-blog'
 #:plugins
@@ -97,7 +97,8 @@ I18N_SUBSITES = {
     ("FAQ", "/zh/pages/faq.html"),
     ("更新日志", "/zh/pages/changelog.html"),
     ("归档", "/zh/archives.html"),
-)
+        ),
+        'STATIC_PATHS': ['images','data']
     }
     }
 TWITTER_URL = 'https://twitter.com/MetanoteTeam'
