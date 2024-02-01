@@ -1,17 +1,15 @@
 #+TITLE: 更新日志
 #+DATE: 2023-12-04 16:14:02 +0800
-#+OPTIONS: toc:nil num:nil ^:t
+#+OPTIONS: toc:nil num:nil ^:t p:t
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
 * 0.7.1
-黑色星期五！全球范围11月24日至27日永久买断 Metanote 高达五折优惠！不要错过！
-
+CLOSED: <2023-12-11>
 1. 修复了无法删除日程类型自定义 Agenda view 的问题
 2. 修复了编辑器菜单中有出现两个"设置"入口的问题
-
-同时，为了能够让用户更好的使用 Metanote 和 Org mode 的强大功能，我们在https://github.com/metanote-dev/metanote-dev.github.io/wiki. 更新并维护了一些文档和教程，请大家参阅。
 * 0.7.0
+CLOSED: <2023-11-18>
 至此 Custom agenda view 功能完整了，Org mode 中 Custom agenda view 功能的所有设置项都已支持(如果有遗漏请报问题给我们)。
 
 下一步我们将全面支持 Custom capture 功能，敬请期待！
@@ -23,6 +21,7 @@
 5. Capture 和 Agenda view 功能入口统一到了更多菜单中
 6. 多个细节体验优化
 * 0.6.0
+CLOSED: <2023-11-03>
 重磅功能，支持了自定义待办清单(Agenda View)! 可以根据 CATEGORY, TAG, PROPERTY, TODO 关键字等自定义待办清单，并可保存以供随时访问查看。
 
 1. 支持自定义待办清单(Agenda View)
@@ -31,6 +30,7 @@
 4. 支持 InBufferSettings ，详见文档，目前支持的包括 TITLE,DATE,CATEGORY,PROPERTY,TODO,SEQ_TODO,TYP_TODO,FILETAGS,TAGS
 5. 窗口切换效果优化等多处体验优化
 * 0.5.0
+CLOSED: <2023-09-22>
 Metanote 目前处于高速开发过程中，随着我们开发工作的进行，我们会带来更多便利好用的功能，并成为最好的笔记，日程和待办清单工具。感谢早期用户对我们的支持和鼓励。
 
 1. 在这个版本中我们支持了对 Metanote 所有高级功能的一次性永久买断！
@@ -38,6 +38,7 @@ Metanote 目前处于高速开发过程中，随着我们开发工作的进行�
 3. 支持了移动和重命名文件或文件夹。这样您就可以更方便的管理您的草稿和闪现。
 4. 多个体现细节优化
 * 0.4.0
+CLOSED: <2023-09-08>
 重大更新！
 三个非常实用的功能
 1. 支持本地通知了！对于编辑的计划事件，最迟事件和日程可以在安排的时间通知提醒了！
@@ -51,6 +52,7 @@ Metanote 目前处于高速开发过程中，随着我们开发工作的进行�
 
 App 正处于早期高速开发阶段，请保持关注和更新，总会有一些功能让你心动！
 * 0.3.0
+CLOSED: <2023-08-22>
 1. 支持快速记录闪现
 2. 更好的文件管理器
 3. 支持设置默认位置
@@ -58,15 +60,18 @@ App 正处于早期高速开发阶段，请保持关注和更新，总会有一�
 5. 编辑器支持深色模式，并优化了字体颜色
 6. 优化了多个交互细节
 * 0.2.1
+CLOSED: <2023-08-11>
 1. 问题修复
 * 0.2.0
+CLOSED: <2023-08-07>
 1. 支持增加外部文档位置
 2. 支持移除 auto-fill mode.
 3. 问题修复
 * 0.1.0
-4. 流畅丝滑的编辑体验
-5. 兼容 org mode 9.3.6
-6. 支持 capture, agenda view, refile, log note 等功能
-7. 支持 mini buffer, remote edit
-8. 支持多窗口编辑
-9. 支持全文搜索
+CLOSED: <2023-07-27>
+1. 流畅丝滑的编辑体验
+2. 兼容 org mode 9.3.6
+3. 支持 capture, agenda view, refile, log note 等功能
+4. 支持 mini buffer, remote edit
+5. 支持多窗口编辑
+6. 支持全文搜索

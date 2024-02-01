@@ -1,17 +1,15 @@
 #+TITLE: Change Log
 #+DATE: 2023-12-04 16:14:02 +0800
-#+OPTIONS: toc:nil num:nil ^:t
+#+OPTIONS: toc:nil num:nil ^:t p:t
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
 * 0.7.1
-Black Friday! Enjoy a 50% discount on the permanent purchase of Metanote, available globally from November 24th to 27th. Don't miss out on this exclusive offer. Upgrade now!
-
+CLOSED: <2023-12-11>
 1. Fixed the issue where custom Agenda views of the Agenda type could not be deleted.
 2. Fixed the issue where there were two “Settings” entries in the menu.
-
-In addition, in order for users to fully utilize the powerful features of Metanote and Org mode, we have updated and maintained some documents and tutorials at [[https://github.com/metanote-dev/metanote-dev.github.io/wiki]]. Please refer to them.
 * 0.7.0
+CLOSED: <2023-11-18>
 By now, we support all the settings for the custom agenda view feature in Org mode. If you find any omissions, please report the issues to us.
 
 Next step, we will support the "Custom capture" feature. Stay tuned!
@@ -23,6 +21,7 @@ Next step, we will support the "Custom capture" feature. Stay tuned!
 5. The entry points for Capture and Agenda View have been unified into the More menu.
 6. Various details and user experience optimizations have been implemented.
 * 0.6.0
+CLOSED: <2023-11-03>
 Exciting features! Now supporting custom agenda views! You can customize your to-do lists based on CATEGORY, TAG, PROPERTY, TODO keywords, etc., and save them for easy access and review.
 
 1. Customizable agenda views supported
@@ -31,6 +30,7 @@ Exciting features! Now supporting custom agenda views! You can customize your to
 4. Support for InBufferSettings, refer to the documentation. Currently supported settings include TITLE, DATE, CATEGORY, PROPERTY, TODO, SEQ_TODO, TYP_TODO, FILETAGS, TAGS.
 5. Window switching effects optimized, along with multiple user experience enhancements.
 * 0.5.0
+CLOSED: <2023-09-22>
 Metanote is currently in a fast-paced development phase, and as we progress with our development work, we will bring more convenient and useful features, aiming to become the best note, calendar, and to-do list tool. We appreciate the support and encouragement from our early users.
 
 1. In this version, we have introduced the option to make a one-time purchase for permanent access to all Metanote premium features!
@@ -38,6 +38,7 @@ Metanote is currently in a fast-paced development phase, and as we progress with
 3. Added support for moving and renaming files or folders, making it easier for you to manage your drafts and flashes.
 4. Multiple user experience improvements and refinements.
 * 0.4.0
+CLOSED: <2023-09-08>
 Major Update!
 Three highly useful features:
 1. Local notifications are now supported! Receive reminders for SCHEDULED, DEADLINE, and ACTIVE planning.
@@ -51,18 +52,22 @@ Experience Improvements:
 
 The app is in its early stages of rapid development, so stay tuned for updates – there are always exciting features coming your way!
 * 0.3.0
+CLOSED: <2023-08-22>
 1. Support Drafts! Now your can capture drafts!
 2. a better file browser
 3. Support set default location
 4. move cursor quickly
 5. editor support dark mode and better font color
 * 0.2.1
+CLOSED: <2023-08-11>
 1. bugfix
 * 0.2.0
+CLOSED: <2023-08-07>
 1. Support adding locations! Support iCloud or other file provider.
 2. Support remove auto-fill mode.
 3. bug fix
 * 0.1.0
+CLOSED: <2023-07-27>
 1. An incredibly smooth editing experience.
 2. Compatible with org mode version 9.3.6
 3. Supports capture, agenda view, refile, log note and more.
