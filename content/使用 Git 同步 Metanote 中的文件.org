@@ -1,20 +1,16 @@
 #+TITLE: 使用 Git 同步 Metanote 中的文件
 #+DATE: 2023-12-05 16:27:32 +0800
+#+PROPERTY: MODIFIED [2024-02-21 三]
 #+OPTIONS: toc:nil num:t ^:t
 #+PROPERTY: LANGUAGE zh
 #+PROPERTY: SLUG how_to_sync_your_org_files_using_git
 #+CATEGORY: Metanote
 #+PROPERTY: TAGS sync,git
 
-选择一个 iOS 上你喜欢的 Git 工具，这里我用 iSh 举例。
+选择一个 iOS 上你喜欢的 Git 工具，这里我用 PolyGit 举例。
 
-1. 打开 iSH，并通过以下命令按装 Git 
-   : apk add git openssh
-2. 配置 git，用户名，邮箱，公钥等，和在命令行中完全一样
-3. 打开 iPhone 上的 “文件” app，在 “On My iPhone” 下新建一个文件夹，比如 “orgfiles”
-4. 在 iSH 中新建一个目录，并将 “orgfiles” 挂载到 iSH 的文件系统上 
-   : mkdir orgfiles 
-   : mount -t ios . orgfiles 
-   执行以上命令后会弹出 iPhone 的文件管理器，选择 “On My iPhone” 下刚刚新建的 “orgfiles” 并点击完成即可。
-5. 在 iSH 中用 git 命令将你的 git 仓库 clone 到 orgfiles 即可
-6. 同样，打开 Metanote，在 “文件” 的左上角选择编辑 locations，然后添加 “orgfiles” 文件夹，然后等待处理完成即可，如果你的文件不是非常非常多，几秒钟就可以处理完成了，如果你主要使用这个文件夹，就将它设为默认 location
+1. 在 PolyGit 新建或 Clone 一个仓库，完成后进入下一步
+2. 打开 Metanote，从屏幕边缘左滑打开文件管理， 在左上角选择“编辑位置” 并点击 "+" 号添加新的位置
+3. 在弹出的系统文件选择中依次选择 “我的iPhone” -> PolyGit -> "刚刚 Clone 的仓库"，然后点击右上角“打开”即可
+4. 首次添加外部位置时 Metanote 会逐一解析每个文件中的待办项目并生成待办列表和日程，如果你的文件不是非常非常多，几秒钟就可以处理完成了，如果你主要使用这个文件夹，就将它设为默认位置
+5. 当文件在外部发生变更后，比如拉取了新内容，考虑到性能问题，Metanote 目前并没有自动解析新增的变更的文件，您可以在 Metanote 的文件管理中下拉刷新或点击“同步”按钮主动处理变更的文件。注意，这只会影响待办列表和日程的更新，并不会影响文件内容本身，也就说即使您没有主动刷新您在 Metanote 打开的文件也是最新的。
