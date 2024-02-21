@@ -4,6 +4,20 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.9.0
+CLOSED: <2024-02-19 一>
+Refreshed and revamped!
+1. Redesigned the logo.
+2. Completely optimized the main interactive experience, supporting sidebars and more mobile-friendly swipe actions for efficient and smooth use.
+3. Focused on optimizing the keyboard design:
+   - Features are centralized and clear.
+   - Added support for sound feedback.
+   - Enabled cursor movement with the joystick.
+4. Added support for hiding files and folders.
+5. Added the ability to add working directories for Obsidian and Logseq, integrating and managing them uniformly.
+6. Supported customization of the startup page.
+7. Enabled opening the current content in a new tab.
+8. Various detailed optimizations and bug fixes.
 * 0.8.0
 CLOSED: <2024-02-01 四>
 Finally, the development and testing of the custom Capture feature are complete! This process not only presented some technical challenges but also involved a substantial amount of work. There are many usage scenarios to support, and the testing alone took nearly two weeks.
