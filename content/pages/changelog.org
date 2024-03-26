@@ -4,6 +4,20 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.10.0
+CLOSED: <2024-03-26 二>
+1. Automatic updates for agenda views and to-do list are now supported. Whether you edit files in Metanote or use other app to edit files in external folders, or retrieve updates from iCloud or Git, Metanote can now automatically detect changes to files and update them accordingly. Your content will always stay up to date.
+2. Agenda Filter support is now available, allowing you to filter schedules and to-do items directly by category, todo keyword, and tag.
+3. Buffer outlines now support clicking to jump to a specific headline.
+4. Customization of Todo Keyword icons and colors is now possible.
+5. More intuitive and convenient multi-buffer management is now provided. You can now directly switch buffers from the Buffer list.
+6. Various other optimizations have been made, resulting in increased stability.
+
+   
+Regarding file synchronization, Metanote can add any external directory that supports folder-level File Provider and automatically detect file updates. Unfortunately, many cloud drives only support file-level File Provider. We have implemented the ability to add individual files to Metanote, which is still in testing and is expected to be launched in next version. Therefore, the best regular file synchronization solutions for now are:
+1. iCloud, which supports folder-level File Provider and can be directly added to Metanote.
+2. Git, where most Git app's directories can be directly added to Metanote. For example, with PolyGit, when you git pull, Metanote will automatically update the file content.
+3. Other apps that support synchronization. Most document editing apps can be directly added to Metanote, such as Obsidian and Logseq. When files in these apps are updated, Metanote will automatically handle the edited files.
 * 0.9.0
 CLOSED: <2024-02-19 一>
 Refreshed and revamped!

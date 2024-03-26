@@ -4,6 +4,20 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.10.0
+CLOSED: <2024-03-26 二>
+1. 支持了自动更新日程和待办事项，无论是在 Metanote 中编辑了文件还是使用其它工具编辑了外部文件夹中的文件，又或者是从 iCloud 或 Git 中获取了更新，现在 Metanote 都能自动检测到文件的变化，并自动更新，您所有的内容都将随时保持最新。
+2. 支持了 Agenda Filter，现在您可以在日程和待办事项中直接通过分类，状态以及 Tag 标签进行筛选了
+3. 文档大纲支持点击跳转到某个标题了
+4. 可以自定义 Todo Keyword 的图标和颜色了
+5. 更加直观方便的多窗口管理，现在您可以从 Buffer list 中直接点击切换窗口了
+6. 其它多个细节优化，现在更加稳定了
+
+
+关于文件同步的说明，Metanote 可以添加任何支持文件夹级 File Provider 的外部目录并自动感知文件更新，但可惜的是很多云盘只支持了文件级的 File Provider，我们已经实现了添加独立文件到 Metanote 中，仍在测试中，预计会在一个版本中上线。所以目前体验最好的常规文件同步方案有
+1. iCloud，iCloud 支持文件夹级的 File Provider，可以直接添加进 Metanote
+2. Git，多数 Git 应用的目录都可以直接添加进 Metanote，拿 PolyGit 举例，当您 git pull 时 Metanote 将自动更新文件内容
+3. 其它支持同步的应用，多数文档编辑类应用都可以直接添加进 Metanote，比如 Obsidian 和 Logseq，当这些应用中的文件发生更新时 Metanote 将自动处理发生编辑的文件。
 * 0.9.0
 CLOSED: <2024-02-19 一>
 焕然一新!
