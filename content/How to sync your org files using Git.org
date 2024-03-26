@@ -1,6 +1,6 @@
 #+TITLE: How to sync your org files using Git
 #+DATE: 2023-12-05 19:03:57 +0800
-#+PROPERTY: MODIFIED [2024-02-21 三]
+#+PROPERTY: MODIFIED [2024-03-26 二]
 #+OPTIONS: toc:nil num:t ^:t
 #+PROPERTY: LANGUAGE en
 #+PROPERTY: SLUG how_to_sync_your_org_files_using_git
@@ -13,6 +13,8 @@ Choose a Git tool on iOS that you like, here I'll use PolyGit as an example.
 2. Open Metanote, swipe from the left edge to open the file manager. In the top left corner, choose "Edit Location," and click the "+" to add a new location.
 3. In the system file selection that pops up, choose "My iPhone" -> PolyGit -> "The Repository You Just Cloned," then click "Open" in the top right corner.
 4. When adding an external location for the first time, Metanote will parse each file's to-do items and generate a to-do list and agenda view. If your files are not numerous, this process will only take a few seconds. If you primarily use this folder, set it as the default location.
-5. When files change externally, such as pulling new content, due to performance considerations, Metanote currently doesn't automatically parse newly changed files. You can manually refresh by pulling down in Metanote's file management or clicking the "Sync" button to actively handle changed files. Note that this will only affect the update of to-do lists and agenda views; it won't impact the content of the files themselves. In other words, even if you don't manually refresh, the files are still up-to-date when you open them in Metanote.
+5. When files change externally, such as pulling new content, ++ due to performance considerations, Metanote currently doesn't automatically parse newly changed files. ++
+
+   From Metanote iOS version 0.10.0, automatic update is supported. Now all you need to do is switch back to Metanote after the git pull operation, and all updates will be automatically applied instantly. And, after editing is complete in Metanote, switch to the Git tool to perform the git push operation.
 
 That's all!
