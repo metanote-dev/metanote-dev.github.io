@@ -4,6 +4,11 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.10.1
+CLOSED: <2024-04-08 一>
+1. Fixed issues after upgrading to iOS 17.4.1.
+2. Fixed issues on iOS 14.x.
+3. Fixed other user-reported issues.
 * 0.10.0
 CLOSED: <2024-03-26 二>
 1. Automatic updates for agenda views and to-do list are now supported. Whether you edit files in Metanote or use other app to edit files in external folders, or retrieve updates from iCloud or Git, Metanote can now automatically detect changes to files and update them accordingly. Your content will always stay up to date.
