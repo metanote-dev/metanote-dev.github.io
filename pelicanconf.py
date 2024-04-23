@@ -48,6 +48,7 @@ EXTRA_PATH_METADATA = {
     'copy2root/update_info.json': {'path': 'update_info.json'},
     'copy2root/update_info_ios.json': {'path': 'update_info_ios.json'},
     'copy2root/.nojekyll': {'path': '.nojekyll'},
+    'copy2root/microsoft-identity-association.json': {'path': 'microsoft-identity-association.json'},
     }
 
 
