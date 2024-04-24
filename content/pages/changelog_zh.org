@@ -4,6 +4,11 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.11.0
+CLOSED: <2024-04-24 三>
+重要更新，现在可以支持同步了。
+
+Metanote 支持多种同步方式使您的文档可以在电脑与手机间无缝衔接，您可以在设置中配置同步，包括本地目录，Git, iCloud, Dropbox, OneDrive, WebDAV(自建 WebDAV Server, ownCloud, Yandex.disk, 坚果云等)，其中本地目录，Git 与 iCloud 通过添加外部文件夹实现，其它方式内置同步。同步是全自动的，您几乎不用主动触发，大部分情况下当您需要时，您最新的文件已经在那里了。您可以将 Metanote 做为数据中心，使用不同的目录与不同的云服务同步，也可以在同一个目录上同时与多个云端同步，更多玩法请尽情探索。
 * 0.10.1
 CLOSED: <2024-04-08 一>
 1. 修复了升级 iOS 17.4.1 后的兼容性问题

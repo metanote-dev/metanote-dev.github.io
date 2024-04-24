@@ -4,6 +4,12 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.11.0
+CLOSED: <2024-04-24 三>
+Major update: Sync support is now available.
+
+Metanote supports various sync methods to seamlessly connect your documents between your computer and iPhone. You can configure sync in the settings, including local directories, Git, iCloud, Dropbox, OneDrive, WebDAV (Apache WebDAV Server, ownCloud, Yandex.disk, etc.). Local directories, Git, and iCloud are implemented by adding external folders, while other methods have built-in sync. Sync is fully automatic, and you hardly need to trigger it actively. In most cases, when you need it, your latest files are already there. You can use Metanote as a data center, syncing with different directories and different cloud services, or syncing with multiple cloud services on the same directory. Feel free to explore more ways to use it.
+
 * 0.10.1
 CLOSED: <2024-04-08 一>
 1. Fixed issues after upgrading to iOS 17.4.1.
