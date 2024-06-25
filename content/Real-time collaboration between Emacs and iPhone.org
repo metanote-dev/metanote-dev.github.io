@@ -1,0 +1,111 @@
+#+TITLE: Real-time collaboration between Emacs and iPhone
+#+DATE: 2024-06-25 16:21:08 +0800
+#+OPTIONS: toc:nil num:t ^:nil
+#+PROPERTY: LANGUAGE en
+#+PROPERTY: SLUG real_time_collaboration_between_Emacs_and_iphone
+
+Let's take a look at the results before implementing.
+#+begin_quote
+There should be a video demonstration here, but I haven't had time to record it yet.
+#+end_quote
+
+* Overview
+Some features and prerequisites. The following setup is for Mac; similar settings can be applied on Windows.
+
+1. After editing and saving files on mobile, you can immediately see the content updates in Emacs. Similarly, after editing and saving in Emacs, you will quickly see the updates in the mobile app, allowing for real-time collaboration.
+2. Fully automatic and seamless. On the Mac side, everything is fully automatic. On the mobile side, you only need to pull down to refresh in rare cases.
+3. No additional software is required on the Mac side except for Emacs.
+4. The Mac OS X uses the built-in httpd with WebDAV protocol. Depending on your needs, you can use it within a local network or over the internet. Users with higher security requirements can configure certificates themselves. For users using other cloud sync methods, the real-time collaboration and ease of use depend on the cloud service itself and may not achieve the same effect as this solution.
+5. On the mobile side, choose an app that supports WebDAV protocol. Here we use our own app, Metanote, as an example.
+6. That's all you need. Now you can start the implementation.
+
+* Implementation
+** Config and start WebDAV service
+Mac OS X already includes apache2, and we just need to configure it slightly to support WebDAV.
+
+1. First, check if the built-in httpd service works correctly. Open the "Terminal" and execute the following command to start the httpd service:
+   #+begin_src bash
+     sudo apachectl start
+   #+end_src
+   Then open your browser and visit http://localhost. If it displays "It works!" everything is OK. Now, stop the httpd service using the following command and prepare to set up WebDAV:
+   #+begin_src bash
+     sudo apachectl stop
+   #+end_src
+2. Prepare the working directory. If you are an org mode user, you probably already have a directory for storing all your org files. Let's assume your Mac username is "abc" and this directory is:
+   : /Users/abc/Documents/org_files
+   If you don't have this directory, you need to create one as we will use it later.
+3. Continue in "Terminal" and execute the following commands:
+   #+begin_src bash
+     cd /etc/apache2/
+     # Backup the configuration file
+     sudo cp httpd.conf httpd.conf.bak
+     # Edit the httpd configuration file
+     sudo emacs httpd.conf
+   #+end_src
+4. Edit the httpd.conf file and ensure the following modules required are present and not commented out (i.e., no "#" at the beginning of the line), and set httpd to run as the current user, so it can access your files:
+   #+begin_src xml
+     LoadModule auth_digest_module libexec/apache2/mod_auth_digest.so
+     LoadModule dav_module libexec/apache2/mod_dav.so
+     LoadModule dav_fs_module libexec/apache2/mod_dav_fs.so
+     LoadModule dav_lock_module libexec/apache2/mod_dav_lock.so
+     Include /private/etc/apache2/extra/httpd-dav.conf
+     <IfModule unixd_module>
+       # Your current username
+       User abc
+       # Your current user's group
+       Group staff
+     </IfModule>
+   #+end_src
+5. Continue in "Terminal" and execute the following commands:
+   #+begin_src bash
+     # Backup the configuration file
+     sudo cp extra/httpd-dav.conf extra/httpd-dav.conf.bak
+     sudo emacs extra/httpd-dav.conf
+   #+end_src
+6. Edit the httpd-dav.conf file with the following content:
+   #+begin_src xml
+DavLockDB "/Users/abc/Documents/DavLock"
+
+Alias /org_files "/Users/abc/Documents/org_files"
+
+<Directory "/Users/abc/Documents/org_files">
+    Dav On
+
+    AuthType Digest
+    AuthName DAV-upload
+    # You can use the htdigest program to create the password database:
+    #   htdigest -c "/Users/abc/Documents/user.passwd" DAV-upload admin
+    AuthUserFile "/Users/abc/Documents/user.passwd"
+    AuthDigestProvider file
+
+    # Allow universal read-access, but writes are restricted
+    # to the admin user.
+    <RequireAny>
+        Require method GET POST OPTIONS
+        Require user admin
+    </RequireAny>
+</Directory>
+   #+end_src
+
+   OK, now set the username and password required to access the WebDAV service. Let's assume they are admin and 12345678:
+   : htdigest -c "/Users/abc/Documents/user.passwd" DAV-upload admin
+7. Now we have completed the WebDAV setup. To ensure it works correctly, you need to check if the firewall *allows httpd to receive incoming connections* and grant httpd *full disk access* in the Privacy & Security settings.
+8. Finally, start the WebDAV service with the following command in "Terminal":
+   : sudo apachectl start
+** Setting up Emacs
+Add the following content to your Emacs init file to enable auto-revert:
+#+begin_src elisp
+  ;; Enable global auto-revert mode
+  (global-auto-revert-mode t)
+  ;; Experience shows that using notify is slower
+  (setq auto-revert-use-notify nil)
+  ;; Using interval checking is significantly faster, set it to 1 second or 0.5 seconds
+  (setq auto-revert-interval 0.5)
+#+end_src
+** Mobile setup
+Open Metanote, go to Settings, and add a WebDAV sync repository. Select "/Documents/" as the local folder, enter "http://xxx.xxx.xxx.xxx/org_files" as the server, and use the username admin and password 12345678. Save and test. If everything works, return to the homepage, tap the sync button, or pull down to refresh for real-time synchronization.
+
+* Tips
+1. You don't need to keep your Mac online all the time. You can use your Mac as usual, and httpd will automatically resume work when the Mac wakes up. Metanote can also work completely offline. The next time your Mac wakes up, open Metanote, and it will automatically complete the synchronization.
+2. Metanote will automatically sync every time it is opened. Since it is on the local network, the sync speed is very fast, often completing before you open the file. If you edit files on the Mac while Metanote is open, you need to tap sync or pull down to refresh to see the updated content. This is the only scenario where you need to operate manually.
+3. If you have a computer at both home and office, you can set up two sync repositories in Metanote to sync with the computers at home and the office. After synchronization, the data among the three will be consistent. This way, whether you are at the office, home, or traveling, you can access and edit your files.

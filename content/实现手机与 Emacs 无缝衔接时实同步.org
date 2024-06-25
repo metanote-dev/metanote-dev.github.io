@@ -1,0 +1,108 @@
+#+TITLE: Emacs 与 iPhone 实现无缝衔接与时实协作
+#+DATE: 2024-06-24 22:08:09 +0800
+#+OPTIONS: toc:nil num:t ^:nil
+#+PROPERTY: LANGUAGE zh
+#+PROPERTY: SLUG real_time_collaboration_between_Emacs_and_iphone
+
+在具体实现前先看一下效果
+#+begin_quote
+此处应有一个视频演示，但我还没有时间录制
+#+end_quote
+* 概述
+此方案的一些特点和前置条件，以下为在 Mac 端的设置，如果是在 Windows 上可进行类似的设置
+1. 移动编辑完并保存后可以在 Emacs 中立即看到内容更新。在 Emacs 中编辑并保存内容后，打开移动端 App 也会很快看到更新，是以两者可以时实协作。
+2. 全自动，无感知，Mac 端完全自动，移动端极少数情况下也仅需要下拉刷新操作即可
+3. Mac 端除 Emacs 之外，无需安装任何其它软件
+4. Mac 端使用系统内置的 httpd 并基于 WebDAV 协议，根据个人需要可在局域网内或在互联网中使用，对安全性要求较高的用户可自行配置证书。对于使用其它云同步方式的用户，协作的时实性和易用性取决于云服务本身，不保能达到与此方案相同的效果。
+5. 移动端选择一款支持 WebDAV 协议的 app 即可，这里使用我们自己开发的 Metanote 举例。
+6. 这就是所有需要的东西了，现可以开始实现了
+
+* 实现
+** 配置和启动 WebDAV 服务
+Mac OS X 已经自带了 apache2，我们只需要稍加配制即可支持 WebDAV。
+
+1. 先看一下自带的 httpd 服务能否正常工作，打开“终端”，执行以下命令启动 httpd 服务
+   #+begin_src bash
+     sudo apachectl start
+   #+end_src
+   然后打开浏览器并访问 http://localhost ， 如果显示 "It works!" 则表示一切正常。好，现在一切正常，我们先用以下命令停止 httpd 服务，并开始准备设置 WebDAV
+   #+begin_src bash
+     sudo apachectl stop
+   #+end_src
+2. 准备工作目录，如果您是 org mode 的用户，那么您很可能已经有了一个目录存放所有的 org 文件，我们假设您 Mac 的用户名是"abc"，这个目录是
+   : /Users/abc/Documents/org_files
+   如果没有那么您需要创建一个，后面会用到此目录
+3. 继续在"终端"中执行以下命令
+   #+begin_src bash
+     cd /etc/apache2/
+     # 备份配制文件
+     sudo cp httpd.conf httpd.conf.bak
+     # 编辑 httpd 配置文件
+     sudo emacs http.conf
+   #+end_src
+4. 编辑 httpd.conf 并确保以下启动 WebDAV 所需的功能模块存在且没有被注释掉，即行首没有 "#"，并设置 httpd 以当前用户的身份运行，这样 httpd 才能正常访问您的文件
+   #+begin_src xml
+     LoadModule auth_digest_module libexec/apache2/mod_auth_digest.so
+     LoadModule dav_module libexec/apache2/mod_dav.so
+     LoadModule dav_fs_module libexec/apache2/mod_dav_fs.so
+     LoadModule dav_lock_module libexec/apache2/mod_dav_lock.so
+     Include /private/etc/apache2/extra/httpd-dav.conf
+     <IfModule unixd_module>
+       # 您当前的用户名
+       User abc
+       # 您当前的用户所在的用户组
+       Group staff
+     </IfModule>
+   #+end_src
+5. 继续在"终端"中执行以下命令
+   #+begin_src bash
+     # 备份配置文件
+     sudo cp extra/httpd-dav.conf extra/httpd-dav.conf.bak
+     sudo emacs extra/httpd-dav.conf
+   #+end_src
+6. 编辑 httpd-dav.conf 文件内容如下:
+   #+begin_src xml
+DavLockDB "/Users/abc/Documents/DavLock"
+
+Alias /org_files "/Users/abc/Documents/org_files"
+
+<Directory "/Users/abc/Documents/org_files">
+    Dav On
+
+    AuthType Digest
+    AuthName DAV-upload
+    # You can use the htdigest program to create the password database:
+    #   htdigest -c "/Users/abc/Documents/user.passwd" DAV-upload admin
+    AuthUserFile "/Users/abc/Documents/user.passwd"
+    AuthDigestProvider file
+
+    # Allow universal read-access, but writes are restricted
+    # to the admin user.
+    <RequireAny>
+        Require method GET POST OPTIONS
+        Require user admin
+    </RequireAny>
+</Directory>
+   #+end_src
+
+   OK, 最后通过以下命令设置您访问 WebDAV 服务需要用户名和密码，我们假设是 admin 和 12345678
+   : htdigest -c "/Users/abc/Documents/user.passwd" DAV-upload abc
+7. 至此我们已经完成了 WebDAV 的设置，为确保它能正常工作，您还需要检查防火墙是否 *允许 httpd 接收传入连接* ，并在隐私与安全性设置中授予 httpd *完全的磁盘访问权限*
+8. 最后，在"终端"中通过以下命令启动 WebDAV 服务
+   : sudo apachectl start
+** 设置 Emacs
+在 emacs 的配置文件中添加以下内容，开启 auto-revert
+#+begin_src elisp
+  ;; 开启全局 auto revert mode
+  (global-auto-revert-mode t)
+  ;; 实践证明使用 notify 会慢一些
+  (setq auto-revert-use-notify nil)
+  ;; 使用定时检查明显要快，可以设为 1 秒或 0.5 秒
+  (setq auto-revert-interval 0.5)
+#+end_src
+** 移动端设置
+打开 Metanote，进入设置，添加 WebDAV 同步仓库，本地文件夹选"/Documents/"即可，服务器填 "http://xxx.xxx.xxx.xxx/org_files"， 用户名 admin 密码 12345678，保存并测试，一切正常返回到首页点击同步按钮或下拉刷新即可实时同步了。
+* 一些技巧
+1. 您无需始终保持 Mac 在线，您可以按平时的方式正常使用 Mac，httpd 会在 Mac 唤醒时自动恢复工作。Metanote 也完全可以离线工作，等到下次 Mac 唤醒时打开 Metanote 会自动完成同步。
+2. Metanote 每次打开时会自动同步，由于是局域网，同步速度很快，往往在您打开文件之前同步就已经完成了。如果您在 Metanote 打开期间编缉了 Mac 上的文件，则需要在 Metanote 中点击同步或下拉刷新才能看到更新的内容，这是唯一需要您主动操作的场景
+3. 如果您在家和办公室各有一台电脑，您台可以在 Metanote 上设置两个同步仓库，分别与家中和办公室中的电脑同步，同步后三者数据会保持一至，这新无论您是在办公室还是在家又或都在旅游都可访问和编辑您的文件了。
