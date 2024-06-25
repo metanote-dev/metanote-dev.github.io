@@ -4,6 +4,22 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.12.0
+CLOSED: [2024-06-25 二]
+We continuously explore ways to optimize Metanote through practical use, and this latest upgrade might be the best experience yet. Our developers have started using Metanote heavily in their daily development work to record and manage progress. With thousands of org documents seamlessly integrated with Emacs and real-time synchronization, Metanote has become as essential to us as Emacs. We have shared on our official website how to synchronize with Emacs in real-time and some practical use cases of how we use Metanote daily for your reference.
+
+This update includes:
+1. Overall optimization of interaction and interface.
+2. Support for directly opening external files.
+3. Support for *scratch* buffer.
+4. Editor support for adjusting font size.
+5. Editor support for auto-hiding and displaying the navigation bar and toolbar.
+6. Performance optimization for full-text search.
+7. Newest added headlines in the agenda view and todo list will be listed at the top.
+8. Opening content in the agenda and task list will automatically narrow to specific subtree.
+9. Narrow buffer now supports widen.
+10. Optimization of buffer list management.
+
 * 0.11.0
 CLOSED: <2024-04-24 三>
 Major update: Sync support is now available.
