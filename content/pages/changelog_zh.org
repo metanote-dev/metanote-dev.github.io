@@ -4,6 +4,15 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.12.1
+CLOSED: [2024-06-28 五]
+1. 清空 scratch buffer 前需要确认
+2. 起始页支持设置为某一文件或文件夹，且不可关闭
+3. 优化了设置页的显示
+4. 打开文件时初始路径为默认位置的根目录
+5. 新文件内容模版不再使用 capture template，而是可以独立设置了
+6. agenda view 支持侧滑变更状态
+7. agenda view 支持显示 category, tags 和优先级了
 * 0.12.0
 CLOSED: [2024-06-25 二]
 我们不断在实践中探索优化 Metanote，这次升级的版本可能是目前以来体验最好的版本。我们内部开发人员已经开始在日常的开发工作中重度使用 Metanote 记录和管理开发进度，上千份 org 文档与 Emacs 之间无缝衔接，实时同步，它已对于我们来说已经同 Emacs 一样重要。我们在我们的官网分享了如何与 Emacs 之间实时同步以及我们日常使用 Metanote 的一些实践案例，以供您参考。

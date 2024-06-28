@@ -1,5 +1,6 @@
 #+TITLE: Emacs 与 iPhone 实现无缝衔接与时实协作
 #+DATE: 2024-06-24 22:08:09 +0800
+#+PROPERTY: MODIFIED [2024-06-27 四]
 #+OPTIONS: toc:nil num:t ^:nil
 #+PROPERTY: LANGUAGE zh
 #+PROPERTY: SLUG real_time_collaboration_between_Emacs_and_iphone
@@ -102,6 +103,9 @@ Alias /org_files "/Users/abc/Documents/org_files"
 #+end_src
 ** 移动端设置
 打开 Metanote，进入设置，添加 WebDAV 同步仓库，本地文件夹选"/Documents/"即可，服务器填 "http://xxx.xxx.xxx.xxx/org_files"， 用户名 admin 密码 12345678，保存并测试，一切正常返回到首页点击同步按钮或下拉刷新即可实时同步了。
+* 原理
+1. 由于 httpd 与 emacs 在相同用户下运行，两者都是直接访问文件系统，因此，httpd 对文件的任何修改都会立即反应到 emacs，同理 emacs 对文件的任何修改也都可以被通过 httpd 访问文件内容的端获取到。如果 emacs 通过 httpd 访问的话则会出现延迟的情况，而且需要不断轮询 httpd 才能发现文件是否变化，无法达到实时的效果
+2. 移动端则通过 httpd 访问文件，Metanote 每次打开时自动与 httpd 同步文件，每次编缉完文件也立即同步，这样机制确保了大部分情况下在使用 Metanote 时文件都是最新的。
 * 一些技巧
 1. 您无需始终保持 Mac 在线，您可以按平时的方式正常使用 Mac，httpd 会在 Mac 唤醒时自动恢复工作。Metanote 也完全可以离线工作，等到下次 Mac 唤醒时打开 Metanote 会自动完成同步。
 2. Metanote 每次打开时会自动同步，由于是局域网，同步速度很快，往往在您打开文件之前同步就已经完成了。如果您在 Metanote 打开期间编缉了 Mac 上的文件，则需要在 Metanote 中点击同步或下拉刷新才能看到更新的内容，这是唯一需要您主动操作的场景

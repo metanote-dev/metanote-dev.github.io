@@ -105,6 +105,10 @@ Add the following content to your Emacs init file to enable auto-revert:
 ** Mobile setup
 Open Metanote, go to Settings, and add a WebDAV sync repository. Select "/Documents/" as the local folder, enter "http://xxx.xxx.xxx.xxx/org_files" as the server, and use the username admin and password 12345678. Save and test. If everything works, return to the homepage, tap the sync button, or pull down to refresh for real-time synchronization.
 
+* Principle
+1. Since httpd and Emacs run under the same user, both directly access the file system. Therefore, any changes made by httpd to the files are immediately reflected in Emacs, and similarly, any changes made by Emacs to the files can be accessed through httpd. If Emacs accesses the files through httpd, there will be a delay and it will need to constantly poll httpd to detect file changes, failing to achieve real-time updates.
+2. On the mobile side, the files are accessed through httpd. Metanote automatically syncs files with httpd every time it is opened and immediately after editing the files. This mechanism ensures that in most cases, the files are up-to-date when using Metanote.
+   
 * Tips
 1. You don't need to keep your Mac online all the time. You can use your Mac as usual, and httpd will automatically resume work when the Mac wakes up. Metanote can also work completely offline. The next time your Mac wakes up, open Metanote, and it will automatically complete the synchronization.
 2. Metanote will automatically sync every time it is opened. Since it is on the local network, the sync speed is very fast, often completing before you open the file. If you edit files on the Mac while Metanote is open, you need to tap sync or pull down to refresh to see the updated content. This is the only scenario where you need to operate manually.

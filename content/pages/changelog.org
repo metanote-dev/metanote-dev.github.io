@@ -4,6 +4,15 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.12.1
+CLOSED: [2024-06-28 五]
+1. Confirmation is required before clearing the scratch buffer.
+2. The start page can be set to a specific file or folder and cannot be closed.
+3. Optimized the display of the settings page.
+4. The initial path when opening a file is set to the root directory of the default location.
+5. New file content templates are now set independently instead of using capture templates.
+6. Agenda view supports swipe gestures to change status.
+7. Agenda view now supports displaying category, tags, and priority.
 * 0.12.0
 CLOSED: [2024-06-25 二]
 We continuously explore ways to optimize Metanote through practical use, and this latest upgrade might be the best experience yet. Our developers have started using Metanote heavily in their daily development work to record and manage progress. With thousands of org documents seamlessly integrated with Emacs and real-time synchronization, Metanote has become as essential to us as Emacs. We have shared on our official website how to synchronize with Emacs in real-time and some practical use cases of how we use Metanote daily for your reference.
