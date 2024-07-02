@@ -1,8 +1,13 @@
 #+TITLE: Real-time collaboration between Emacs and iPhone
 #+DATE: 2024-06-25 16:21:08 +0800
+#+PROPERTY: MODIFIED [2024-07-02 二]
 #+OPTIONS: toc:nil num:t ^:nil
 #+PROPERTY: LANGUAGE en
 #+PROPERTY: SLUG real_time_collaboration_between_Emacs_and_iphone
+
+#+begin_quote
+*Important! To avoid making this introduction overly complex and to allow readers to quickly experience the actual results, I did not include the configuration of the httpd certificate. Therefore, this should only be used as a demo to experience its performance. If you plan to use it in a real environment, please configure the certificate yourself and use https.*
+#+end_quote
 
 Let's take a look at the results before implementing.
 #+begin_quote

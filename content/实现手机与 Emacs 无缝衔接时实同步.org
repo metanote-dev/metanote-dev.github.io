@@ -1,14 +1,19 @@
 #+TITLE: Emacs 与 iPhone 实现无缝衔接与时实协作
 #+DATE: 2024-06-24 22:08:09 +0800
-#+PROPERTY: MODIFIED [2024-06-27 四]
+#+PROPERTY: MODIFIED [2024-07-02 二]
 #+OPTIONS: toc:nil num:t ^:nil
 #+PROPERTY: LANGUAGE zh
 #+PROPERTY: SLUG real_time_collaboration_between_Emacs_and_iphone
+
+#+begin_quote
+*重要！为了不让这篇介绍过于复杂，并能够让读者能够快速看到效果，我并没有介绍 httpd 证书的配置，所以这仅仅可以做为一个 Demo 用来体验效果，如果在实际环境中使用，请自行配制证书并使用 https。*
+#+end_quote
 
 在具体实现前先看一下效果
 #+begin_quote
 此处应有一个视频演示，但我还没有时间录制
 #+end_quote
+
 * 概述
 此方案的一些特点和前置条件，以下为在 Mac 端的设置，如果是在 Windows 上可进行类似的设置
 1. 移动编辑完并保存后可以在 Emacs 中立即看到内容更新。在 Emacs 中编辑并保存内容后，打开移动端 App 也会很快看到更新，是以两者可以时实协作。
