@@ -4,6 +4,12 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.13.0
+CLOSED: [2024-09-28 六]
+1. 左边栏回归了
+2. 支持了悬浮按钮，即使是在编辑内容时也可以快速的访问常用功能
+3. 更合理的交互
+4. 提升了稳定性
 * 0.12.1
 CLOSED: [2024-06-28 五]
 1. 清空 scratch buffer 前需要确认
