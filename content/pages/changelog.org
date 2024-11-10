@@ -4,6 +4,15 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.14.1
+CLOSED: [2024-11-10 日]
+This is a very important version. In this version we have implemented a more modern display of Org mode than in Emacs. Tables and blocks can be layout and rendered independently. In this version, you can easily browse and edit tables and code blocks on your mobile phone without being limited by the screen size of your mobile phone. And this is just the beginning.
+
+1. Supports Org mode’s Visibility Cycling
+2. Currently you can switch the collapsed and expanded state of Subtree through TAB key
+3. Supports the independent layout of tables and code blocks. You can see the same table effect as in Emacs on your mobile phone without being limited by the screen size. Of course, you can still edit them smoothly.
+4. Supports independent layout and rendering of other blocks, you can even nest other blocks within the block
+5. Fix other issues.
 * 0.13.0
 CLOSED: [2024-09-28 六]
 1. Slide menu is back.
