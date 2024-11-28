@@ -3,3 +3,63 @@
 #+OPTIONS: toc:nil num:t ^:nil
 #+PROPERTY: LANGUAGE en
 #+PROPERTY: SLUG hyperlinks_and_attachments
+
+* Overview
+
+Starting from Metanote version 0.15.0, most hyperlinks functions in org mode are supported.
+
+It should be noted that Metanote only supports opening document links with relative paths, absolute paths and remote document paths, for example, file:/ssh:someone@soomewhere:doc/doc.pdf can be recognized, but cannot be opened. Because of the path on the mobile side is different from that on the PC side. This includes setting the attachments dir. If it is an absolute path you may not be able to open attachments.
+
+* Link Format
+1. Supports standard format, and special characters such as '[' ']' can be automatically escaped when they appear in links, and are fully compatible with org mode.
+   #+begin_example
+   [[LINK][DESCRIPTION]]
+   [[LINK]]
+   #+end_example
+2. Supports <link>
+3. Supports Plain link
+4. Link Abbreviations not yet supported.
+5. Corderef type links can be recognized, but commands such as shell and elisp cannot be executed.
+
+* Internal Links
+1. Supports linking to custom id
+   #+begin_example
+   [[#my-custom-id]]
+   #+end_example
+2. Supports linking to dedicated target <<my target>>
+3. Supports linking to '#+NAME keyword'
+4. Radio Targets not yet supported.
+
+* External Links
+Supports the following types link:
+1. file
+   1. 'file:/home/data/images/a.jpg'
+   2. '/home/data/images/a.jpg'
+   3. 'file:doc/doc.pdf'
+   4. './doc/doc.pdf'
+   5. 'file:test.org'
+   6. 'file:test.org::NNN' (jump to line number)
+   7. 'file:test.org::my target' (jump to dedicated target)
+   8. 'file:projects.org::*headline title' (jump to headline)
+   9. 'file:projects.org::#custom-id' (jump to headline with custom id)
+2. attachment
+3. docview
+4. http/https
+
+* Store, insert, open and edit links
+1. Save the link in any internal org file through the edit menu 'Copy link', which can automatically identify dedicated target, #+NAME, headline title, etc.
+2. After 'Copy link', paste the link anywhere in any internal org file. Internal links or external links can be automatically identified and converted to correct relative paths. Note that they need to be in the same location.
+3. Insert and edit links directly through the insert panel.
+4. Click the link to open or edit the link.
+
+* Attachments
+1. Supports opening, previewing and simple editing of the following attachments:
+   1. iWork and Microsoft Office documents
+   2. Images
+   3. Live Photos
+   4. Text files
+   5. PDFs
+   6. Audio and video files
+2. The attachment directory can specify multiple types of IDs, but if not specified, only the automatic creation of UUID type IDs is currently supported.
+3. The attachment directory supports setting the PROPERTY 'dir' or 'ID' separately, or setting it in InBufferSettings.
+4. Supports directly selecting attachments from the insertion panel. The attachment will be copied to the specified attachment directory. If the attachment directory does not exist, a UUID directory will be automatically created.

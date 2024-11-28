@@ -5,10 +5,12 @@
 #+PROPERTY: SLUG hyperlinks_and_attachments
 
 * 概述
-Metanote 支持了大部分了 org mode 中的链接功能。需要特别说明的是，在 Metanote 中只支持打开相对路径的文档链接，绝对路径和远程的文档链接，比如 file:/ssh:someone@soomewhere:doc/doc.pdf 可识别，但无法打开，因为移动端的路径与 PC 端是不同的。这包括对于 attachments 路径的设置，如果是绝对路径您可能会无法打开 attachments.
+从 Metanote 0.15.0 版本开始支持大部分 org mode 中的链接功能。
+
+需要特别说明的是，在 Metanote 中只支持打开相对路径的文档链接，绝对路径和远程的文档链接，比如 file:/ssh:someone@soomewhere:doc/doc.pdf 可识别，但无法打开，因为移动端的路径与 PC 端是不同的。这包括对于 attachments 路径的设置，如果是绝对路径您可能会无法打开 attachments.
 
 * 链接格式
-1. 支持标准格式，且在标准格式的链接中出现 '[' ']' 等特殊自符时可自动转义，与 org mode 完全兼容
+1. 支持标准格式，且在标准格式的链接中出现 '[' ']' 等特殊字符时可自动转义，与 org mode 完全兼容
    #+begin_example
    [[LINK][DESCRIPTION]]
    [[LINK]]
@@ -40,7 +42,6 @@ Metanote 支持了大部分了 org mode 中的链接功能。需要特别说明�
    8. 'file:projects.org::*headline title' 跳转到某 headline
    9. 'file:projects.org::#custom-id' 跳转到某 custom id 的 headline
 2. attachment
-   1. 支持单独设置 PROPERTY dir 目录或 ID，或在 InBufferSettings 中设置
 3. docview
 4. http/https
 
@@ -59,4 +60,5 @@ Metanote 支持了大部分了 org mode 中的链接功能。需要特别说明�
    5. PDFs
    6. Audio and video files
 2. attachment 目录可指定多种类型的 ID，但如果未指定，暂时只支持自动创建 UUID 类型 ID
-3. 支持从插入面版直接选择附件插入，附件将会被复制到指定的 attachment 目录，如果 attachment 目录不存在则会自动创建 UUID 目录
+3. attachment 目录支持单独设置 PROPERTY dir 目录或 ID，或在 InBufferSettings 中设置
+4. 支持从插入面版直接选择附件插入，附件将会被复制到指定的 attachment 目录，如果 attachment 目录不存在则会自动创建 UUID 目录
