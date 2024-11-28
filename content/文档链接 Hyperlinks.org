@@ -19,7 +19,10 @@ Metanote 支持了大部分了 org mode 中的链接功能。需要特别说明�
 5. Corderef 类型的链接可识别，但无法执行 shell, elisp 等命令
 
 * 内部链接
-1. 支持链接到 custom id [[#my-custom-id]]
+1. 支持链接到 custom id
+   #+begin_example
+   [[#my-custom-id]]
+   #+end_example
 2. 支持链接到 dedicated target <<my target>>
 3. 支持链接到 #+NAME keyword
 4. Radio Targets 暂时尚未支持
