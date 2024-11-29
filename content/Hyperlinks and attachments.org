@@ -56,7 +56,7 @@ Supports the following types link:
 :PROPERTIES:
 :ID:       43E3E180-9DF1-4B3C-A18C-59EEBFCD1FF0
 :END:
-[[attachment:2024-11-29_11-21-58_insert attachments.png]]
+[[file:data/43/E3E180-9DF1-4B3C-A18C-59EEBFCD1FF0/2024-11-29_11-21-58_insert attachments.png]]
 
 1. Supports opening, previewing and simple editing of the following attachments:
    1. iWork and Microsoft Office documents
