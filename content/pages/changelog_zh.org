@@ -4,6 +4,21 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.15.0
+CLOSED: [2024-11-29 五]
+1. 支持了文档链接和附件
+   1. 支持内部和外部文档链接的跳转，插入和编辑
+   2. 支持打开，预览和编辑以下类型附件
+      1. iWork and Microsoft Office documents
+      2. Images
+      3. Live Photos
+      4. Text files
+      5. PDFs
+      6. Audio and video files
+2. 支持了通过左划或双击折叠或展开 headline
+3. 支持了通过右划返回上一页
+
+链接与附件详见 [[file:../hyperlinks_and_attachments.html][文档链接和附件]]
 * 0.14.1
 CLOSED: [2024-11-10 日]
 这是一个非常重要的版本，在这个版本中我们实现了比 Emacs 中更为现代化的 Org mode 的显示，表格和 blocks 可以独立布局和渲染。您在这个版本中可以方便的在手机中浏览和编辑表格和代码块而不受手机屏幕大小的限制。而这仅仅只是个开始。

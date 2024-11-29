@@ -4,6 +4,22 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.15.0
+CLOSED: [2024-11-29 五]
+1. Hyperlinks and attachments
+   1. Supports jumping, inserting and editing of internal and external links.
+   2. Supports opening, previewing and editing the following types of attachments:
+      1. iWork and Microsoft Office documents
+      2. Images
+      3. Live Photos
+      4. Text files
+      5. PDFs
+      6. Audio and video files
+2. Supports folding or expanding headlines by left swiping or double-clicking.
+3. Supports going backward by swiping right.
+
+See [[file:../hyperlinks_and_attachments.html][Hyperlinks and attachments]]
+
 * 0.14.1
 CLOSED: [2024-11-10 日]
 This is a very important version. In this version we have implemented a more modern display of Org mode than in Emacs. Tables and blocks can be layout and rendered independently. In this version, you can easily browse and edit tables and code blocks on your mobile phone without being limited by the screen size of your mobile phone. And this is just the beginning.
