@@ -51,7 +51,12 @@
 3. 通过插入面板直接插入和编辑链接
 4. 点击链接可以打开或编辑链接
 
-* 附件
+* 附件 :ATTACH:
+:PROPERTIES:
+:ID:       43E3E180-9DF1-4B3C-A18C-59EEBFCD1FF0
+:END:
+[[attachment:2024-11-29_11-21-58_insert attachments.png]]
+
 1. 支持多种链接或附件的打开预览和简单编辑，比如
    1. iWork and Microsoft Office documents
    2. Images
