@@ -4,6 +4,11 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.16.0
+CLOSED: [2024-12-06 六]
+- Supports displaying images in file links and attachments.
+- Fixed the problem of not having permission when inserting attachments.
+- Fixed some  other issues.
 * 0.15.0
 CLOSED: [2024-11-29 五]
 1. Hyperlinks and attachments
