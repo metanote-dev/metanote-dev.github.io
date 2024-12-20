@@ -4,6 +4,9 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.17.0
+CLOSED: [2024-12-20 五]
+大幅优化了产品交互，现在不只强大，而且更好用了。
 * 0.16.0
 CLOSED: [2024-12-06 六]
 - 支持了直接渲染和显示文档链接和附件中的图片

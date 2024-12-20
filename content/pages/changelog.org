@@ -4,6 +4,9 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.17.0
+CLOSED: [2024-12-20 五]
+The user interaction design has been greatly optimized. Now it is not only powerful, but also easier to use.
 * 0.16.0
 CLOSED: [2024-12-06 六]
 - Supports displaying images in file links and attachments.
