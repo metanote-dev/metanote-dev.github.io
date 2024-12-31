@@ -4,6 +4,15 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.17.1
+CLOSED: [2024-12-31 二]
+The user interaction design has been greatly optimized. Now it is not only powerful, but also easier to use.
+
+Note that starting from this version, the gesture operation changes to swiping left from the edge of the screen to go backward and close, and swiping left from non-edge to open the navigation drawer. This is because on the one hand it is unified with the standard side slide return gesture of iOS, and on the other hand it can effectively reduce misoperations.
+
+- Fast accessor supports setting whether to automatically activate the search bar
+- Fast accessor supports setting file sorting method
+- Other bugfix
 * 0.17.0
 CLOSED: [2024-12-20 五]
 The user interaction design has been greatly optimized. Now it is not only powerful, but also easier to use.
