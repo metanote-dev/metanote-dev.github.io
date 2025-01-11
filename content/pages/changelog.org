@@ -4,6 +4,10 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.18.0
+CLOSED: [2025-01-11 六]
+1. Src block supports syntax highlighting. Support most mainstream development languages and highlighting themes.
+2. bugfix
 * 0.17.1
 CLOSED: [2024-12-31 二]
 The user interaction design has been greatly optimized. Now it is not only powerful, but also easier to use.
