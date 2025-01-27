@@ -4,6 +4,11 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.19.0
+CLOSED: [2025-01-27 一]
+- 支持了 LaTeX 数学公式的编辑解析和渲染
+- 支持了 org mode entity
+- 其它问题修复
 * 0.18.0
 CLOSED: [2025-01-11 六]
 1. 代码块支持实时语法高亮，支持多种主流开发语言和高亮主题。
