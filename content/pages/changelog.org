@@ -4,6 +4,16 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.20.0
+CLOSED: [2025-02-26 三]
+1. Implemented interactive visual tag editing
+   1. Support group tag
+   2. Support mutually exclusive group
+   3. Support regular expression tags
+2. Support editing to-do status, priority, tag, etc. directly from the agenda view through remote edit
+3. Solved the related issues when customizing capture template
+4. Solved the crash problem when highlighting code blocks on some mobile phones.
+5. Other bug fixes
 * 0.19.0
 CLOSED: [2025-01-27 一]
 - Support latex environment, latex fragment.

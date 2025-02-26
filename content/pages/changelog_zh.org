@@ -4,6 +4,16 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.20.0
+CLOSED: [2025-02-26 三]
+1. 实现了交互式可视化的 tag 编辑
+   1. 支持 group tag
+   2. 支持互斥组
+   3. 支持正则 tag
+2. 支持从 agenda view 中直接通过 remote edit 编辑待办事项状态，优先级，tag 等
+3. 处理了自定义 capture template 时的相关问题
+4. 处理了部分手机上高亮代码块时的 crash 问题
+5. 其它问题修复
 * 0.19.0
 CLOSED: [2025-01-27 一]
 - 支持了 LaTeX 数学公式的编辑解析和渲染
