@@ -4,6 +4,16 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.21.1
+CLOSED: [2025-03-19 三]
+支持了归档功能。
+
+1. 同时支持了内部归档(打 'ARCHIVE' tag) 和归档到其它文件中
+2. 您可以在设置项中设置默认的归档动作
+3. 支持设置归档路径，目标 headline 和是否使用 datetree
+4. 支持设置归档时需要记录的上下文信息
+5. 支持全局归档设置和 inBufferSettings，通过 inBufferSettings 您可以将不同文件中的任务归档到不同的位置
+6. 现在您可以在编辑窗口或 agenda view 中一键触发归档动作
 * 0.20.0
 CLOSED: [2025-02-26 三]
 1. 实现了交互式可视化的 tag 编辑

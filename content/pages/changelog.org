@@ -4,6 +4,16 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.21.1
+CLOSED: [2025-03-19 三]
+Support archiving.
+
+1. Supports both internal archiving (with 'ARCHIVE' tag) and archiving to other files
+2. You can set the default archiving action in the settings
+3. Supports setting the archiving path, target headline and whether to use datetree
+4. Supports setting the context information to be recorded when archiving
+5. Supports global archiving settings and inBufferSettings. With inBufferSettings, you can archive tasks in different files to different locations
+6. Now you can trigger the archiving action with one click in the editor or agenda view
 * 0.20.0
 CLOSED: [2025-02-26 三]
 1. Implemented interactive visual tag editing
