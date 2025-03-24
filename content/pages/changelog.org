@@ -4,6 +4,17 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.22.0
+CLOSED: [2025-03-24 一]
+Optimized product interaction and improved stability.
+
+1. Recent files and full-text search have been moved to the sidebar. Now these two functions can be accessed directly from the sidebar.
+2. Support one-click creation of files and folders from the file list
+3. The sorting of the file list supports setting whether folders are prioritized
+4. Fixed the problem that inherited tags cannot be displayed when editing tags
+5. *scratch* buffer supports the functions of Refile, archiving and adding attachments
+6. Capture template supports separate settings for whether to use mini buffer
+7. Other details optimization and problem fixes
 * 0.21.1
 CLOSED: [2025-03-19 三]
 Support archiving.
