@@ -4,6 +4,14 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.23.0
+CLOSED: [2025-04-13 日]
+Supports custom themes. Now you can customize the fonts, colors and styles of different elements in the document through the configuration file to create your own unique theme. You can also import other people's themes or share your own themes.
+
+1. New default theme
+2. Archive function is now available
+3. The function of opening and editing documents in 'Files' is now available
+4. When inserting a link by pasting, the copied document link can be automatically recognized and inserted
 * 0.22.0
 CLOSED: [2025-03-24 一]
 Optimized product interaction and improved stability.
