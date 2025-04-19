@@ -4,6 +4,12 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.23.1
+CLOSED: [2025-04-19 六]
+1. Support preview, create, duplicate, edit and share themes
+2. Support editing source code files
+3. Custom capture templates and agenda views can use emojis
+4. Improve stability
 * 0.23.0
 CLOSED: [2025-04-13 日]
 Supports custom themes. Now you can customize the fonts, colors and styles of different elements in the document through the configuration file to create your own unique theme. You can also import other people's themes or share your own themes.
