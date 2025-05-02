@@ -4,6 +4,22 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.25.0
+CLOSED: [2025-05-02 五]
+The agenda view and keyboard toolbar have been mainly upgraded. For optimization of other key functions, please check the following details.
+
+1. Upgraded keyboard toolbar
+   1. The functions are organized more clearly and are more convenient to use.
+   2. The structured editing function has been strengthened and is now very easy to use.
+2. Upgraded agenda view
+   1. Better UX/UI
+   2. Supports tags, properties, planning and other operations. Almost all operations can be completed in the agenda view.
+3. Supports restriction agenda view based on the currently opened document
+4. Upgraded interactive tag editing
+5. Supports interactive editing of properties
+6. Supports clicking to edit timestamps
+7. Fixed the problem that document links were not recognized when pasting them in miniBuffer.
+8. Fixed the problem that modifying FILETAGS in InBufferSettings does not take effect
 * 0.23.1
 CLOSED: [2025-04-19 六]
 1. Support preview, create, duplicate, edit and share themes

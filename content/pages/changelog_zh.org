@@ -4,6 +4,22 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.25.0
+CLOSED: [2025-05-02 五]
+重点升级了 agenda view 和键盘工具条，其它重点功能的优化请查看以下详细信息
+
+1. 优化键盘工具条
+   1. 功能组织更清晰，使用更加方便
+   2. 加强了结构化编辑功能，现在非常好用
+2. 升级了 agenda view
+   1. 更好的交互和视觉效果
+   2. 支持了 tags, properties, planning 等操作，几乎所有的操作现面都可以在 agenda view 中完成了
+3. 支持了基于当前打开文档的 agenda view
+4. 升级了交互式的 tag 编辑
+5. 支持了交互式的 properties 的编辑
+6. 支持了点击编辑时间戳
+7. 修复了 miniBuffer 中粘贴文档链接时不识别的问题
+8. 修复了修改 InBufferSettings 中 FILETAGS 不生效的问题
 * 0.23.1
 CLOSED: [2025-04-19 六]
 1. 支持预览,新建，复制，编辑和分享主题
