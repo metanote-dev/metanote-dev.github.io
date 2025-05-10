@@ -1,0 +1,2 @@
+{"version_name":"0.4.1","version_code":742,"description":"<li>Support refile!</li><li>Support log done note and timestamp!</li><li>Support task status change log!</li><li>Support indent mode! Just like org-mode's indent mode! Now it looks more clear!</li><li>Support reminders! SCHEDULED, DEADLINE and active timestamp task can have a notification on it's time! Of course support repeater and warning shitf.</li><li>Support ongoing notification from which you can take quick task,note and journal!</li><li>Fixed sync issues!</li><li>Stability improvement.</li>"}
+
