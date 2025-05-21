@@ -4,6 +4,17 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE en
 
+* 0.26.0
+CLOSED: [2025-05-21 三]
+Theme supported clean-mode and bullet-list. Numbered lists are automatically numbered during structure editing and support checkboxes.
+
+1. Theme supported clean-mode. When clean-mode is turned on, all syntax markers of org-mode's rich text will be automatically hidden, which can make your content look cleaner and neater.
+2. Theme supported bullet-list. You can set the asterisk of org-mode to other characters you like, or set it to an empty string to hide it completely.
+3. Added two default themes, default-literature and default-outline. You can see the effects and settings of clean-mode and bullet-list in these two themes.
+4. Numbered lists can automatically correct numbers during structure editing.
+5. Lists supported checkboxes. Now simple tasks, such as shopping lists, can be implemented using lists with checkboxes
+6. Optimized the interface of agenda view
+7. Other bug fixes
 * 0.25.1
 CLOSED: [2025-05-10 六]
 1. Optimized the display of agenda view

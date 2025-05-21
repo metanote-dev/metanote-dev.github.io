@@ -4,6 +4,17 @@
 #+PROPERTY: SLUG changelog
 #+PROPERTY: LANGUAGE zh
 
+* 0.26.0
+CLOSED: [2025-05-21 三]
+编号列表实现了自动编号，并支持了复选框。主题支持了 clean-mode 和 bullet-list。
+
+1. Theme 支持了 clean-mode，当打开 clean-mode 后，所有 org mode 富文本的语法标记将会被自动隐藏，这可以使您的内容看起来更干净整齐
+2. Theme 支持了 bullet-list，你可以将 org mode 的星号设置为其它您喜欢的字符，或设置为空字符串将其完全隐藏
+3. 添加了两个默认的 Theme default-literature 和 default-outline, 您可以在这两个主题中看到 clean-mode 和 bullet-list 的效果和设置方法
+4. 编号列表在格式化编辑时可以自动修正编号
+5. 列表支持了 checkbox，现在简单任务，比如购物清单可以使用带 checkbox 的列表来实现了
+6. 优化了 agenda view 的界面
+7. 其它 bug 修复
 * 0.25.1
 CLOSED: [2025-05-10 六]
 1. 优化了 agenda view 的显示
