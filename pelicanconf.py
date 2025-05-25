@@ -71,6 +71,7 @@ MENUITEMS = (
     ("Blog", "/blog/index.html"),
     ("FAQ", "/pages/faq.html"),
     ("ChangeLog", "/pages/changelog.html"),
+    ("Contact", "/pages/contact.html"),
     ("Archive", "/archives.html"),
 )
 
@@ -97,6 +98,7 @@ I18N_SUBSITES = {
     ("Blog", "/zh/blog/index.html"),
     ("FAQ", "/zh/pages/faq.html"),
     ("更新日志", "/zh/pages/changelog.html"),
+    ("联系我们", "/zh/pages/contact.html"),
     ("归档", "/zh/archives.html"),
         ),
         'STATIC_PATHS': ['images','data']

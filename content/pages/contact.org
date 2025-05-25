@@ -1,0 +1,16 @@
+#+TITLE: Contact Us
+#+DATE: 2025-05-24 11:54:16 +0800
+#+OPTIONS: toc:nil num:t ^:nil
+#+PROPERTY: LANGUAGE en
+#+PROPERTY: SLUG contact
+
+1. Follow the development progress
+2. Propose functional requirements
+3. Seek help
+4. Report problems
+5. Discuss and exchange experience in notes, knowledge management, GTD, etc.
+
+   
+Scan the QR code to join the WeChat group chat
+
+[[file:../images/wx_qr.jpg]]

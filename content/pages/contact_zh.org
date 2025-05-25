@@ -1,0 +1,17 @@
+#+TITLE: 联系我们
+#+DATE: 2025-05-24 11:59:00 +0800
+#+OPTIONS: toc:nil num:t ^:nil
+#+PROPERTY: LANGUAGE zh
+#+PROPERTY: SLUG contact
+
+1. 关注开发进度
+2. 提出功能需求
+3. 寻求帮助
+4. 报告问题
+5. 探讨和交流笔记，知识管理，GTD 等使用经验
+
+
+扫码加入微信群聊
+
+[[file:../images/wx_qr.jpg]]
+
