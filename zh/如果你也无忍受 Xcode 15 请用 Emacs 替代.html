@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E7KGQHGD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0E7KGQHGD6');
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index,follow">
+
+
+	<link href="https://metanote-dev.github.io/zh/../theme/css/org.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://metanote-dev.github.io/zh/../theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="https://metanote-dev.github.io/zh/../theme/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+            <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+	        <title>Metanote-文档,日程,待办 - 如果你也无忍受 Xcode 15 请用 Emacs 替代</title>
+
+
+
+
+
+	    <meta property="og:locale" content="zh">
+    <meta property="og:site_name" content="Metanote-文档,日程,待办">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://metanote-dev.github.io/zh/如果你也无忍受 Xcode 15 请用 Emacs 替代.html">
+	<meta property="og:title" content="如果你也无忍受 Xcode 15 请用 Emacs 替代">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://metanote-dev.github.io/zh/">
+	<meta property="article:published_time" content="2024-02-23 00:00:00+08:00">
+  </head>
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://metanote-dev.github.io/zh/">Metanote-文档,日程,待办</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+                        <li><a href="/zh/blog/index.html">Blog</a></li>
+                        <li><a href="/zh/pages/faq.html">FAQ</a></li>
+                        <li><a href="/zh/pages/changelog.html">更新日志</a></li>
+                        <li><a href="/zh/pages/contact.html">联系我们</a></li>
+                        <li><a href="/zh/archives.html">归档</a></li>
+				<!-- i18n begin -->
+<li><a href="https://metanote-dev.github.io/">English</a></li>
+<li class="active"><a href="https://metanote-dev.github.io/zh/">中文</a></li>
+<!-- i18n end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('https://metanote-dev.github.io/zh/../theme/images/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="post-heading">
+                        <h1>如果你也无忍受 Xcode 15 请用 Emacs 替代</h1>
+                            <span class="meta">by
+			      <a href="https://metanote-dev.github.io/zh/author/metanote-team.html">Metanote Team</a>
+			      in <a href="https://metanote-dev.github.io/zh/category/misc.html">misc</a>
+			      on 2024-02-23
+                            </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p>
+最近苹果更新了 Xcode 15，苹果的产品通常我是不升级的，以苹果的一贯作风想必又是在倒逼用户更新换代苹果产品，当然这也包括了开发者在内，Xcode 不升级就无法提交 App，Mac OS X 不升级就无法升级 Xcode，然后就是电脑不买最新款就无法升级新的 Mac OS X，最终，您不得不买新电脑，如此周而复始，苹果收入源源不断，用户难逃逐渐被掏空的命运&#x2026;
+</p>
+
+<p>
+于是，为了提交 app 我不得不升级了 Xcode 15，想着也许电脑还能再扛一段时间，没想到新版本的 Xcode 太难用了。Git 的文件 Diff 目前主流的都是左右两侧对比或三方合并， Xcode 之前也是这样，但升级之后居然只能逐行对比，为什么越升级反而越倒退了？当然，Xcode 的 Git 版本管理功能本身一直就都很鸡肋，之前虽然是 side by side 的 diff 但是比较算法有很大问题，常常错位，也许换成 line by line 是为了解决这个问题？可能开发一个像 Android Studio 一样的优化的 diff 算法对苹果来说很难吧。
+</p>
+
+<p>
+好在我之前配置了 Emacs，可以满足大部分的开发工作，只是在重构和调试时才用回 Xcode，有时懒得切换就一直在 Xcode 中了，这下可就好了，又给了我一个切换 Emacs 的动力。Xcode 其它的弊端就不在这里一一列举了，总之，还好有 Emacs。
+</p>
+
+<p>
+苹果，离乔布斯的时代渐行渐远。
+</p>
+
+    </article>
+
+    <hr>
+    <div class="row">
+      <div class="col-xs-6 text-left">
+        <a href="https://metanote-dev.github.io/zh/real_time_collaboration_between_Emacs_and_iphone.html">&larr; Emacs 与 iPhone 实现无缝衔接与时实协作</a>
+      </div>
+      <div class="col-xs-6 text-right">
+        <a href="https://metanote-dev.github.io/zh/custom_capture_template.html">自定义 Capture 功能 &rarr;</a>
+      </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/MetanoteTeam" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:metanote.team@gmail.com" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/metanote-dev" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; 2023 Metanote team. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- jQuery -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/clean-blog.js"></script>
+</body>
+
+</html>

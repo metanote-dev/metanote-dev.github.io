@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E7KGQHGD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0E7KGQHGD6');
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index,follow">
+
+
+	<link href="https://metanote-dev.github.io/zh/../theme/css/org.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://metanote-dev.github.io/zh/../theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="https://metanote-dev.github.io/zh/../theme/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+            <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+	        <title>更新日志</title>
+
+    <meta property="og:locale" content="zh">
+    <meta property="og:site_name" content="Metanote-文档,日程,待办">
+  </head>
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://metanote-dev.github.io/zh/">Metanote-文档,日程,待办</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+                        <li><a href="/zh/blog/index.html">Blog</a></li>
+                        <li><a href="/zh/pages/faq.html">FAQ</a></li>
+                        <li><a href="/zh/pages/changelog.html">更新日志</a></li>
+                        <li><a href="/zh/pages/contact.html">联系我们</a></li>
+                        <li><a href="/zh/archives.html">归档</a></li>
+				<!-- i18n begin -->
+<li><a href="https://metanote-dev.github.io/">English</a></li>
+<li class="active"><a href="https://metanote-dev.github.io/zh/">中文</a></li>
+<!-- i18n end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+        <header class="intro-header" style="background-image: url('https://metanote-dev.github.io/zh/../theme/images/home-bg.jpg')">
+        <div class="container">
+          <div class="row">
+	    <div class="col-lg-12">
+	      <div class="post-heading">
+		<h1>Metanote</h1>
+		<h3>一款支持知识管理，写作，TODO-list 和项目管理的纯文本编辑器</h3>
+	      </div>
+	    </div>
+	  </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<h1>更新日志</h1>
+<hr>
+    <article>
+        
+<div id="outline-container-org79d9242" class="outline-2">
+<h2 id="org79d9242">0.26.0</h2>
+<div class="outline-text-2" id="text-org79d9242">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-05-21 Wed]</span></span></p>
+<p>
+编号列表实现了自动编号，并支持了复选框。主题支持了 clean-mode 和 bullet-list。
+</p>
+
+<ol class="org-ol">
+<li>Theme 支持了 clean-mode，当打开 clean-mode 后，所有 org mode 富文本的语法标记将会被自动隐藏，这可以使您的内容看起来更干净整齐</li>
+<li>Theme 支持了 bullet-list，你可以将 org mode 的星号设置为其它您喜欢的字符，或设置为空字符串将其完全隐藏</li>
+<li>添加了两个默认的 Theme default-literature 和 default-outline, 您可以在这两个主题中看到 clean-mode 和 bullet-list 的效果和设置方法</li>
+<li>编号列表在格式化编辑时可以自动修正编号</li>
+<li>列表支持了 checkbox，现在简单任务，比如购物清单可以使用带 checkbox 的列表来实现了</li>
+<li>优化了 agenda view 的界面</li>
+<li>其它 bug 修复</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgcf3f5d0" class="outline-2">
+<h2 id="orgcf3f5d0">0.25.1</h2>
+<div class="outline-text-2" id="text-orgcf3f5d0">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-05-10 Sat]</span></span></p>
+<ol class="org-ol">
+<li>优化了 agenda view 的显示</li>
+<li>支持了编辑 txt 文件时的软键盘工具条</li>
+<li>修复了归档时可能出现操作失败的问题</li>
+<li>修复了在使用九宫格输入法的情况下新建文件或文件夹时无法确认的问题</li>
+<li>修复了结构化编辑的相关问题</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org92c7884" class="outline-2">
+<h2 id="org92c7884">0.25.0</h2>
+<div class="outline-text-2" id="text-org92c7884">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-05-02 Fri]</span></span></p>
+<p>
+重点升级了 agenda view 和键盘工具条，其它重点功能的优化请查看以下详细信息
+</p>
+
+<ol class="org-ol">
+<li>优化键盘工具条
+<ol class="org-ol">
+<li>功能组织更清晰，使用更加方便</li>
+<li>加强了结构化编辑功能，现在非常好用</li>
+</ol></li>
+<li>升级了 agenda view
+<ol class="org-ol">
+<li>更好的交互和视觉效果</li>
+<li>支持了 tags, properties, planning 等操作，几乎所有的操作现面都可以在 agenda view 中完成了</li>
+</ol></li>
+<li>支持了基于当前打开文档的 agenda view</li>
+<li>升级了交互式的 tag 编辑</li>
+<li>支持了交互式的 properties 的编辑</li>
+<li>支持了点击编辑时间戳</li>
+<li>修复了 miniBuffer 中粘贴文档链接时不识别的问题</li>
+<li>修复了修改 InBufferSettings 中 FILETAGS 不生效的问题</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga3e9bab" class="outline-2">
+<h2 id="orga3e9bab">0.23.1</h2>
+<div class="outline-text-2" id="text-orga3e9bab">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-04-19 Sat]</span></span></p>
+<ol class="org-ol">
+<li>支持预览,新建，复制，编辑和分享主题</li>
+<li>支持编辑各种源码文件</li>
+<li>自定义 capture templates 和 agenda views 可以使用表情符号</li>
+<li>提升稳定性</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd8f6013" class="outline-2">
+<h2 id="orgd8f6013">0.23.0</h2>
+<div class="outline-text-2" id="text-orgd8f6013">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-04-13 Sun]</span></span></p>
+<p>
+支持了自定义主题，现在您可以通过配置文件自定义文档中不同元素的字体，颜色和样式，打造自己独一无二的主题。也可以导入他人的主题或分享自己的主题。
+</p>
+
+<ol class="org-ol">
+<li>全新的默认主题</li>
+<li>归档功能现在可用了</li>
+<li>打开和编辑'文件'中文档的功能现在可用了</li>
+<li>通过粘贴插入链接时可以自动识别并插入已复制的文档链接</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org913eed3" class="outline-2">
+<h2 id="org913eed3">0.22.0</h2>
+<div class="outline-text-2" id="text-org913eed3">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-03-24 Mon]</span></span></p>
+<p>
+优化了产品交互设计并提升了稳定性。
+</p>
+
+<ol class="org-ol">
+<li>最近访问和全文搜索移到了侧边栏，现在可以从侧边栏直接访问这两个功能了。</li>
+<li>支持从文件列表一键新建文件和文件夹</li>
+<li>文件列表的排序支持设置是否文件夹优先</li>
+<li>修复了 Tag 编辑时无法显示继承的 tag 的问题</li>
+<li><b>scratch</b> buffer 支持了 Refile, 归档和添加附件的功能</li>
+<li>Capture 模版支持单独设置是否使用迷你窗口</li>
+<li>其它细节优化和问题修复</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3089d6f" class="outline-2">
+<h2 id="org3089d6f">0.21.1</h2>
+<div class="outline-text-2" id="text-org3089d6f">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-03-19 Wed]</span></span></p>
+<p>
+支持了归档功能。
+</p>
+
+<ol class="org-ol">
+<li>同时支持了内部归档(打 'ARCHIVE' tag) 和归档到其它文件中</li>
+<li>您可以在设置项中设置默认的归档动作</li>
+<li>支持设置归档路径，目标 headline 和是否使用 datetree</li>
+<li>支持设置归档时需要记录的上下文信息</li>
+<li>支持全局归档设置和 inBufferSettings，通过 inBufferSettings 您可以将不同文件中的任务归档到不同的位置</li>
+<li>现在您可以在编辑窗口或 agenda view 中一键触发归档动作</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org1a7ea9b" class="outline-2">
+<h2 id="org1a7ea9b">0.20.0</h2>
+<div class="outline-text-2" id="text-org1a7ea9b">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-02-26 Wed]</span></span></p>
+<ol class="org-ol">
+<li>实现了交互式可视化的 tag 编辑
+<ol class="org-ol">
+<li>支持 group tag</li>
+<li>支持互斥组</li>
+<li>支持正则 tag</li>
+</ol></li>
+<li>支持从 agenda view 中直接通过 remote edit 编辑待办事项状态，优先级，tag 等</li>
+<li>处理了自定义 capture template 时的相关问题</li>
+<li>处理了部分手机上高亮代码块时的 crash 问题</li>
+<li>其它问题修复</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgfb6cbca" class="outline-2">
+<h2 id="orgfb6cbca">0.19.0</h2>
+<div class="outline-text-2" id="text-orgfb6cbca">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-01-27 Mon]</span></span></p>
+<ul class="org-ul">
+<li>支持了 LaTeX 数学公式的编辑解析和渲染</li>
+<li>支持了 org mode entity</li>
+<li>其它问题修复</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgef535d1" class="outline-2">
+<h2 id="orgef535d1">0.18.0</h2>
+<div class="outline-text-2" id="text-orgef535d1">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2025-01-11 Sat]</span></span></p>
+<ol class="org-ol">
+<li>代码块支持实时语法高亮，支持多种主流开发语言和高亮主题。</li>
+<li>其它问题修复</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org19abadf" class="outline-2">
+<h2 id="org19abadf">0.17.1</h2>
+<div class="outline-text-2" id="text-org19abadf">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2024-12-31 Tue]</span></span></p>
+<p>
+大幅优化了产品交互，现在不只强大，而且更好用了。
+</p>
+
+<p>
+注意，从这个版本开始，手势操作改变为从屏幕边缘左滑返回和关闭，非边缘左滑打开导航栏。这是因为一方面与 iOS 的标准侧滑返回手势统一，另一方面可以有效减少误操作。
+</p>
+
+<ul class="org-ul">
+<li>快速打开支持设置是否自动激活搜索框</li>
+<li>快速打开支持设置文件排序方式</li>
+<li>其它问题修复</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf8ff0fc" class="outline-2">
+<h2 id="orgf8ff0fc">0.17.0</h2>
+<div class="outline-text-2" id="text-orgf8ff0fc">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2024-12-20 Fri]</span></span></p>
+<p>
+大幅优化了产品交互，现在不只强大，而且更好用了。
+</p>
+</div>
+</div>
+<div id="outline-container-org3c04510" class="outline-2">
+<h2 id="org3c04510">0.16.0</h2>
+<div class="outline-text-2" id="text-org3c04510">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2024-12-06 Fri]</span></span></p>
+<ul class="org-ul">
+<li>支持了直接渲染和显示文档链接和附件中的图片</li>
+<li>修复插入附件时提示没有权限的问题</li>
+<li>修复多个其它问题</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf0a1295" class="outline-2">
+<h2 id="orgf0a1295">0.15.0</h2>
+<div class="outline-text-2" id="text-orgf0a1295">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2024-11-29 Fri]</span></span></p>
+<ol class="org-ol">
+<li>支持了文档链接和附件
+<ol class="org-ol">
+<li>支持内部和外部文档链接的跳转，插入和编辑</li>
+<li>支持打开，预览和编辑以下类型附件
+<ol class="org-ol">
+<li>iWork and Microsoft Office documents</li>
+<li>Images</li>
+<li>Live Photos</li>
+<li>Text files</li>
+<li>PDFs</li>
+<li>Audio and video files</li>
+</ol></li>
+</ol></li>
+<li>支持了通过左划或双击折叠或展开 headline</li>
+<li>支持了通过右划返回上一页</li>
+</ol>
+
+<p>
+链接与附件详见 <a href="../hyperlinks_and_attachments.html">文档链接和附件</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgf17cc00" class="outline-2">
+<h2 id="orgf17cc00">0.14.1</h2>
+<div class="outline-text-2" id="text-orgf17cc00">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2024-11-10 Sun]</span></span></p>
+<p>
+这是一个非常重要的版本，在这个版本中我们实现了比 Emacs 中更为现代化的 Org mode 的显示，表格和 blocks 可以独立布局和渲染。您在这个版本中可以方便的在手机中浏览和编辑表格和代码块而不受手机屏幕大小的限制。而这仅仅只是个开始。
+</p>
+
+<ol class="org-ol">
+<li>支持了 Org mode 的 Visibility Cycling</li>
+<li>目前您可以通过 TAB 键切换 Subtree 的折叠和展开状态</li>
+<li>支持了表格和代码块的独立布局，您可以在手机中看到和 Emacs 中一样的表格的效果而不受屏幕大小的限制，当然，您仍旧可以流畅的编辑它们。</li>
+<li>支持了其它 block 的独立布局和渲染，您甚至可以在 block 中嵌套其它 block</li>
+<li>修复其它问题。</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8b9485b" class="outline-2">
+<h2 id="org8b9485b">0.13.0</h2>
+<div class="outline-text-2" id="text-org8b9485b">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2024-09-28 Sat]</span></span></p>
+<ol class="org-ol">
+<li>左边栏回归了</li>
+<li>支持了悬浮按钮，即使是在编辑内容时也可以快速的访问常用功能</li>
+<li>更合理的交互</li>
+<li>提升了稳定性</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org45ba289" class="outline-2">
+<h2 id="org45ba289">0.12.1</h2>
+<div class="outline-text-2" id="text-org45ba289">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2024-06-28 Fri]</span></span></p>
+<ol class="org-ol">
+<li>清空 scratch buffer 前需要确认</li>
+<li>起始页支持设置为某一文件或文件夹，且不可关闭</li>
+<li>优化了设置页的显示</li>
+<li>打开文件时初始路径为默认位置的根目录</li>
+<li>新文件内容模版不再使用 capture template，而是可以独立设置了</li>
+<li>agenda view 支持侧滑变更状态</li>
+<li>agenda view 支持显示 category, tags 和优先级了</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org55aa852" class="outline-2">
+<h2 id="org55aa852">0.12.0</h2>
+<div class="outline-text-2" id="text-org55aa852">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">[2024-06-25 Tue]</span></span></p>
+<p>
+我们不断在实践中探索优化 Metanote，这次升级的版本可能是目前以来体验最好的版本。我们内部开发人员已经开始在日常的开发工作中重度使用 Metanote 记录和管理开发进度，上千份 org 文档与 Emacs 之间无缝衔接，实时同步，它已对于我们来说已经同 Emacs 一样重要。我们在我们的官网分享了如何与 Emacs 之间实时同步以及我们日常使用 Metanote 的一些实践案例，以供您参考。
+</p>
+
+<p>
+本次更新内容：
+</p>
+<ol class="org-ol">
+<li>整体优化了交互和界面</li>
+<li>支持了直接打开外部文件</li>
+<li>支持 scratch buffer</li>
+<li>编辑器支持了调整字体大小</li>
+<li>编辑器支持自动隐藏显示导航栏和工具栏</li>
+<li>优化了全文搜索的性能</li>
+<li>日程和待办列表中最新添加事件将排在最前</li>
+<li>日程和待办列表中打开内容将自动 Narrow 到具体内容</li>
+<li>Narrow buffer 支持了 widen</li>
+<li>优化了多窗口管理</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd9a11ea" class="outline-2">
+<h2 id="orgd9a11ea">0.11.0</h2>
+<div class="outline-text-2" id="text-orgd9a11ea">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2024-04-24 Wed&gt;</span></span></p>
+<p>
+重要更新，现在可以支持同步了。
+</p>
+
+<p>
+Metanote 支持多种同步方式使您的文档可以在电脑与手机间无缝衔接，您可以在设置中配置同步，包括本地目录，Git, iCloud, Dropbox, OneDrive, WebDAV(自建 WebDAV Server, ownCloud, Yandex.disk, 坚果云等)，其中本地目录，Git 与 iCloud 通过添加外部文件夹实现，其它方式内置同步。同步是全自动的，您几乎不用主动触发，大部分情况下当您需要时，您最新的文件已经在那里了。您可以将 Metanote 做为数据中心，使用不同的目录与不同的云服务同步，也可以在同一个目录上同时与多个云端同步，更多玩法请尽情探索。
+</p>
+</div>
+</div>
+<div id="outline-container-org5de3cfc" class="outline-2">
+<h2 id="org5de3cfc">0.10.1</h2>
+<div class="outline-text-2" id="text-org5de3cfc">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2024-04-08 Mon&gt;</span></span></p>
+<ol class="org-ol">
+<li>修复了升级 iOS 17.4.1 后的兼容性问题</li>
+<li>修复了 iOS 14.x 上的兼容性问题</li>
+<li>集中修复了多个用户反馈问题</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc2dbdf8" class="outline-2">
+<h2 id="orgc2dbdf8">0.10.0</h2>
+<div class="outline-text-2" id="text-orgc2dbdf8">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2024-03-26 Tue&gt;</span></span></p>
+<ol class="org-ol">
+<li>支持了自动更新日程和待办事项，无论是在 Metanote 中编辑了文件还是使用其它工具编辑了外部文件夹中的文件，又或者是从 iCloud 或 Git 中获取了更新，现在 Metanote 都能自动检测到文件的变化，并自动更新，您所有的内容都将随时保持最新。</li>
+<li>支持了 Agenda Filter，现在您可以在日程和待办事项中直接通过分类，状态以及 Tag 标签进行筛选了</li>
+<li>文档大纲支持点击跳转到某个标题了</li>
+<li>可以自定义 Todo Keyword 的图标和颜色了</li>
+<li>更加直观方便的多窗口管理，现在您可以从 Buffer list 中直接点击切换窗口了</li>
+<li>其它多个细节优化，现在更加稳定了</li>
+</ol>
+
+
+<p>
+关于文件同步的说明，Metanote 可以添加任何支持文件夹级 File Provider 的外部目录并自动感知文件更新，但可惜的是很多云盘只支持了文件级的 File Provider，我们已经实现了添加独立文件到 Metanote 中，仍在测试中，预计会在一个版本中上线。所以目前体验最好的常规文件同步方案有
+</p>
+<ol class="org-ol">
+<li>iCloud，iCloud 支持文件夹级的 File Provider，可以直接添加进 Metanote</li>
+<li>Git，多数 Git 应用的目录都可以直接添加进 Metanote，拿 PolyGit 举例，当您 git pull 时 Metanote 将自动更新文件内容</li>
+<li>其它支持同步的应用，多数文档编辑类应用都可以直接添加进 Metanote，比如 Obsidian 和 Logseq，当这些应用中的文件发生更新时 Metanote 将自动处理发生编辑的文件。</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge8a2900" class="outline-2">
+<h2 id="orge8a2900">0.9.0</h2>
+<div class="outline-text-2" id="text-orge8a2900">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2024-02-19 Mon&gt;</span></span></p>
+<p>
+焕然一新!
+</p>
+<ol class="org-ol">
+<li>重新设计了 Logo</li>
+<li>全面优化了主体交互体验，支持了侧边栏和更适合手机的滑动操作，高效流畅</li>
+<li>集中优化了软键盘的设计
+<ol class="org-ol">
+<li>功能集中且清晰</li>
+<li>支持了按键音反馈</li>
+<li>支持了轨迹球移动光标</li>
+</ol></li>
+<li>支持了隐藏文件和文件夹</li>
+<li>支持添加 Obsidian 和 Logseq 工作目录，整合并统一管理和编辑</li>
+<li>支持定制启动页</li>
+<li>支持在新窗口打开当前内容</li>
+<li>多个细节优化和问题修复</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga3e065d" class="outline-2">
+<h2 id="orga3e065d">0.8.0</h2>
+<div class="outline-text-2" id="text-orga3e065d">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2024-02-01 Thu&gt;</span></span></p>
+<p>
+终于，自定义 Capture 功能的开发和测工作完成了！这个过程不但有一些技术挑战，而且有着很大的工作量，有非常多的使用场景需要支持，单是测试工作就用了将近两周。
+</p>
+
+<p>
+至此，Metanote 对 Org mode 的核心功能的支持更加完备，包括基本的文档结构，自定义任务管理，自定义 Tag 等 InBufferSettings, 自定义 Agenda view，自定义 Capture 等等，我想 Metanote 应该是在 Emacs 之外对 Org mode 支持最完整的应用了。在后面的开发工作中我们将逐渐支持富文本渲染，包括图片，表格，超链接等，以及加密，导出，Roam Research 等功能，敬请期待。
+</p>
+
+<p>
+同时我们启用了公测版本，您可以同时安装正式版和测试版，加入公测，反馈问题， <a href="https://testflight.apple.com/join/pAYGdOQe">https://testflight.apple.com/join/pAYGdOQe</a> (注意，测试版本可能会存在一些问题，仅供测试使用)
+</p>
+
+<p>
+本次更新内容:
+</p>
+<ol class="org-ol">
+<li>支持自定义 Capture 功能，详细设置和使用请参考官网 <a href="https://metanote-dev.github.io/">https://metanote-dev.github.io/</a></li>
+<li>所有打开新窗口(Buffer)的功能的入口，包括 capture, agenda view, 文件管理器，收藏等，移至导航栏左侧菜单</li>
+<li>“草稿”功能做为一个 Capture 模版不再独立存在，从文件管理器中移除</li>
+<li>“收藏”功能独立为一个窗口(Buffer)，从文件管理器中移除</li>
+<li>优化了 MiniBuffer 和 Narrow Buffer 的功能</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org06637e7" class="outline-2">
+<h2 id="org06637e7">0.7.1</h2>
+<div class="outline-text-2" id="text-org06637e7">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2023-12-11 Mon&gt;</span></span></p>
+<ol class="org-ol">
+<li>修复了无法删除日程类型自定义 Agenda view 的问题</li>
+<li>修复了编辑器菜单中有出现两个"设置"入口的问题</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb874c18" class="outline-2">
+<h2 id="orgb874c18">0.7.0</h2>
+<div class="outline-text-2" id="text-orgb874c18">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2023-11-18 Sat&gt;</span></span></p>
+<p>
+至此 Custom agenda view 功能完整了，Org mode 中 Custom agenda view 功能的所有设置项都已支持(如果有遗漏请报问题给我们)。
+</p>
+
+<p>
+下一步我们将全面支持 Custom capture 功能，敬请期待！
+</p>
+
+<ol class="org-ol">
+<li>Custom agenda view 现在支持 Agenda 类型，可以按日，周，月和年时间范围查看待办事项</li>
+<li>自定义 Agenda view 可以直接保存了</li>
+<li>日程默认显示本周所有的待办事项</li>
+<li>默认全局待办列表只显示未完成项目</li>
+<li>Capture 和 Agenda view 功能入口统一到了更多菜单中</li>
+<li>多个细节体验优化</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6df51af" class="outline-2">
+<h2 id="org6df51af">0.6.0</h2>
+<div class="outline-text-2" id="text-org6df51af">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2023-11-03 Fri&gt;</span></span></p>
+<p>
+重磅功能，支持了自定义待办清单(Agenda View)! 可以根据 CATEGORY, TAG, PROPERTY, TODO 关键字等自定义待办清单，并可保存以供随时访问查看。
+</p>
+
+<ol class="org-ol">
+<li>支持自定义待办清单(Agenda View)</li>
+<li>支持 Tag，包括 Tag Group，详见帮助文档</li>
+<li>支持 Property，包括自定义 Property 和 Special Property，目前支持的 Special Property 包括 PRIORITY, LEVEL, TODO, ITEM, CATEGORY, 详见帮助文档</li>
+<li>支持 InBufferSettings ，详见文档，目前支持的包括 TITLE,DATE,CATEGORY,PROPERTY,TODO,SEQ<sub>TODO,TYP</sub><sub>TODO,FILETAGS,TAGS</sub></li>
+<li>窗口切换效果优化等多处体验优化</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org5c1e40b" class="outline-2">
+<h2 id="org5c1e40b">0.5.0</h2>
+<div class="outline-text-2" id="text-org5c1e40b">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2023-09-22 Fri&gt;</span></span></p>
+<p>
+Metanote 目前处于高速开发过程中，随着我们开发工作的进行，我们会带来更多便利好用的功能，并成为最好的笔记，日程和待办清单工具。感谢早期用户对我们的支持和鼓励。
+</p>
+
+<ol class="org-ol">
+<li>在这个版本中我们支持了对 Metanote 所有高级功能的一次性永久买断！</li>
+<li>支持了 iPad!</li>
+<li>支持了移动和重命名文件或文件夹。这样您就可以更方便的管理您的草稿和闪现。</li>
+<li>多个体现细节优化</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge481233" class="outline-2">
+<h2 id="orge481233">0.4.0</h2>
+<div class="outline-text-2" id="text-orge481233">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2023-09-08 Fri&gt;</span></span></p>
+<p>
+重大更新！
+三个非常实用的功能
+</p>
+<ol class="org-ol">
+<li>支持本地通知了！对于编辑的计划事件，最迟事件和日程可以在安排的时间通知提醒了！</li>
+<li>支持今日聚合视图！一键查看今天要做的事！</li>
+<li>自定义待办关键字！告别 TODO 和 DONE，你可以设置自己独有的关键字，比如“稍后”，“取消”，所有你能想到的，发挥想象力，找到最合适自己的工作流！</li>
+</ol>
+
+<p>
+体验优化
+</p>
+<ol class="org-ol">
+<li>编辑时屏幕常亮，现在可以慢慢思考了</li>
+<li>优化了时间戳的编辑</li>
+<li>支持快捷启动，闪现功能从主屏屏一键开启</li>
+</ol>
+
+<p>
+App 正处于早期高速开发阶段，请保持关注和更新，总会有一些功能让你心动！
+</p>
+</div>
+</div>
+<div id="outline-container-org84cd326" class="outline-2">
+<h2 id="org84cd326">0.3.0</h2>
+<div class="outline-text-2" id="text-org84cd326">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2023-08-22 Tue&gt;</span></span></p>
+<ol class="org-ol">
+<li>支持快速记录闪现</li>
+<li>更好的文件管理器</li>
+<li>支持设置默认位置</li>
+<li>更方便的移动光标</li>
+<li>编辑器支持深色模式，并优化了字体颜色</li>
+<li>优化了多个交互细节</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgab93b2e" class="outline-2">
+<h2 id="orgab93b2e">0.2.1</h2>
+<div class="outline-text-2" id="text-orgab93b2e">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2023-08-11 Fri&gt;</span></span></p>
+<ol class="org-ol">
+<li>问题修复</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org14cd182" class="outline-2">
+<h2 id="org14cd182">0.2.0</h2>
+<div class="outline-text-2" id="text-org14cd182">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2023-08-07 Mon&gt;</span></span></p>
+<ol class="org-ol">
+<li>支持增加外部文档位置</li>
+<li>支持移除 auto-fill mode.</li>
+<li>问题修复</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org37edf69" class="outline-2">
+<h2 id="org37edf69">0.1.0</h2>
+<div class="outline-text-2" id="text-org37edf69">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">CLOSED:</span> <span class="timestamp">&lt;2023-07-27 Thu&gt;</span></span></p>
+<ol class="org-ol">
+<li>流畅丝滑的编辑体验</li>
+<li>兼容 org mode 9.3.6</li>
+<li>支持 capture, agenda view, refile, log note 等功能</li>
+<li>支持 mini buffer, remote edit</li>
+<li>支持多窗口编辑</li>
+<li>支持全文搜索</li>
+</ol>
+</div>
+</div>
+
+    </article>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/MetanoteTeam" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:metanote.team@gmail.com" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/metanote-dev" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; 2023 Metanote team. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- jQuery -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/clean-blog.js"></script>
+</body>
+
+</html>

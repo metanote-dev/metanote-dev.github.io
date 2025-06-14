@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E7KGQHGD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0E7KGQHGD6');
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index,follow">
+
+
+	<link href="https://metanote-dev.github.io/zh/../theme/css/org.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://metanote-dev.github.io/zh/../theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="https://metanote-dev.github.io/zh/../theme/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+            <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+	        <title>Metanote-文档,日程,待办 - 文档内设置 InBufferSettings</title>
+
+
+
+
+
+	    <meta property="og:locale" content="zh">
+    <meta property="og:site_name" content="Metanote-文档,日程,待办">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://metanote-dev.github.io/zh/in_buffer_settings.html">
+	<meta property="og:title" content="文档内设置 InBufferSettings">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://metanote-dev.github.io/zh/">
+	<meta property="article:published_time" content="2023-12-05 00:00:00+08:00">
+  </head>
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://metanote-dev.github.io/zh/">Metanote-文档,日程,待办</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+                        <li><a href="/zh/blog/index.html">Blog</a></li>
+                        <li><a href="/zh/pages/faq.html">FAQ</a></li>
+                        <li><a href="/zh/pages/changelog.html">更新日志</a></li>
+                        <li><a href="/zh/pages/contact.html">联系我们</a></li>
+                        <li><a href="/zh/archives.html">归档</a></li>
+				<!-- i18n begin -->
+<li><a href="https://metanote-dev.github.io/">English</a></li>
+<li class="active"><a href="https://metanote-dev.github.io/zh/">中文</a></li>
+<!-- i18n end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('https://metanote-dev.github.io/zh/../theme/images/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="post-heading">
+                        <h1>文档内设置 InBufferSettings</h1>
+                            <span class="meta">by
+			      <a href="https://metanote-dev.github.io/zh/author/metanote-team.html">Metanote Team</a>
+			      in <a href="https://metanote-dev.github.io/zh/category/misc.html">misc</a>
+			      on 2023-12-05
+                            </span>
+                        Translations:
+<a href="https://metanote-dev.github.io/zh/../in_buffer_settings.html" hreflang="en">en</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        
+<div id="outline-container-org40106a9" class="outline-2">
+<h2 id="org40106a9"><span class="section-number-2">1.</span> InBufferSettings</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+InBufferSettings 使得每个 org 文件可以有自己独立的于全局的设置，比如 TODO 关键字的设置，TAG 的设置等。
+</p>
+</div>
+</div>
+<div id="outline-container-org5d8b7c7" class="outline-2">
+<h2 id="org5d8b7c7"><span class="section-number-2">2.</span> Metanote 目前支持的 InBufferSettings 以及作用</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b>注意</b> 即使目前 Metanote 不支持的 InBufferSettings 你依然可以添加，Metanote 可以正确解析和识别，只是没有对应的功能，在以后的版本中随着功能增加会有更多的 InBufferSettings 得到支持。以下的内容都是 Metanote 已经支持的，几乎支持了 org mode 中所有主要的 InBufferSettings.
+</p>
+</div>
+<div id="outline-container-org84e68eb" class="outline-3">
+<h3 id="org84e68eb"><span class="section-number-3">2.1.</span> TITLE</h3>
+<div class="outline-text-3" id="text-2-1">
+<pre class="example" id="org5072608">
+#+TITLE: 文章题目
+</pre>
+<p>
+如果设置了 TITLE 则会在文件管理器中显示文章题目，如果没有设置则默认显示文件名。
+</p>
+</div>
+</div>
+<div id="outline-container-org672d9f9" class="outline-3">
+<h3 id="org672d9f9"><span class="section-number-3">2.2.</span> CATEGORY</h3>
+<div class="outline-text-3" id="text-2-2">
+<pre class="example" id="org7d71447">
+#+CATEGORY: 分类
+</pre>
+<ol class="org-ol">
+<li>如果设置了 CATEGORY 则文件内所有的 Headline 都会继承这个分类，你可以在 Agenda view 中通过 CATEGORY 来筛选 Headline</li>
+<li>如果没有设置 CATEGORY 则文件内所有的 Headline 的分类默认为文件名</li>
+<li><p>
+文件中的 Headline 可以通过设置自己的 Property 来覆盖整个文件的 InBufferSettings 设置，比如
+</p>
+<pre class="example" id="orgb872f3d">
+#+CATEGORY: 文件中的Headline都继承的分类
+'* Headline
+:PROPERTIES:
+:CATEGORY: 覆盖文件的分类
+:END:
+</pre></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org90c6b05" class="outline-3">
+<h3 id="org90c6b05"><span class="section-number-3">2.3.</span> STARTUP</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+STARTUP 有很多值，目前 Metanote 支持的有 "logdone" 和 "lognotedone"，当 STARTUP 中有 "logdone" 时，当前文件中的 Headline 在被标记为完成状态时会记录完的时间戳，而当有 "lognotedone" 时表示当前文件中的 Headline 在被标记为完成状态时会在记录时间戳的同时要求记录一条日志，"logdone" 和 "lognotedone" 同时只能出现一个。
+</p>
+<pre class="example" id="orge751179">
+#+STARTUP: lognotedone
+</pre>
+</div>
+</div>
+<div id="outline-container-org81488af" class="outline-3">
+<h3 id="org81488af"><span class="section-number-3">2.4.</span> TODO, SEQ<sub>TODO</sub>, TYP<sub>TODO</sub></h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+SEQ<sub>TODO</sub> 和 TYP<sub>TODO</sub> 在 Org mode 中已经不再使用，而是统一使用 TODO. TODO 用来定义文件级 TODO 关键字。
+</p>
+<pre class="example" id="org04e4a14">
+#+TODO: REPORT BUG KNOWNCAUSE | FIXED
+#+TODO: TODO(t) WAIT(w@/!) | DONE(d!) CANCELED(c@)
+</pre>
+<p>
+TODO 关键字的声明语法与 Org mode 完全一致
+</p>
+<ol class="org-ol">
+<li>"|" 前为未完成状态，后面为完成状态</li>
+<li>WAIT(w@/!)
+<ol class="org-ol">
+<li>w 为快捷键定义</li>
+<li>在 "/" 前的 @ 表示进入 WAIT 时记录日志</li>
+<li>在 "/" 之后的 ! 表示离开 WAIT 状态时记录时间戳</li>
+<li>如果没有 "/" 则单独使用 "@" 或 "!" 则默认为进入时的动作</li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgcb674da" class="outline-3">
+<h3 id="orgcb674da"><span class="section-number-3">2.5.</span> FILETAGS</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+定义文件级的 TAG，在开启 TAG 继承的情况下文件中的 Headline 都将继承文件级的 TAG
+</p>
+<pre class="example" id="org99eaf19">
+#+FILETAGS: :Peter:Boss:Secret:
+</pre>
+</div>
+</div>
+<div id="outline-container-orgff3b524" class="outline-3">
+<h3 id="orgff3b524"><span class="section-number-3">2.6.</span> TAGS</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+在文件内声明 TAG 或 TAG 组
+</p>
+<pre class="example" id="org65f939a">
+#+TAGS: laptop car pc sailboat
+#+TAGS: [ GTD : Control Persp ]
+#+TAGS: [ Project : {P@.+} ]
+</pre>
+<ol class="org-ol">
+<li>第一行声明了四个 TAG，但并没有什么实际用处，只是在输入 TAG 时更加便捷，TAG 不用声明就可以直接使用</li>
+<li>第二行声明了一个 TAG 组，Control, Persp 都属于 GTD，在 Agenda view 中搜索打有 GTP TAG 的 Headline 时，打有 Control 或 Persp TAG 的 Headline 都可能被检索出来。</li>
+<li>第三行用简单的正则表式声明了一个 TAG 组，所的符合正则表达式的 TAG 都属于 Project</li>
+<li>可通过交叉定义 TAG 组实现分级的 TAG 组定义，形成分类学上的定义。</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org1709f46" class="outline-3">
+<h3 id="org1709f46"><span class="section-number-3">2.7.</span> PROPERTY</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+定义文件级的 Property，在 Property 继承开启的情况下文件中所有 Headline 都将继承文件级的 Property
+</p>
+<pre class="example" id="orgca94c08">
+#+PROPERTY: var foo=1
+</pre>
+</div>
+<div id="outline-container-org8cc1c4b" class="outline-4">
+<h4 id="org8cc1c4b"><span class="section-number-4">2.7.1.</span> 有特殊意义的 Property</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<p>
+如果 Property 的 Key 为 SUMMARY 则 SUMMARY 的 value 为做为文件的摘要显示在文件管理器中，比如
+</p>
+<pre class="example" id="orge0f73e0">
+#+PROPERTY: SUMMARY 这是一篇文章的摘要
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+    </article>
+
+    <hr>
+    <div class="row">
+      <div class="col-xs-6 text-left">
+        <a href="https://metanote-dev.github.io/zh/how_to_sync_your_org_files_using_git.html">&larr; 使用 Git 同步 Metanote 中的文件</a>
+      </div>
+      <div class="col-xs-6 text-right">
+      </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/MetanoteTeam" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:metanote.team@gmail.com" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/metanote-dev" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; 2023 Metanote team. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- jQuery -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/clean-blog.js"></script>
+</body>
+
+</html>

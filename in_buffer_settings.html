@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E7KGQHGD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0E7KGQHGD6');
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index,follow">
+
+
+	<link href="https://metanote-dev.github.io/theme/css/org.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="https://metanote-dev.github.io/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://metanote-dev.github.io/theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://metanote-dev.github.io/theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="https://metanote-dev.github.io/theme/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+            <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+	        <title>Metanote-notes,docs,tasks - InBufferSettings</title>
+
+
+
+
+
+	    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="Metanote-notes,docs,tasks">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://metanote-dev.github.io/in_buffer_settings.html">
+	<meta property="og:title" content="InBufferSettings">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://metanote-dev.github.io/">
+	<meta property="article:published_time" content="2023-12-05 00:00:00+08:00">
+  </head>
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://metanote-dev.github.io/">Metanote-notes,docs,tasks</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+                        <li><a href="/blog/index.html">Blog</a></li>
+                        <li><a href="/pages/faq.html">FAQ</a></li>
+                        <li><a href="/pages/changelog.html">ChangeLog</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
+                        <li><a href="/archives.html">Archive</a></li>
+				<!-- i18n begin -->
+<li class="active"><a href="https://metanote-dev.github.io/">English</a></li>
+<li><a href="https://metanote-dev.github.io/zh/">中文</a></li>
+<!-- i18n end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('https://metanote-dev.github.io/theme/images/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="post-heading">
+                        <h1>InBufferSettings</h1>
+                            <span class="meta">by
+			      <a href="https://metanote-dev.github.io/author/metanote-team.html">Metanote Team</a>
+			      in <a href="https://metanote-dev.github.io/category/misc.html">misc</a>
+			      on 2023-12-05
+                            </span>
+                        Translations:
+<a href="https://metanote-dev.github.io/zh/in_buffer_settings.html" hreflang="zh">zh</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <div id="outline-container-org54ec54b" class="outline-2">
+<h2 id="org54ec54b"><span class="section-number-2">1.</span> InBufferSettings</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+InBufferSettings allows each file to have its own independent settings, such as TODO keywords and TAG settings, separate from the global settings.
+</p>
+</div>
+</div>
+<div id="outline-container-org9fb6655" class="outline-2">
+<h2 id="org9fb6655"><span class="section-number-2">2.</span> InBufferSettings supported by Metanote and their functions</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b>Note:</b> Even if Metanote does not currently support some InBufferSettings, you can still add them. Metanote can correctly parse and recognize them; they just don't have corresponding functionality. In future versions, as features are added, more InBufferSettings will be supported. The following content is already supported by Metanote, covering almost all major InBufferSettings in org mode.
+</p>
+</div>
+
+<div id="outline-container-org29ec927" class="outline-3">
+<h3 id="org29ec927"><span class="section-number-3">2.1.</span> TITLE</h3>
+<div class="outline-text-3" id="text-2-1">
+<pre class="example" id="org2b1dd2f">
+#+TITLE: Article Title
+</pre>
+<p>
+If TITLE is set, the article title will be displayed in the file manager. If not set, the file name will be displayed by default.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge42988a" class="outline-3">
+<h3 id="orge42988a"><span class="section-number-3">2.2.</span> CATEGORY</h3>
+<div class="outline-text-3" id="text-2-2">
+<pre class="example" id="orga4f205e">
+#+CATEGORY: Category
+</pre>
+<ol class="org-ol">
+<li>If CATEGORY is set, all headlines in the file will inherit this category. You can filter headlines in Agenda view by CATEGORY.</li>
+<li>If CATEGORY is not set, all headlines in the file will default to the file name.</li>
+<li><p>
+Headlines in the file can override the InBufferSettings of the entire file by setting their own properties. For example:
+</p>
+<pre class="example" id="org44ce35d">
+#+CATEGORY: Category inherited by headlines in the file
+'* Headline
+:PROPERTIES:
+:CATEGORY: Overriding category for the headline
+:END:
+</pre></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbff6c44" class="outline-3">
+<h3 id="orgbff6c44"><span class="section-number-3">2.3.</span> STARTUP</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+STARTUP has many values. Currently supported by Metanote are "logdone" and "lognotedone." When "logdone" is present in STARTUP, timestamps will be recorded for headlines in the current file when marked as done. When "lognotedone" is present, it indicates that headlines in the current file, when marked as done, should record a timestamp and require a log entry. Only one of "logdone" and "lognotedone" can be present at a time.
+</p>
+<pre class="example" id="org7dad112">
+#+STARTUP: lognotedone
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org01ba0f1" class="outline-3">
+<h3 id="org01ba0f1"><span class="section-number-3">2.4.</span> TODO, SEQ<sub>TODO</sub>, TYP<sub>TODO</sub></h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+SEQ<sub>TODO</sub> and TYP<sub>TODO</sub> are no longer used in Org mode; TODO is now used universally. TODO is used to define file-level TODO keywords.
+</p>
+<pre class="example" id="org53e81fd">
+#+TODO: REPORT BUG KNOWNCAUSE | FIXED
+#+TODO: TODO(t) WAIT(w@/!) | DONE(d!) CANCELED(c@)
+</pre>
+<p>
+The syntax for declaring TODO keywords is identical to Org mode:
+</p>
+<ol class="org-ol">
+<li>"|" denotes incomplete states, and states after it denote completion.</li>
+<li>WAIT(w@/!)
+<ol class="org-ol">
+<li>w is a fast-key definition.</li>
+<li>@ before "/" indicates logging when entering the WAIT state.</li>
+<li>! after "/" indicates logging a timestamp when leaving the WAIT state.</li>
+<li>If there is no "/", using "@" or "!" alone defaults to the action when entering.</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org291f63c" class="outline-3">
+<h3 id="org291f63c"><span class="section-number-3">2.5.</span> FILETAGS</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Defines file-level TAGS. With tag inheritance enabled, headlines in the file will inherit file-level TAGS.
+</p>
+<pre class="example" id="orgfe6474a">
+#+FILETAGS: :Peter:Boss:Secret:
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org96094ea" class="outline-3">
+<h3 id="org96094ea"><span class="section-number-3">2.6.</span> TAGS</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+Declares TAGS or TAG groups within the file.
+</p>
+<pre class="example" id="orgce6e85e">
+#+TAGS: laptop car pc sailboat
+#+TAGS: [ GTD : Control Persp ]
+#+TAGS: [ Project : {P@.+} ]
+</pre>
+<ol class="org-ol">
+<li>The first line declares four TAGS, but they have no practical use. It's just more convenient when entering TAGS.</li>
+<li>The second line declares a TAG group. Control and Persp belong to GTD. When searching for headlines with the GTD TAG in Agenda view, headlines with Control or Persp TAG might be retrieved.</li>
+<li>The third line uses a simple regular expression to declare a TAG group. All TAGS matching the regular expression belong to TAG "Project".</li>
+<li>Cross-defining TAG groups can be used to create hierarchical definitions of TAG groups, forming a hierarchical structure.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc5fc36f" class="outline-3">
+<h3 id="orgc5fc36f"><span class="section-number-3">2.7.</span> PROPERTY</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+Defines file-level properties. With property inheritance enabled, all headlines in the file will inherit file-level properties.
+</p>
+<pre class="example" id="org10db750">
+#+PROPERTY: var foo=1
+</pre>
+</div>
+<div id="outline-container-org795db59" class="outline-4">
+<h4 id="org795db59"><span class="section-number-4">2.7.1.</span> Properties with special meanings</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<p>
+If the property key is SUMMARY, the value of SUMMARY will be displayed as the abstract for the file in the file manager. For example:
+</p>
+<pre class="example" id="org19de20e">
+#+PROPERTY: SUMMARY This is the abstract of an article
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+    </article>
+
+    <hr>
+    <div class="row">
+      <div class="col-xs-6 text-left">
+        <a href="https://metanote-dev.github.io/how_to_sync_your_org_files_using_git.html">&larr; How to sync your org files using Git</a>
+      </div>
+      <div class="col-xs-6 text-right">
+      </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/MetanoteTeam" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:metanote.team@gmail.com" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/metanote-dev" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; 2023 Metanote team. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- jQuery -->
+    <script src="https://metanote-dev.github.io/theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://metanote-dev.github.io/theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://metanote-dev.github.io/theme/js/clean-blog.js"></script>
+</body>
+
+</html>

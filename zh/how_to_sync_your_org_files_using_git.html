@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E7KGQHGD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0E7KGQHGD6');
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index,follow">
+
+
+	<link href="https://metanote-dev.github.io/zh/../theme/css/org.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://metanote-dev.github.io/zh/../theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="https://metanote-dev.github.io/zh/../theme/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+            <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+	        <title>Metanote-文档,日程,待办 - 使用 Git 同步 Metanote 中的文件</title>
+
+
+
+
+        <meta name="tags" contents="sync" />
+        <meta name="tags" contents="git" />
+
+	    <meta property="og:locale" content="zh">
+    <meta property="og:site_name" content="Metanote-文档,日程,待办">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://metanote-dev.github.io/zh/how_to_sync_your_org_files_using_git.html">
+	<meta property="og:title" content="使用 Git 同步 Metanote 中的文件">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://metanote-dev.github.io/zh/">
+	<meta property="article:published_time" content="2023-12-05 00:00:00+08:00">
+  </head>
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://metanote-dev.github.io/zh/">Metanote-文档,日程,待办</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+                        <li><a href="/zh/blog/index.html">Blog</a></li>
+                        <li><a href="/zh/pages/faq.html">FAQ</a></li>
+                        <li><a href="/zh/pages/changelog.html">更新日志</a></li>
+                        <li><a href="/zh/pages/contact.html">联系我们</a></li>
+                        <li><a href="/zh/archives.html">归档</a></li>
+				<!-- i18n begin -->
+<li><a href="https://metanote-dev.github.io/">English</a></li>
+<li class="active"><a href="https://metanote-dev.github.io/zh/">中文</a></li>
+<!-- i18n end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('https://metanote-dev.github.io/zh/../theme/images/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="post-heading">
+                        <h1>使用 Git 同步 Metanote 中的文件</h1>
+                            <span class="meta">by
+			      <a href="https://metanote-dev.github.io/zh/author/metanote-team.html">Metanote Team</a>
+			      in <a href="https://metanote-dev.github.io/zh/category/metanote.html">Metanote</a>
+			      on 2023-12-05
+			      updated 2024-03-26
+			      tags: 			      <a href="https://metanote-dev.github.io/zh/tag/sync.html">sync</a>
+			      <a href="https://metanote-dev.github.io/zh/tag/git.html">git</a>
+                            </span>
+                        Translations:
+<a href="https://metanote-dev.github.io/zh/../how_to_sync_your_org_files_using_git.html" hreflang="en">en</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p>
+选择一个 iOS 上你喜欢的 Git 工具，这里我用 PolyGit 举例。
+</p>
+
+<ol class="org-ol">
+<li>在 PolyGit 新建或 Clone 一个仓库，完成后进入下一步</li>
+<li>打开 Metanote，从屏幕边缘左滑打开文件管理， 在左上角选择“编辑位置” 并点击 "+" 号添加新的位置</li>
+<li>在弹出的系统文件选择中依次选择 “我的iPhone” -&gt; PolyGit -&gt; "刚刚 Clone 的仓库"，然后点击右上角“打开”即可</li>
+<li>首次添加外部位置时 Metanote 会逐一解析每个文件中的待办项目并生成待办列表和日程，如果你的文件不是非常非常多，几秒钟就可以处理完成了，如果你主要使用这个文件夹，就将它设为默认位置</li>
+<li><p>
+<del>当文件在外部发生变更后，比如拉取了新内容，考虑到性能问题，Metanote 目前并没有自动解析新增的变更的文件</del>
+</p>
+
+<p>
+从 Metanote iOS version 0.10.0 版本开始，自动更新已经支持，您要做的仅仅是在  git pull 操作之后切换回 Metanote，一切更新都将立刻自动完成，或在 Metanote 中编辑完成后切换到 Git 工具进行 git push 操作。
+</p></li>
+</ol>
+
+    </article>
+
+    <hr>
+    <div class="row">
+      <div class="col-xs-6 text-left">
+        <a href="https://metanote-dev.github.io/zh/agenda_view.html">&larr; 日程清单 Agenda View</a>
+      </div>
+      <div class="col-xs-6 text-right">
+        <a href="https://metanote-dev.github.io/zh/in_buffer_settings.html">文档内设置 InBufferSettings &rarr;</a>
+      </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/MetanoteTeam" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:metanote.team@gmail.com" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/metanote-dev" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; 2023 Metanote team. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- jQuery -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/clean-blog.js"></script>
+</body>
+
+</html>

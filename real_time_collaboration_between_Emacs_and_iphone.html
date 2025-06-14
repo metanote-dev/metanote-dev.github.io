@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E7KGQHGD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0E7KGQHGD6');
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index,follow">
+
+
+	<link href="https://metanote-dev.github.io/theme/css/org.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="https://metanote-dev.github.io/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://metanote-dev.github.io/theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://metanote-dev.github.io/theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="https://metanote-dev.github.io/theme/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+            <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+	        <title>Metanote-notes,docs,tasks - Real-time collaboration between Emacs and iPhone</title>
+
+
+
+
+
+	    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="Metanote-notes,docs,tasks">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://metanote-dev.github.io/real_time_collaboration_between_Emacs_and_iphone.html">
+	<meta property="og:title" content="Real-time collaboration between Emacs and iPhone">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://metanote-dev.github.io/">
+	<meta property="article:published_time" content="2024-06-25 00:00:00+08:00">
+  </head>
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://metanote-dev.github.io/">Metanote-notes,docs,tasks</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+                        <li><a href="/blog/index.html">Blog</a></li>
+                        <li><a href="/pages/faq.html">FAQ</a></li>
+                        <li><a href="/pages/changelog.html">ChangeLog</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
+                        <li><a href="/archives.html">Archive</a></li>
+				<!-- i18n begin -->
+<li class="active"><a href="https://metanote-dev.github.io/">English</a></li>
+<li><a href="https://metanote-dev.github.io/zh/">中文</a></li>
+<!-- i18n end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('https://metanote-dev.github.io/theme/images/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="post-heading">
+                        <h1>Real-time collaboration between Emacs and iPhone</h1>
+                            <span class="meta">by
+			      <a href="https://metanote-dev.github.io/author/metanote-team.html">Metanote Team</a>
+			      in <a href="https://metanote-dev.github.io/category/misc.html">misc</a>
+			      on 2024-06-25
+			      updated 2024-07-02
+                            </span>
+                        Translations:
+<a href="https://metanote-dev.github.io/zh/real_time_collaboration_between_Emacs_and_iphone.html" hreflang="zh">zh</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <blockquote>
+<p>
+<b>Important! To avoid making this introduction overly complex and to allow readers to quickly experience the actual results, I did not include the configuration of the httpd certificate. Therefore, this should only be used as a demo to experience its performance. If you plan to use it in a real environment, please configure the certificate yourself and use https.</b>
+</p>
+</blockquote>
+
+<p>
+Let's take a look at the results before implementing.
+</p>
+<blockquote>
+<p>
+There should be a video demonstration here, but I haven't had time to record it yet.
+</p>
+</blockquote>
+
+<div id="outline-container-orga9af69d" class="outline-2">
+<h2 id="orga9af69d"><span class="section-number-2">1.</span> Overview</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Some features and prerequisites. The following setup is for Mac; similar settings can be applied on Windows.
+</p>
+
+<ol class="org-ol">
+<li>After editing and saving files on mobile, you can immediately see the content updates in Emacs. Similarly, after editing and saving in Emacs, you will quickly see the updates in the mobile app, allowing for real-time collaboration.</li>
+<li>Fully automatic and seamless. On the Mac side, everything is fully automatic. On the mobile side, you only need to pull down to refresh in rare cases.</li>
+<li>No additional software is required on the Mac side except for Emacs.</li>
+<li>The Mac OS X uses the built-in httpd with WebDAV protocol. Depending on your needs, you can use it within a local network or over the internet. Users with higher security requirements can configure certificates themselves. For users using other cloud sync methods, the real-time collaboration and ease of use depend on the cloud service itself and may not achieve the same effect as this solution.</li>
+<li>On the mobile side, choose an app that supports WebDAV protocol. Here we use our own app, Metanote, as an example.</li>
+<li>That's all you need. Now you can start the implementation.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6f5dd69" class="outline-2">
+<h2 id="org6f5dd69"><span class="section-number-2">2.</span> Implementation</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org8f529bb" class="outline-3">
+<h3 id="org8f529bb"><span class="section-number-3">2.1.</span> Config and start WebDAV service</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Mac OS X already includes apache2, and we just need to configure it slightly to support WebDAV.
+</p>
+
+<ol class="org-ol">
+<li><p>
+First, check if the built-in httpd service works correctly. Open the "Terminal" and execute the following command to start the httpd service:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo apachectl start
+</pre>
+</div>
+<p>
+Then open your browser and visit <a href="http://localhost">http://localhost</a>. If it displays "It works!" everything is OK. Now, stop the httpd service using the following command and prepare to set up WebDAV:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo apachectl stop
+</pre>
+</div></li>
+<li><p>
+Prepare the working directory. If you are an org mode user, you probably already have a directory for storing all your org files. Let's assume your Mac username is "abc" and this directory is:
+</p>
+<pre class="example">
+/Users/abc/Documents/org_files
+</pre>
+
+<p>
+If you don't have this directory, you need to create one as we will use it later.
+</p></li>
+<li><p>
+Continue in "Terminal" and execute the following commands:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">cd /etc/apache2/
+# Backup the configuration file
+sudo cp httpd.conf httpd.conf.bak
+# Edit the httpd configuration file
+sudo emacs httpd.conf
+</pre>
+</div></li>
+<li><p>
+Edit the httpd.conf file and ensure the following modules required are present and not commented out (i.e., no "#" at the beginning of the line), and set httpd to run as the current user, so it can access your files:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">LoadModule auth_digest_module libexec/apache2/mod_auth_digest.so
+LoadModule dav_module libexec/apache2/mod_dav.so
+LoadModule dav_fs_module libexec/apache2/mod_dav_fs.so
+LoadModule dav_lock_module libexec/apache2/mod_dav_lock.so
+Include /private/etc/apache2/extra/httpd-dav.conf
+&lt;IfModule unixd_module&gt;
+  # Your current username
+  User abc
+  # Your current user's group
+  Group staff
+&lt;/IfModule&gt;
+</pre>
+</div></li>
+<li><p>
+Continue in "Terminal" and execute the following commands:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"># Backup the configuration file
+sudo cp extra/httpd-dav.conf extra/httpd-dav.conf.bak
+sudo emacs extra/httpd-dav.conf
+</pre>
+</div></li>
+<li><p>
+Edit the httpd-dav.conf file with the following content:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml">DavLockDB "/Users/abc/Documents/DavLock"
+
+Alias /org_files "/Users/abc/Documents/org_files"
+
+&lt;Directory "/Users/abc/Documents/org_files"&gt;
+    Dav On
+
+    AuthType Digest
+    AuthName DAV-upload
+    # You can use the htdigest program to create the password database:
+    #   htdigest -c "/Users/abc/Documents/user.passwd" DAV-upload admin
+    AuthUserFile "/Users/abc/Documents/user.passwd"
+    AuthDigestProvider file
+
+    # Allow universal read-access, but writes are restricted
+    # to the admin user.
+    &lt;RequireAny&gt;
+	Require method GET POST OPTIONS
+	Require user admin
+    &lt;/RequireAny&gt;
+&lt;/Directory&gt;
+</pre>
+</div>
+
+<p>
+OK, now set the username and password required to access the WebDAV service. Let's assume they are admin and 12345678:
+</p>
+<pre class="example">
+htdigest -c "/Users/abc/Documents/user.passwd" DAV-upload admin
+</pre></li>
+<li>Now we have completed the WebDAV setup. To ensure it works correctly, you need to check if the firewall <b>allows httpd to receive incoming connections</b> and grant httpd <b>full disk access</b> in the Privacy &amp; Security settings.</li>
+<li><p>
+Finally, start the WebDAV service with the following command in "Terminal":
+</p>
+<pre class="example">
+sudo apachectl start
+</pre></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9760230" class="outline-3">
+<h3 id="org9760230"><span class="section-number-3">2.2.</span> Setting up Emacs</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Add the following content to your Emacs init file to enable auto-revert:
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp">;; Enable global auto-revert mode
+(global-auto-revert-mode t)
+;; Experience shows that using notify is slower
+(setq auto-revert-use-notify nil)
+;; Using interval checking is significantly faster, set it to 1 second or 0.5 seconds
+(setq auto-revert-interval 0.5)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3886b07" class="outline-3">
+<h3 id="org3886b07"><span class="section-number-3">2.3.</span> Mobile setup</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Open Metanote, go to Settings, and add a WebDAV sync repository. Select "<i>Documents</i>" as the local folder, enter "<a href="http://xxx.xxx.xxx.xxx/org_files">http://xxx.xxx.xxx.xxx/org_files</a>" as the server, and use the username admin and password 12345678. Save and test. If everything works, return to the homepage, tap the sync button, or pull down to refresh for real-time synchronization.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3c89e01" class="outline-2">
+<h2 id="org3c89e01"><span class="section-number-2">3.</span> Principle</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>Since httpd and Emacs run under the same user, both directly access the file system. Therefore, any changes made by httpd to the files are immediately reflected in Emacs, and similarly, any changes made by Emacs to the files can be accessed through httpd. If Emacs accesses the files through httpd, there will be a delay and it will need to constantly poll httpd to detect file changes, failing to achieve real-time updates.</li>
+<li>On the mobile side, the files are accessed through httpd. Metanote automatically syncs files with httpd every time it is opened and immediately after editing the files. This mechanism ensures that in most cases, the files are up-to-date when using Metanote.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org91a324f" class="outline-2">
+<h2 id="org91a324f"><span class="section-number-2">4.</span> Tips</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li>You don't need to keep your Mac online all the time. You can use your Mac as usual, and httpd will automatically resume work when the Mac wakes up. Metanote can also work completely offline. The next time your Mac wakes up, open Metanote, and it will automatically complete the synchronization.</li>
+<li>Metanote will automatically sync every time it is opened. Since it is on the local network, the sync speed is very fast, often completing before you open the file. If you edit files on the Mac while Metanote is open, you need to tap sync or pull down to refresh to see the updated content. This is the only scenario where you need to operate manually.</li>
+<li>If you have a computer at both home and office, you can set up two sync repositories in Metanote to sync with the computers at home and the office. After synchronization, the data among the three will be consistent. This way, whether you are at the office, home, or traveling, you can access and edit your files.</li>
+</ol>
+</div>
+</div>
+
+    </article>
+
+    <hr>
+    <div class="row">
+      <div class="col-xs-6 text-left">
+        <a href="https://metanote-dev.github.io/hyperlinks_and_attachments.html">&larr; Hyperlinks and attachments</a>
+      </div>
+      <div class="col-xs-6 text-right">
+        <a href="https://metanote-dev.github.io/custom_capture_template.html">Custom Capture Template &rarr;</a>
+      </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/MetanoteTeam" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:metanote.team@gmail.com" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/metanote-dev" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; 2023 Metanote team. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- jQuery -->
+    <script src="https://metanote-dev.github.io/theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://metanote-dev.github.io/theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://metanote-dev.github.io/theme/js/clean-blog.js"></script>
+</body>
+
+</html>

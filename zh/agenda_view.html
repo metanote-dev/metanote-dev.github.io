@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E7KGQHGD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0E7KGQHGD6');
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index,follow">
+
+
+	<link href="https://metanote-dev.github.io/zh/../theme/css/org.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://metanote-dev.github.io/zh/../theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="https://metanote-dev.github.io/zh/../theme/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+            <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+	        <title>Metanote-文档,日程,待办 - 日程清单 Agenda View</title>
+
+
+
+
+
+	    <meta property="og:locale" content="zh">
+    <meta property="og:site_name" content="Metanote-文档,日程,待办">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://metanote-dev.github.io/zh/agenda_view.html">
+	<meta property="og:title" content="日程清单 Agenda View">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://metanote-dev.github.io/zh/">
+	<meta property="article:published_time" content="2023-12-05 00:00:00+08:00">
+  </head>
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://metanote-dev.github.io/zh/">Metanote-文档,日程,待办</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+                        <li><a href="/zh/blog/index.html">Blog</a></li>
+                        <li><a href="/zh/pages/faq.html">FAQ</a></li>
+                        <li><a href="/zh/pages/changelog.html">更新日志</a></li>
+                        <li><a href="/zh/pages/contact.html">联系我们</a></li>
+                        <li><a href="/zh/archives.html">归档</a></li>
+				<!-- i18n begin -->
+<li><a href="https://metanote-dev.github.io/">English</a></li>
+<li class="active"><a href="https://metanote-dev.github.io/zh/">中文</a></li>
+<!-- i18n end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('https://metanote-dev.github.io/zh/../theme/images/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="post-heading">
+                        <h1>日程清单 Agenda View</h1>
+                            <span class="meta">by
+			      <a href="https://metanote-dev.github.io/zh/author/metanote-team.html">Metanote Team</a>
+			      in <a href="https://metanote-dev.github.io/zh/category/misc.html">misc</a>
+			      on 2023-12-05
+                            </span>
+                        Translations:
+<a href="https://metanote-dev.github.io/zh/../agenda_view.html" hreflang="en">en</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        
+<div id="outline-container-org0d4c99e" class="outline-2">
+<h2 id="org0d4c99e"><span class="section-number-2">1.</span> Agenda View</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Agenda View 也叫日程清单，可以通过设置时间范围，文件范围，完成状态，标签(Tag)或属性(Property)等条件来筛选和生成适合各种场景的待办清单，你可以将常用的待办清单的设置保存起来以便从菜单里随时查看，你可以创建任意多个待办清单。
+</p>
+
+<p>
+在日程清单中你除了可以查看待办事项之外还可以方便的进行一些操作，而不必打开对应的文件进行编辑，当你进行这些操作时 Metanote 会自动完成文件的编辑。目前可进行的操作有以下：
+</p>
+<ol class="org-ol">
+<li>改变 Headline 的状态，当你的待办事项进入下一个阶段时你可以这里直接修改</li>
+<li>移动或归档 Headline，当你已完成一件事情后你可以通过移动功能将它归档到另一个文件中去，比如“2023归档.org”，注意，如果 Headline 有子 Headline 则子 Headline 也会被移动</li>
+<li>删除 Headline，当你完成一件事情且没有归档的必要时可以在这里直接删除，同样，如果有子 Headline 会被一起删除</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7698405" class="outline-2">
+<h2 id="org7698405"><span class="section-number-2">2.</span> 默认 Agenda view</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+默认情况下 Metanote 提供了两个待办清单"日程"和"待办事项"
+</p>
+</div>
+<div id="outline-container-orgdc9e096" class="outline-3">
+<h3 id="orgdc9e096"><span class="section-number-3">2.1.</span> 日程</h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li>日程会按时间范围(日，周，月，年)列出所的文件中有具体时间安排的 Headline，包括
+<ol class="org-ol">
+<li>计划事件(SCHEDULED)，计划某个时间做什么事情</li>
+<li>最迟事件(DEADLINE)，某件事最迟要在什么时间完成</li>
+<li>活跃时间戳(active timestamp)，安排在某个时间点的事情。活跃时间戳是这个样子 <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-18 Sat&gt;</span></span>，如果你只是想记录一个时间，但并不想它出现在你的是程中或收到通知提醒，你可以使用静默时间戳，像这个样子 <span class="timestamp-wrapper"><span class="timestamp">[2023-11-18 Sat]</span></span></li>
+</ol></li>
+<li>如果你查看的是“今天”的日程则会出现的 Headline 有以下：
+<ol class="org-ol">
+<li>定义在今天的事情</li>
+<li>定义在今天之前但是未完成状态的事情，也就是说你今仍可以需要做这些事情</li>
+<li>定义在今天之后的事情，但需要在今天提醒的事情(你可以在 Planning 中使用 waring 来设置提前几天或过期几天提醒)</li>
+</ol></li>
+<li>如果你查看的是今天之前或这后的日程，则只会出现定义在那个日期的事项。</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgabefb46" class="outline-3">
+<h3 id="orgabefb46"><span class="section-number-3">2.2.</span> 待办事项</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+待办事项会列出所有文件下所有状态为未完成的 Headline
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd2ac33c" class="outline-2">
+<h2 id="orgd2ac33c"><span class="section-number-2">3.</span> 自定义 Agenda View 的设置项</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+以下设置项是与 Org mode 一致的，如果你熟悉 Org mode 则可以完全参考 Org mode 的设置。如果不熟悉也很容易使用，不过是一些过滤条件。
+</p>
+</div>
+<div id="outline-container-orgf1b908c" class="outline-3">
+<h3 id="orgf1b908c"><span class="section-number-3">3.1.</span> 名称</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+会出现在菜单栏中以便与其它清单区分和快速访问
+</p>
+</div>
+</div>
+<div id="outline-container-org2772256" class="outline-3">
+<h3 id="org2772256"><span class="section-number-3">3.2.</span> Agenda files</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+设置文件范围，可以是单个文件或文件夹，如果不设置默认为所有文件
+</p>
+</div>
+</div>
+<div id="outline-container-orgcb27040" class="outline-3">
+<h3 id="orgcb27040"><span class="section-number-3">3.3.</span> 类型</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+日程清单有“列表”和“日程”两种类型，它们只是呈现方式不同
+</p>
+</div>
+<div id="outline-container-orga2318a5" class="outline-4">
+<h4 id="orga2318a5"><span class="section-number-4">3.3.1.</span> 列表</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+所有符合条件的 Headline 以清单形式呈现
+</p>
+</div>
+</div>
+<div id="outline-container-org0462d06" class="outline-4">
+<h4 id="org0462d06"><span class="section-number-4">3.3.2.</span> 日程</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ol class="org-ol">
+<li>除自定义 Agenda view 限制的条件外，要求 Headline 必须是 SCHEDULED, DEADLINE 或和活跃时间戳的</li>
+<li>以日历的形式呈现</li>
+</ol>
+</div>
+<ol class="org-ol">
+<li><a id="org139396e"></a>周期<br />
+<div class="outline-text-5" id="text-3-3-2-1">
+<p>
+设置日程显示的时间范围
+</p>
+</div>
+</li>
+<li><a id="org2c0fa9f"></a>每周第一天<br />
+<div class="outline-text-5" id="text-3-3-2-2">
+<p>
+单日程的周期为“周”时，设置每周的第一天是星期几，在其它周期时此设置项无效。
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6fda41a" class="outline-3">
+<h3 id="org6fda41a"><span class="section-number-3">3.4.</span> 配置</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org73e1137" class="outline-4">
+<h4 id="org73e1137"><span class="section-number-4">3.4.1.</span> 仅限未完成</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+是否只显示是未完成状态的 Headline，默认为选中，只显示未完成的任务
+</p>
+</div>
+</div>
+<div id="outline-container-orga8da061" class="outline-4">
+<h4 id="orga8da061"><span class="section-number-4">3.4.2.</span> 子任务</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+是否显示子任务，默认选中，显示子任务
+</p>
+</div>
+</div>
+<div id="outline-container-org1e4d32a" class="outline-4">
+<h4 id="org1e4d32a"><span class="section-number-4">3.4.3.</span> 开启 Tag 继承</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<p>
+选中时启用 Tag 继承，否则不启用，默认为启用
+</p>
+</div>
+</div>
+<div id="outline-container-org5a25b96" class="outline-4">
+<h4 id="org5a25b96"><span class="section-number-4">3.4.4.</span> Tag 组</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<p>
+选中时启用 Tag 组，否则不启用，默认为启用
+</p>
+</div>
+</div>
+<div id="outline-container-orgebfb52e" class="outline-4">
+<h4 id="orgebfb52e"><span class="section-number-4">3.4.5.</span> 开启 Property 继承</h4>
+<div class="outline-text-4" id="text-3-4-5">
+<p>
+选中时启用 Property 继承，否则不启用，默认不启用
+</p>
+</div>
+</div>
+<div id="outline-container-org449291d" class="outline-4">
+<h4 id="org449291d"><span class="section-number-4">3.4.6.</span> 计划事件，最迟事件，提醒时间戳</h4>
+<div class="outline-text-4" id="text-3-4-6">
+<p>
+当选中时显示这三种任务，否则不显示。这三种任务因为有具体日期时间，通常会出现在“日程”中，所以如果你不想让它们重复出现在你的自定义清单中可以取消勾选它们。默认是显示的
+</p>
+</div>
+</div>
+<div id="outline-container-orgde6c4df" class="outline-4">
+<h4 id="orgde6c4df"><span class="section-number-4">3.4.7.</span> 已注释，已归档</h4>
+<div class="outline-text-4" id="text-3-4-7">
+<p>
+当选中时显示这三种任务，否则不显示。默认不显示。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org160f562" class="outline-3">
+<h3 id="org160f562"><span class="section-number-3">3.5.</span> Tags 和 Properties</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+编辑自定义 Tag 和 Property 的过滤条件的查询字符串，完全兼容 Org mode 的 search string。每一个条件都是一个 Tag 或 Property，遵循以下设置方式
+</p>
+<ol class="org-ol">
+<li><p>
+支持逻辑运算符 "&amp;" 表示“且关系”和"|"表示“或关系”，"&amp;" 的结合优先级高于 "|"，目前不支持括号()表达式。比如:
+</p>
+<pre class="example" id="org301cc15">
+tag1|tag2&amp;tag3
+</pre>
+<p>
+表示查找打有 tag1 或 同时打有 tag2 和 tag3 的 Headline
+</p></li>
+<li><p>
+"+" 表示正向选择，"-" 表示反选，在有 + 或 - 且没有歧义情况下可以省略 &amp; 符。比如
+</p>
+<pre class="example" id="org2c2fe8f">
++tag1+tag2-tag3
+</pre>
+<p>
+表示查找同时打有 tag1 和 tag2 且没有打 tag3 的 Headline
+</p></li>
+<li><p>
+支持正则表达式，比如
+</p>
+<pre class="example" id="org2ebaa8e">
+work+{^boss.*}
+</pre>
+<p>
+表示查找同时打有 work 和以 boss 开头的 tag 的 Headline
+</p></li>
+<li><p>
+当有关系运算符时表示查询条件为 Property，否则为 Tag。支持的关系运算符有 '&lt;','<code>','&gt;','&lt;</code>','&gt;=','&lt;&gt;'， <b>注意</b> 如果 Property 的值为字符串需使用双引号括起来，比如
+</p>
+<pre class="example" id="org0c2d83b">
++work+PRIORITY="A"+With={Sarah|Denny}
+</pre>
+<p>
+表示查找打有 work Tag 且优先级为 "A"，且有 With Property 且 Porperty 的值为 Sarah 或 Denny 的 Headline
+</p></li>
+<li><p>
+特殊 Property，前面例子中已经出现，即 PRIORITY，特殊 Property 是 Headline 本身具有属性，无需定义就已经存在，可以通过这些 Property 查找特定条件的 Headline，目前支持的特殊 Property 有以下：
+</p>
+<ol class="org-ol">
+<li>PRIORITY
+表示 Headline 的优先级，可用的值为 "A","B","C" 依次表示高，中，低</li>
+<li>LEVEL
+表示 Headline 有几个星号</li>
+<li>TODO
+表示 Headline 的状态关键字，注意它的值是文本，需要用双引号括起来</li>
+<li>ITEM
+表示 Headline 的标题</li>
+<li>CATEGORY
+表示 Headline 的分类</li>
+</ol>
+<pre class="example" id="orge0a7e35">
+项目A+PRIORITY="A"+LEVEL=2+TODO="未完成"+CATEGORY="工作"+ITEM={.*故障.*}
+</pre>
+<p>
+表示查询分类为“工作”且打有 Tag  “项目A”，且优先级为 "A"，状态为 "未完成"，标题中包含 "故障" 文案的 Level 为 2 的 Headline
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+    </article>
+
+    <hr>
+    <div class="row">
+      <div class="col-xs-6 text-left">
+        <a href="https://metanote-dev.github.io/zh/a_simple_and_effective_gtd_workflow.html">&larr; 一种简单有效的GTD工作流</a>
+      </div>
+      <div class="col-xs-6 text-right">
+        <a href="https://metanote-dev.github.io/zh/how_to_sync_your_org_files_using_git.html">使用 Git 同步 Metanote 中的文件 &rarr;</a>
+      </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/MetanoteTeam" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:metanote.team@gmail.com" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/metanote-dev" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; 2023 Metanote team. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- jQuery -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/clean-blog.js"></script>
+</body>
+
+</html>

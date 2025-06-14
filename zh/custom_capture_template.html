@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E7KGQHGD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0E7KGQHGD6');
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index,follow">
+
+
+	<link href="https://metanote-dev.github.io/zh/../theme/css/org.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://metanote-dev.github.io/zh/../theme/css/clean-blog.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://metanote-dev.github.io/zh/../theme/css/code_blocks/darkly.css" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="https://metanote-dev.github.io/zh/../theme/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+            <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+	        <title>Metanote-文档,日程,待办 - 自定义 Capture 功能</title>
+
+
+
+
+
+	    <meta property="og:locale" content="zh">
+    <meta property="og:site_name" content="Metanote-文档,日程,待办">
+
+	<meta property="og:type" content="article">
+	<meta property="article:author" content="">
+	<meta property="og:url" content="https://metanote-dev.github.io/zh/custom_capture_template.html">
+	<meta property="og:title" content="自定义 Capture 功能">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="https://metanote-dev.github.io/zh/">
+	<meta property="article:published_time" content="2024-01-31 00:00:00+08:00">
+  </head>
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://metanote-dev.github.io/zh/">Metanote-文档,日程,待办</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+                        <li><a href="/zh/blog/index.html">Blog</a></li>
+                        <li><a href="/zh/pages/faq.html">FAQ</a></li>
+                        <li><a href="/zh/pages/changelog.html">更新日志</a></li>
+                        <li><a href="/zh/pages/contact.html">联系我们</a></li>
+                        <li><a href="/zh/archives.html">归档</a></li>
+				<!-- i18n begin -->
+<li><a href="https://metanote-dev.github.io/">English</a></li>
+<li class="active"><a href="https://metanote-dev.github.io/zh/">中文</a></li>
+<!-- i18n end -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('https://metanote-dev.github.io/zh/../theme/images/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="post-heading">
+                        <h1>自定义 Capture 功能</h1>
+                            <span class="meta">by
+			      <a href="https://metanote-dev.github.io/zh/author/metanote-team.html">Metanote Team</a>
+			      in <a href="https://metanote-dev.github.io/zh/category/misc.html">misc</a>
+			      on 2024-01-31
+                            </span>
+                        Translations:
+<a href="https://metanote-dev.github.io/zh/../custom_capture_template.html" hreflang="en">en</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p>
+终于，自定义 Capture 功能开发测试完成。
+</p>
+
+<div id="outline-container-orgebee85a" class="outline-2">
+<h2 id="orgebee85a"><span class="section-number-2">1.</span> Capture 功能是什么</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Metanote 中自定义 Capture 功能通过自定义目标文件，自定义内容模版等方式实现快速记录、收集想法，任务和素材等功能。通过合理地自定义适合自己日常工作流的 Capture 模版能够极大的提高信息收集和管理的效率。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org120865d" class="outline-2">
+<h2 id="org120865d"><span class="section-number-2">2.</span> Capture 功能使用</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7267107" class="outline-3">
+<h3 id="org7267107"><span class="section-number-3">2.1.</span> 使用 Capture&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+在 Metanote 的任意功能界面中您都可以通过导航栏左侧“+”按钮打开 Capture 功能入口，选择默认或自定义的模版，您可以在设置中自定义 Capture 模版(注意，需要 Metanote 高级版)
+</p>
+
+<p>
+另外一个非常方便的使用方式是通过 App icon 的 3D-touch 弹出的快捷菜单进行 capture ，这将允许您在不打开 app 情况下直接进行 capture.
+</p>
+
+
+<div id="org23938ee" class="figure">
+<p><img src="data/36/36CF9D-1A3A-4359-8F9D-408C70D3FAE2/1.png" alt="1.png" />
+</p>
+</div>
+
+
+<div id="org5466f9c" class="figure">
+<p><img src="data/36/36CF9D-1A3A-4359-8F9D-408C70D3FAE2/2.png" alt="2.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb8d18af" class="outline-3">
+<h3 id="orgb8d18af"><span class="section-number-3">2.2.</span> 使用 MiniBuffer</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+MiniBuffer 使您可以在不离开当前编辑窗口的情况下直接在一个 mini 窗口中记录内容，这样您可以边参考当前窗口内容边记录笔记，而且您可以随时在两个窗口中切换，甚至在两个窗口中编辑同一个文件的不同部分，这并不会有任何问题。
+</p>
+
+<p>
+您可以在“设置”中选择在 capture 时是否使用 MiniBuffer，默认为“自动”选择使用 MiniBuffer 或全屏窗口 capture。
+</p>
+
+
+<div id="org41a7cc9" class="figure">
+<p><img src="data/36/36CF9D-1A3A-4359-8F9D-408C70D3FAE2/3.png" alt="3.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdf176b7" class="outline-3">
+<h3 id="orgdf176b7"><span class="section-number-3">2.3.</span> 保存 Capture 内容</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+使用 MiniBuffer 时点击确认按钮则保存并退出 MiniBuffer；在全屏状态下同编辑文件，退出编辑自动保存
+</p>
+</div>
+</div>
+<div id="outline-container-org2852c4c" class="outline-3">
+<h3 id="org2852c4c"><span class="section-number-3">2.4.</span> 取消 Capture</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+capture 时偶尔会出现没想好，中途取消 capture 的情况，此时只需点击“删除”按钮一切就都会恢复原样。
+</p>
+</div>
+</div>
+<div id="outline-container-orgbddaea9" class="outline-3">
+<h3 id="orgbddaea9"><span class="section-number-3">2.5.</span> 快速访问最后 Capture 的文件</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+如果您忘记了 capture 的内容存在了哪里，使用导航栏左测菜单中的“最后保存”功能直接打开最后一次 capture 编辑的文件
+</p>
+</div>
+</div>
+<div id="outline-container-orgc2c5eff" class="outline-3">
+<h3 id="orgc2c5eff"><span class="section-number-3">2.6.</span> 默认模版</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+Metanote 中默认提供了三个最常见的 Capture template，分别对应不同的使用场景，Metanote 高级版支持自定义任意多个 Capture template，并可以修改为删除默认模版。
+</p>
+</div>
+<div id="outline-container-org7f17431" class="outline-4">
+<h4 id="org7f17431"><span class="section-number-4">2.6.1.</span> 草稿</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<p>
+"草稿" 会在根目录下新建一个以当前时间为文件名的空白文件，文件名格式可以设置中自定义，取消 capture 会自动删除该文件，适合快速记录一个临时文件，草稿或想法供稍后整理。
+</p>
+</div>
+</div>
+<div id="outline-container-orgcbd0b69" class="outline-4">
+<h4 id="orgcbd0b69"><span class="section-number-4">2.6.2.</span> 待办</h4>
+<div class="outline-text-4" id="text-2-6-2">
+<p>
+"待办" 会在根目录下的 "Index.org" 文件中追加一个待办任务，适合快速记录一个待办事项。
+</p>
+</div>
+</div>
+<div id="outline-container-org2b80aa4" class="outline-4">
+<h4 id="org2b80aa4"><span class="section-number-4">2.6.3.</span> 日志</h4>
+<div class="outline-text-4" id="text-2-6-3">
+<p>
+"日志" 会在根目录下的 "日志.org" 文件中自动以当前日期的年月日组织 headline，在 org mode 称为 datetree，适合记日记。
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org7400564" class="outline-2">
+<h2 id="org7400564"><span class="section-number-2">3.</span> 自定义 Capture 模版</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgf6c901e" class="outline-3">
+<h3 id="orgf6c901e"><span class="section-number-3">3.1.</span> template target</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+设置 capture 的内容保存的位置，比如某文件中的某个 headline 下面
+</p>
+</div>
+<div id="outline-container-org204bd8b" class="outline-4">
+<h4 id="org204bd8b"><span class="section-number-4">3.1.1.</span> file</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+capture 内容保存到指定文件。可以直接选择已存在的文件，或选择文件夹，如果选择文件夹则需要提供一个文件名的模版，支持 template expansion 语法，如果文件已存在则会直接使用，如果文件不存在则会自动创建
+</p>
+</div>
+</div>
+<div id="outline-container-org4c6708c" class="outline-4">
+<h4 id="org4c6708c"><span class="section-number-4">3.1.2.</span> file+headline</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+capture 的内容保存到指定文件的指定 headline 中，以 headline 的 title 匹配，如果 headline 不存在则自动创建
+</p>
+</div>
+</div>
+<div id="outline-container-org31f2044" class="outline-4">
+<h4 id="org31f2044"><span class="section-number-4">3.1.3.</span> file+olp</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<p>
+olp 全称为 outlin path，逐级定义目标 headline，任意一级 headline 不存在都将自动创建
+</p>
+</div>
+</div>
+<div id="outline-container-org9f1e820" class="outline-4">
+<h4 id="org9f1e820"><span class="section-number-4">3.1.4.</span> file+olp+datetree</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<p>
+根据日期选择目标 headline，olp 为可选
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org21b016e" class="outline-3">
+<h3 id="org21b016e"><span class="section-number-3">3.2.</span> template type</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+指定 capture template 内容的类型，可为 主题（entry）, 列表（item） 或 任意（plain）
+</p>
+</div>
+</div>
+<div id="outline-container-org35d5584" class="outline-3">
+<h3 id="org35d5584"><span class="section-number-3">3.3.</span> template properties</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+设置 capture template 一些形为
+</p>
+<ol class="org-ol">
+<li>prepend 设置从头部还是尾部插入</li>
+<li>immediate-finish 设置不弹出编辑窗口，直接保存，在记录一些自动内容时非常方便</li>
+<li>empty-line-before 设置 capture 内容与前面内容之间保留几个空行</li>
+<li>empty-line-after 设置 capture 内容与后面内容之间保留几个空行，这在插入列表时很有用</li>
+<li>time-prompt 设置在 target 为 datetree 的情况下不使用当前日期而是交互式的选择日期</li>
+<li>tree-type 设置 datetree 使用月份还是周数</li>
+<li>unnarrowed 设置编辑 capture 时不使用 narrowed buffer，直接编辑整个文件</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga03b945" class="outline-3">
+<h3 id="orga03b945"><span class="section-number-3">3.4.</span> template expansion</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+可以在 template 中使用的一些占位符，在 capture 时这些占位符将自动填充指定内容。
+</p>
+<ol class="org-ol">
+<li>%&lt;FORMAT&gt; 按 "FORMAT" 格式化当前时间日期，注意，不同于 org mode，"FORMAT" 使用 Unicode 标准，见 <a href="https://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns">https://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns</a></li>
+<li>%t 插入 org mode active 时间戳，仅当前日期</li>
+<li>%T 插入 org mode active 时间戳，包括当前日期和时时间</li>
+<li>%u, %U，同上，但插入 inactive 时间戳</li>
+<li>%i 发起 capture 时当前编辑窗口选中的内容</li>
+<li>%f 发起 capture 时当前编辑窗口编辑的文件名</li>
+<li>%F 发起 capture 时当前编辑窗口编辑的文件的完整路径</li>
+<li>%^g 交互式插入当前 Buffer 中的 Tag</li>
+<li>%^G 交互工插入全局 Tag</li>
+<li>%^t, %^T, %^u, %^U 交互式插入 org mode 时间戳</li>
+<li>%^{PROP}p 交互式插入 property</li>
+<li>%^{PROMPT} 交互式插入编辑内容</li>
+<li>%N 插入第 N 个 PROMPT，注意，不同于 org mode，数字前无需转义</li>
+<li>%? 光标位置</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org41f7b70" class="outline-3">
+<h3 id="org41f7b70"><span class="section-number-3">3.5.</span> Org mode 的支持情况</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+此部分内容仅供了解 Org mode 的用户参考，不熟悉 Org mode 可以直接跳过。Metanote 是对 Org mode 支持最完整的 app，对于自定义 Capture 功能同样支持了 Org mode 大部分常用自定义 Capture 设置项，以下是详细支持情况:
+</p>
+</div>
+<div id="outline-container-org2ecca5e" class="outline-4">
+<h4 id="org2ecca5e"><span class="section-number-4">3.5.1.</span> template type</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<ol class="org-ol">
+<li class="on"><code>[X]</code> entry 支持</li>
+<li class="on"><code>[X]</code> item 支持</li>
+<li class="on"><code>[X]</code> checkitem 支持，使用 item 实现</li>
+<li class="on"><code>[X]</code> plain 支持</li>
+<li class="off"><code>[&#xa0;]</code> table-line 暂不支持，稍后集中处理表格时统一支持</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org4f287e1" class="outline-4">
+<h4 id="org4f287e1"><span class="section-number-4">3.5.2.</span> target</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<ol class="org-ol">
+<li class="on"><code>[X]</code> file 支持</li>
+<li class="off"><code>[&#xa0;]</code> id 暂不支持，稍后实现 org-roam 时统一支持</li>
+<li class="on"><code>[X]</code> file+headline 支持</li>
+<li class="on"><code>[X]</code> file+olp 支持</li>
+<li class="off"><code>[&#xa0;]</code> file+regexp 暂不支持，未测试出 org mode 此 target 的功能逻辑，在不同的 template type 下表现都不一至</li>
+<li class="on"><code>[X]</code> file+olp+datetree 支持</li>
+<li class="off"><code>[&#xa0;]</code> file+function 暂不支持，由于 Metanote 尚未支持 elisp，因此暂时无法支持 function</li>
+<li class="off"><code>[&#xa0;]</code> function 暂不支持，同上，但做为补尝，在 Metanote 中支持自定义文件名，选择好目录后可以使用与 template 内容相同的语法定义文件名，这样就允许 capture 时动态的选择或创建不同的文件</li>
+<li class="off"><code>[&#xa0;]</code> clock 暂不支持，稍后集中处理 clock 相关功能时统一支持</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9468958" class="outline-4">
+<h4 id="org9468958"><span class="section-number-4">3.5.3.</span> properties</h4>
+<div class="outline-text-4" id="text-3-5-3">
+<ol class="org-ol">
+<li class="on"><code>[X]</code> :prepend 支持</li>
+<li class="on"><code>[X]</code> :immediate-finish 支持</li>
+<li class="on"><code>[X]</code> :empty-line-before 支持</li>
+<li class="on"><code>[X]</code> :empty-line-after 支持</li>
+<li class="off"><code>[&#xa0;]</code> :clock-in 暂不支持，集中实现 clock 相关功能统一支持</li>
+<li class="off"><code>[&#xa0;]</code> :clock-keep 暂不支持，集中实现 clock 相关功能统一支持</li>
+<li class="off"><code>[&#xa0;]</code> :clock-resume 暂不支持，集中实现 clock 相关功能统一支持</li>
+<li class="on"><code>[X]</code> :time-prompt 支持</li>
+<li class="off"><code>[&#xa0;]</code> :tree-type 支持</li>
+<li class="on"><code>[X]</code> :unnarrowed 支持</li>
+<li class="off"><code>[&#xa0;]</code> :table-line-pos 暂是支持，集中处理表格时统一支持</li>
+<li class="off"><code>[&#xa0;]</code> :kill-buffer 不支持，Metanote 已自动实现此功能</li>
+<li class="off"><code>[&#xa0;]</code> :no-save 不支持，Metanote 已自动实现此功能</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7764eba" class="outline-4">
+<h4 id="org7764eba"><span class="section-number-4">3.5.4.</span> template expansion</h4>
+<div class="outline-text-4" id="text-3-5-4">
+<ol class="org-ol">
+<li class="off"><code>[&#xa0;]</code> %[FILE] 暂不支持</li>
+<li class="off"><code>[&#xa0;]</code> %(EXP) 暂不支持</li>
+<li class="on"><code>[X]</code> %&lt;FORMAT&gt; 支持</li>
+<li class="on"><code>[X]</code> %t 支持</li>
+<li class="on"><code>[X]</code> %T 支持</li>
+<li class="on"><code>[X]</code> %u, %U 支持</li>
+<li class="on"><code>[X]</code> %i 支持</li>
+<li class="off"><code>[&#xa0;]</code> %a 暂不支持</li>
+<li class="off"><code>[&#xa0;]</code> %A 暂不支持</li>
+<li class="off"><code>[&#xa0;]</code> %l 暂不支持</li>
+<li class="off"><code>[&#xa0;]</code> %c 下一个版本支持</li>
+<li class="off"><code>[&#xa0;]</code> %x 下一个版本支持</li>
+<li class="off"><code>[&#xa0;]</code> %k 暂不支持</li>
+<li class="off"><code>[&#xa0;]</code> %K 暂不支持</li>
+<li class="off"><code>[&#xa0;]</code> %n 不支持，Metanote 中不存在 user name</li>
+<li class="on"><code>[X]</code> %f 支持</li>
+<li class="on"><code>[X]</code> %F 支持</li>
+<li class="off"><code>[&#xa0;]</code> %:keyword 暂不支持</li>
+<li class="on"><code>[X]</code> %^g 支持</li>
+<li class="on"><code>[X]</code> %^G 支持</li>
+<li class="on"><code>[X]</code> %^t, %^T, %^u, %^U 支持</li>
+<li class="off"><code>[&#xa0;]</code> %^C 下一个版本支持</li>
+<li class="off"><code>[&#xa0;]</code> %^L 下一个版本支持</li>
+<li class="on"><code>[X]</code> %^{PROP}p 支持</li>
+<li class="on"><code>[X]</code> %^{PROMPT} 支持</li>
+<li class="on"><code>[X]</code> %N 支持</li>
+<li class="on"><code>[X]</code> %? 支持</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+    </article>
+
+    <hr>
+    <div class="row">
+      <div class="col-xs-6 text-left">
+        <a href="https://metanote-dev.github.io/zh/如果你也无忍受 Xcode 15 请用 Emacs 替代.html">&larr; 如果你也无忍受 Xcode 15 请用 Emacs 替代</a>
+      </div>
+      <div class="col-xs-6 text-right">
+        <a href="https://metanote-dev.github.io/zh/why_the_developement_of_custom_capture_take_so_long.html">自定义 Capture 功能为什么开发了这么久 &rarr;</a>
+      </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/MetanoteTeam" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:metanote.team@gmail.com" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/metanote-dev" class="btn-default">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; 2023 Metanote team. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- jQuery -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="https://metanote-dev.github.io/zh/../theme/js/clean-blog.js"></script>
+</body>
+
+</html>
